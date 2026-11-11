@@ -1,0 +1,109 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-navy-deep: var(--navy-deep);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.982 0.004 250);
+  --navy-deep: oklch(0.21 0.055 262);
+  --navy-foreground: oklch(0.96 0.01 250);
+  --navy-muted: oklch(0.78 0.02 258);
+  --foreground: oklch(0.26 0.03 262);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.42 0.14 262);
+  --gold: oklch(0.78 0.13 85);
+  --gold-bright: oklch(0.88 0.15 92);
+  --primary-foreground: oklch(0.98 0.005 250);
+  --secondary: oklch(0.95 0.01 255);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--secondary);
+  --muted-foreground: oklch(0.47 0.02 260);
+  --accent: oklch(0.93 0.03 85);
+  --accent-foreground: var(--primary);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.89 0.012 255);
+  --input: oklch(0.92 0.012 255);
+  --ring: var(--primary);
+  --gradient-gold: linear-gradient(135deg, var(--gold-bright), var(--gold) 55%, oklch(0.66 0.12 78));
+  --shadow-gold: 0 16px 36px -20px oklch(0.6 0.12 85 / 35%);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0; }
+
+  /* Premium dark navy sections: light text, soft borders, brighter gold accents.
+     Attribute selector covers opacity variants like bg-navy-deep/90 too. */
+  [class*="bg-navy-deep"] {
+    color: var(--navy-foreground);
+    border-color: oklch(1 0 0 / 12%);
+  }
+  section[class*="bg-navy-deep"] {
+    background-image: radial-gradient(ellipse 80% 60% at 70% 0%, oklch(0.32 0.08 262 / 55%), transparent);
+  }
+  [class*="bg-navy-deep"] :is(h1, h2, h3, h4, strong) { color: var(--navy-foreground); }
+  [class*="bg-navy-deep"] .text-muted-foreground { color: var(--navy-muted); }
+  [class*="bg-navy-deep"] :is(.border, .border-y, .border-t, .border-b) { border-color: oklch(1 0 0 / 14%); }
+  [class*="bg-navy-deep"] .bg-card { background-color: oklch(1 0 0 / 5%); color: var(--navy-foreground); }
+  [class*="bg-navy-deep"] .text-gold { color: var(--gold-bright); }
+}
+
+@utility text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility bg-gold-gradient { background: var(--gradient-gold); }
+@utility shadow-gold { box-shadow: var(--shadow-gold); }
+@utility card-lift {
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+  &:hover { transform: translateY(-4px); border-color: var(--primary); box-shadow: var(--shadow-gold); }
+}
+@utility fade-up { animation: fadeUp .8s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up { animation: none; }
+  .card-lift { transition: none; }
+  .card-lift:hover { transform: none; }
+}
