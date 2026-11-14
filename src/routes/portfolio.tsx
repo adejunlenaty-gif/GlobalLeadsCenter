@@ -160,17 +160,17 @@ function PortfolioPage() {
             </div>
           ))}
 
-          {/* 100% Replacement Guarantee Feature Card */}
+          {/* Clear Replacement Policy Feature Card */}
           <div className="bento-card-dark p-6 flex flex-col justify-between text-[#FAF7F2]">
             <div>
               <span className="pill-badge bg-emerald-500/20 text-emerald-300 border-emerald-500/30 text-[11px]">
-                Zero-Risk Guarantee
+                Buyer Protection
               </span>
               <h3 className="font-display text-xl uppercase tracking-wider text-[#FAF7F2] font-bold mt-3">
-                100% Free Replacement Warranty
+                Clear Replacement Policy
               </h3>
               <p className="mt-3 text-xs leading-relaxed text-stone-300">
-                Should any delivered lead record contain an invalid phone number, disconnected line, or duplicate from a previous batch within 48 hours of delivery, our team replaces it 1-to-1 without question.
+                Should any delivered lead record contain an invalid phone number, disconnected line, or duplicate from a previous batch within 48 hours of delivery, our team issues a 1-to-1 replacement credit without dispute.
               </p>
             </div>
             <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">

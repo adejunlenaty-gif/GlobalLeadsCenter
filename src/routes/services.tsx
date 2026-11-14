@@ -18,7 +18,7 @@ import {
   Check,
 } from "lucide-react";
 import { CtaBand, PageHero, meta } from "@/components/SiteChrome";
-import { SERVICES, CATEGORIES, ServiceCategory, CONTACT, STRUCTURED_APPROACH, POST_PURCHASE_WORKFLOW } from "@/lib/site";
+import { SERVICES, CATEGORIES, ServiceCategory, CONTACT, STRUCTURED_APPROACH, POST_PURCHASE_WORKFLOW, ADDITIONAL_CAPABILITIES } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { serviceQuoteSearch } from "@/lib/service-quotes";
 
@@ -125,6 +125,14 @@ export function ServicesPage() {
               className="bento-card p-6 md:p-7 flex flex-col justify-between scroll-mt-24 transition-transform hover:-translate-y-1 hover:shadow-lg bg-[#FAF7F2]"
             >
               <div>
+                <div className="h-40 overflow-hidden rounded-xl bg-stone-900 mb-4 border border-stone-800/10 shadow-xs">
+                  <img
+                    src={s.image}
+                    alt={s.name}
+                    className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <span className="pill-badge bg-stone-200 text-stone-800 text-[10px] font-semibold">
                     {s.category}
@@ -189,6 +197,62 @@ export function ServicesPage() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Additional Sourcing Capabilities */}
+        <div className="mt-16 rounded-2xl border border-stone-800/20 bg-[#FAF7F2] p-7 md:p-10 shadow-sm">
+          <div className="border-b border-stone-800/15 pb-5 mb-8">
+            <span className="text-xs uppercase tracking-[0.2em] font-bold text-stone-600">
+              EXPANDED CATALOGUE
+            </span>
+            <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-wider text-stone-900 font-bold mt-1">
+              Additional Sourcing Capabilities
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-stone-700 max-w-3xl leading-relaxed">
+              In addition to our 15 core specialisms, we coordinate custom acquisition briefs across expanding consumer and commercial sectors where they match verified sourcing capabilities.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {ADDITIONAL_CAPABILITIES.map((cap) => (
+              <div
+                key={cap.name}
+                className="rounded-xl border border-stone-800/15 bg-white p-4 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors"
+              >
+                <div>
+                  <span className="pill-badge text-[9px] bg-stone-100 text-stone-800 mb-2">
+                    {cap.badge}
+                  </span>
+                  <h3 className="font-display text-sm uppercase tracking-wide text-stone-900 font-bold mt-1">
+                    {cap.name}
+                  </h3>
+                  <p className="mt-1.5 text-xs text-stone-600 leading-relaxed">
+                    {cap.desc}
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-stone-100 flex justify-end">
+                  <Link
+                    to="/contact"
+                    search={{ service: cap.name }}
+                    className="text-[11px] font-bold uppercase tracking-wider text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
+                  >
+                    Inquire <ChevronRight className="h-3 w-3" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Compliance & Jurisdictional Notice */}
+          <div className="mt-8 rounded-xl border border-amber-600/30 bg-amber-50/80 p-4 text-xs text-amber-950 flex items-start gap-3">
+            <ShieldCheck className="h-5 w-5 text-amber-800 shrink-0 mt-0.5" />
+            <div>
+              <span className="font-bold uppercase tracking-wider block mb-0.5">Compliance & Regulatory Notice</span>
+              <p className="leading-relaxed">
+                Financial, cryptocurrency, gambling, lottery, and consumer lending campaigns require appropriate affirmative consent, lawful sourcing, and applicable jurisdictional checks. GlobalLeadsCenter does not advertise compliance certifications or guarantees unless fully substantiated by audited documentation.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -276,10 +340,10 @@ export function ServicesPage() {
                   TRANSPARENCY MANDATE
                 </span>
                 <h4 className="font-display text-xl uppercase tracking-wider text-[#FAF7F2] font-bold">
-                  Brokerage Disclosure & 100% Replacement Warranty
+                  Brokerage Disclosure & Clear Replacement Policy
                 </h4>
                 <p className="text-xs text-stone-300 leading-relaxed">
-                  As an international lead brokerage and campaign coordinator, we clearly disclose whether each delivery batch is directly generated through our internal assets or sourced via vetted partner networks. Every order includes our unconditional 48-hour warranty: any invalid number or syntax error is replaced 1-to-1 without dispute.
+                  As an international lead brokerage and campaign coordinator, we clearly disclose whether each delivery batch is directly generated through our internal assets or sourced via vetted partner networks. Every order includes our Clear Replacement Policy: any invalid number or syntax error reported within 48 hours is replaced 1-to-1 without dispute.
                 </p>
               </div>
 

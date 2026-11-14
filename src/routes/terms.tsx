@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: meta(
-      "Terms of Service & Replacement Warranty — Globalleadscenter",
-      "Terms of service, lead brokerage disclosures, 100% replacement warranty terms, and buyer protection policies."
+      "Terms of Service & Replacement Policy — Globalleadscenter",
+      "Terms of service, lead brokerage disclosures, clear replacement policy terms, and buyer protection guidelines."
     ),
   }),
   component: TermsPage,
@@ -19,7 +19,7 @@ function TermsPage() {
       <PageHero
         eyebrow="Commercial Governance"
         title="TERMS OF SERVICE & BUYER PROTECTION"
-        intro="Clear commercial agreements, transparent sourcing disclosures, and our comprehensive 100% replacement warranty on invalid records."
+        intro="Clear commercial agreements, transparent sourcing disclosures, and our comprehensive clear replacement policy on invalid records."
       />
 
       <section className="mx-auto max-w-5xl px-5 py-16">
@@ -54,11 +54,11 @@ function TermsPage() {
             <div className="flex items-center gap-2 mb-2">
               <ShieldCheck className="h-6 w-6 text-emerald-800" />
               <h2 className="font-display text-2xl uppercase tracking-wide text-stone-900 font-bold">
-                2. 100% Replacement Warranty Policy
+                2. Clear Replacement Policy
               </h2>
             </div>
             <p className="text-sm text-stone-700 leading-relaxed">
-              We stand behind data quality with a transparent, binding replacement guarantee:
+              We stand behind data quality with a transparent, binding replacement policy:
             </p>
             <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50/70 p-5 text-xs text-emerald-950 space-y-3">
               <p className="font-semibold text-sm text-emerald-900">

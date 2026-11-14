@@ -22,6 +22,7 @@ export type Service = {
   slug: string;
   name: string;
   category: ServiceCategory;
+  image: string;
   summary: string;
   focus: string[];
   details: string[];
@@ -60,6 +61,7 @@ export const SERVICES: Service[] = [
     slug: "sweepstakes",
     name: "Sweepstakes Leads",
     category: "Promotional",
+    image: "/sweepstakes-prize-gift.jpg",
     summary: "Targeted audiences for authorized sweepstakes and promotional campaigns.",
     focus: [
       "Targeted audience and geographic acquisition",
@@ -83,6 +85,7 @@ export const SERVICES: Service[] = [
     slug: "pch",
     name: "PCH & Prize Leads",
     category: "Promotional",
+    image: "/canva-assets/service-2.jpg",
     summary: "Audience acquisition for prize-and-promotion briefs, combining relevant qualification, documented consent, and international delivery schedules.",
     focus: [
       "Prize-and-promotion enthusiast audience targeting",
@@ -106,6 +109,7 @@ export const SERVICES: Service[] = [
     slug: "mega-millions",
     name: "Mega Millions / Lottery-Interest Leads",
     category: "Promotional",
+    image: "/lottery-tumbler.jpg",
     summary: "Lottery-interest audiences for authorized, jurisdiction-permitted campaigns.",
     focus: [
       "Targeted lottery-interest audience segmentation",
@@ -131,6 +135,7 @@ export const SERVICES: Service[] = [
     slug: "crypto",
     name: "Cryptocurrency Leads",
     category: "Financial",
+    image: "/crypto-blockchain-tokens.jpg",
     summary: "Prospects expressing interest in cryptocurrency, digital assets and related services.",
     focus: [
       "Prospects expressing active interest in crypto, Web3 & digital assets",
@@ -154,6 +159,7 @@ export const SERVICES: Service[] = [
     slug: "forex",
     name: "Forex Leads",
     category: "Financial",
+    image: "/forex-trading-station.jpg",
     summary: "Trading-interest prospects for appropriately authorized forex brokers.",
     focus: [
       "Trading-interest prospects for authorized forex brokers & prop desks",
@@ -177,6 +183,7 @@ export const SERVICES: Service[] = [
     slug: "investor",
     name: "Investor Leads",
     category: "Financial",
+    image: "/investor-portfolio-desk.jpg",
     summary: "Investor-interest inquiries matched to campaign-specific criteria.",
     focus: [
       "Investor-interest inquiries matched to campaign-specific criteria",
@@ -200,6 +207,7 @@ export const SERVICES: Service[] = [
     slug: "banking",
     name: "Banking Leads",
     category: "Financial",
+    image: "/banking-office-branch.jpg",
     summary: "Prospects interested in banking products and financial services.",
     focus: [
       "Prospects interested in retail banking, merchant services & commercial accounts",
@@ -223,6 +231,7 @@ export const SERVICES: Service[] = [
     slug: "pay-loan",
     name: "Pay Loan Leads",
     category: "Financial",
+    image: "/pay-loan-consultation.jpg",
     summary: "Loan and consumer-finance inquiries for authorized lenders and brokers.",
     focus: [
       "Inquiries for consumer loans, personal credit & debt relief",
@@ -248,6 +257,7 @@ export const SERVICES: Service[] = [
     slug: "first-hit",
     name: "First-Hit Leads",
     category: "Specialized",
+    image: "/first-hit-target.jpg",
     summary: "Newly acquired leads delivered within a clearly agreed freshness window.",
     focus: [
       "Explicit choice: Standard Fresh (0-24h window) vs. Dedicated Exclusive",
@@ -273,17 +283,18 @@ export const SERVICES: Service[] = [
     slug: "usa",
     name: "USA Targeted Leads",
     category: "Specialized",
+    image: "/usa-regional-network.jpg",
     summary: "Precision nationwide and state-specific audience acquisition configured around your exact vertical, age demographics, and US compliance mandates.",
     focus: [
       "State-level, County, or ZIP-code radius targeting",
-      "TCPA compliance records with TrustedForm / Jornaya token support",
+      "TCPA consent documentation and compliance review",
       "Demographic and household filters",
       "Fast daily handover or automated CRM routing",
-      "Replacement guarantee for disconnected US numbers",
+      "Clear replacement policy for disconnected US numbers",
     ],
     details: [
       "Execute high-converting campaigns scoped specifically to permitted US states and territories. Whether you require nationwide reach or hyper-local ZIP-radius targeting, we calibrate collection to your operational territory.",
-      "All US consumer campaigns adhere strictly to TCPA guidelines. Leads can include verifiable third-party certification tokens (such as Jornaya LeadID or TrustedForm certificates) upon request.",
+      "All US consumer campaigns adhere strictly to compliant outreach guidelines. Leads can include verifiable third-party certification tokens (such as Jornaya LeadID or TrustedForm certificates) upon request.",
       "We run phone number validation against US carrier databases to separate wireless from landline and eliminate disconnected lines.",
     ],
     fieldsCaptured: ["Full Name", "Phone (Wireless/Landline flag)", "Email", "Street Address", "City, State, ZIP", "TCPA Consent Token"],
@@ -296,6 +307,7 @@ export const SERVICES: Service[] = [
     slug: "b2b",
     name: "B2B Leads",
     category: "Specialized",
+    image: "/b2b-signalx-profiles.jpg",
     summary: "Decision-maker contacts segmented by industry, company revenue, job seniority, and exact geographic radius.",
     focus: [
       "Firmographic and job role targeting (C-level, VP, Director)",
@@ -319,6 +331,7 @@ export const SERVICES: Service[] = [
     slug: "gambling",
     name: "Gambling Campaign Leads",
     category: "Specialized",
+    image: "/canva-assets/service-1.jpg",
     summary: "Audience acquisition built exclusively for licensed gaming, sports betting, and casino operators, aligned with responsible gambling mandates.",
     focus: [
       "Strict targeting of legally licensed jurisdictions only",
@@ -342,6 +355,7 @@ export const SERVICES: Service[] = [
     slug: "recovery",
     name: "Recovery Inquiry Leads",
     category: "Specialized",
+    image: "/lead-dashboard-preview.jpg",
     summary: "Inquiry generation for authorized claims-assistance, fraud dispute, and chargeback services, with transparent, non-misleading communications.",
     focus: [
       "Accurate, non-misleading capture copy with mandatory legal disclaimers",
@@ -365,6 +379,7 @@ export const SERVICES: Service[] = [
     slug: "ledger",
     name: "Ledger-Related Leads",
     category: "Specialized",
+    image: "/canva-assets/case-phones.jpg",
     summary: "Audience campaigns for hardware wallets, key security solutions, and crypto custody devices, focused on security-conscious digital asset holders.",
     focus: [
       "Security-interest and self-custody segmentation",
@@ -388,6 +403,7 @@ export const SERVICES: Service[] = [
     slug: "custom",
     name: "Custom Lead Generation",
     category: "Specialized",
+    image: "/canva-assets/case-grid.jpg",
     summary: "Bespoke audience generation built from scratch for niche verticals, specialized campaigns, and unique qualification requirements.",
     focus: [
       "Discovery consultation and custom scope definition",
@@ -409,22 +425,69 @@ export const SERVICES: Service[] = [
   },
 ];
 
+export const ADDITIONAL_CAPABILITIES = [
+  {
+    name: "Insurance Inquiry Leads",
+    desc: "Prospects requesting health, life, auto, or commercial insurance quotes with opt-in consent.",
+    badge: "Consumer Services",
+  },
+  {
+    name: "Mortgage Inquiry Leads",
+    desc: "Homeowners and buyers actively seeking mortgage refinancing, purchase loans, or rate comparisons.",
+    badge: "Home Finance",
+  },
+  {
+    name: "Business Owner Leads",
+    desc: "Verified SMB decision-makers and founders interested in business banking, equipment loans, or commercial solutions.",
+    badge: "Commercial",
+  },
+  {
+    name: "Solar Inquiry Leads",
+    desc: "Residential property owners inquiring about renewable energy programs, solar installations, and utility rebates.",
+    badge: "Clean Energy",
+  },
+  {
+    name: "E-Commerce Leads",
+    desc: "Consumers who actively engage with online shopping promotions, direct-to-consumer deals, and digital reward clubs.",
+    badge: "Retail & DTC",
+  },
+  {
+    name: "Home Improvement Leads",
+    desc: "Homeowners requesting contractor estimates for roofing, HVAC, windows, remodeling, and residential repair.",
+    badge: "Home Services",
+  },
+  {
+    name: "Appointment Setting",
+    desc: "Pre-screened, calendar-scheduled appointments for authorized B2B sales teams and professional services desks.",
+    badge: "High Intent",
+  },
+  {
+    name: "Custom B2B Acquisition",
+    desc: "Targeted Account-Based Marketing (ABM) prospect acquisition campaigns engineered to your exact enterprise criteria.",
+    badge: "Enterprise",
+  },
+];
+
 export const STRUCTURED_APPROACH = [
   {
+    step: "01",
     title: "Campaign-specific targeting",
-    desc: "Requirements aligned with your campaign brief.",
+    desc: "Requirements and audience parameters aligned directly with your campaign brief.",
   },
   {
+    step: "02",
     title: "Freshness standards",
-    desc: "Delivery timeframes clearly defined before ordering.",
+    desc: "Delivery timeframes, batch schedules, and SLAs clearly defined before ordering.",
   },
   {
+    step: "03",
     title: "Sourcing transparency",
-    desc: "Available source and consent documentation.",
+    desc: "Available origin URLs, consent documentation, and brokerage disclosure.",
   },
   {
+    step: "04",
     title: "Buyer-focused service",
-    desc: "Clear communication and agreed delivery requirements.",
+    desc: "Clear communication, dedicated desk coordinator, and agreed delivery requirements.",
   },
 ];
 
@@ -443,14 +506,14 @@ export const POST_PURCHASE_WORKFLOW = [
     subtitle: "Multi-layered screening prior to handover",
     desc: "Every record passes automated quality gates: syntax validation, duplicate scrubbing against your historical delivery logs, and live HLR carrier checks to verify that mobile lines are active and connectable.",
     deliverables: ["Live HLR mobile line validation", "Email deliverability ping check", "Duplicate exclusion across batches", "Bot & fraudulent entry scrubbing"],
-    image: "/lead-dashboard-preview.jpg",
+    image: "/curved-dashboard-monitor.jpg",
   },
   {
     step: "03",
     title: "Consent & Sourcing Transparency",
     subtitle: "Documented audit trail and brokerage disclosure",
     desc: "We operate with total sourcing transparency. Every batch includes capture URL, IP timestamp, and consent documentation. As a professional sourcing coordinator and broker, we clearly disclose whether a batch is directly generated through our internal assets or procured via our vetted partner network.",
-    deliverables: ["Exact ISO capture timestamps", "Landing page URL & consent log", "Direct vs partner sourcing disclosure", "TCPA / GDPR compliant records"],
+    deliverables: ["Exact ISO capture timestamps", "Landing page URL & consent log", "Direct vs partner sourcing disclosure", "Consent documentation & compliance review"],
     image: "/sweepstakes-million-question.jpg",
   },
   {
@@ -464,10 +527,10 @@ export const POST_PURCHASE_WORKFLOW = [
   {
     step: "05",
     title: "Buyer Support & Order Management",
-    subtitle: "100% Replacement warranty & dedicated coordination",
+    subtitle: "Clear replacement policy & dedicated coordination",
     desc: "Clients receive proactive updates from a dedicated account coordinator. If any record is found to be disconnected or invalid, submit it within 48 hours for immediate 1-to-1 credit replacement under our transparent warranty.",
-    deliverables: ["48-Hour invalid lead replacement warranty", "Dedicated Telegram/WhatsApp support", "Delivery discrepancy audits", "Flexible campaign pacing adjustments"],
-    image: "/canva-assets/service-3.jpg",
+    deliverables: ["48-Hour invalid lead replacement policy", "Dedicated Telegram/WhatsApp support", "Delivery discrepancy audits", "Flexible campaign pacing adjustments"],
+    image: "/team-operations-center.jpg",
   },
 ];
 
@@ -485,10 +548,10 @@ export const PACKAGES = [
       "Targeted geographic & demographic filtering",
       "Full opt-in consent documentation & timestamp",
       "Automated phone syntax & duplicate scrubbing",
-      "100% replacement warranty on invalid phone lines",
+      "Clear replacement policy on invalid phone lines (48h)",
       "24-Hour onboarding & campaign launch SLA",
     ],
-    replacementPolicy: "100% free replacement on any disconnected or invalid records reported within 48 hours.",
+    replacementPolicy: "Clear replacement policy: 1-to-1 replacement credit on verified disconnected or invalid numbers reported within 48 hours.",
   },
   {
     id: "growth",
@@ -507,7 +570,7 @@ export const PACKAGES = [
       "Weekly volume pacing & schedule adjustments",
       "Dedicated Campaign Account Manager",
     ],
-    replacementPolicy: "100% replacement warranty + proactive carrier verification prior to dispatch.",
+    replacementPolicy: "Clear replacement policy: proactive carrier verification prior to dispatch + priority 48-hour replacement window.",
   },
   {
     id: "enterprise",
@@ -537,14 +600,14 @@ export const BUYER_CONFIDENCE = [
     desc: "Every record originates from an affirmative opt-in digital funnel—interactive surveys, promotional entry hubs, and targeted intent pages. We never use scraped, recycled, or unverified contact lists.",
   },
   {
-    title: "2. Documented Proof of Consent",
-    tagline: "TCPA & GDPR Aligned",
-    desc: "Every delivered lead is accompanied by a complete digital audit trail: exact capture timestamp (ISO 8601), user IP address, landing page domain, and the specific terms of consent agreed to.",
+    title: "2. Consent Documentation & Compliance Review",
+    tagline: "Audit-Trail Verified",
+    desc: "Every delivered lead is accompanied by a complete digital audit trail: exact capture timestamp (ISO 8601), user IP address, landing page domain, and documented affirmative consent wording.",
   },
   {
     title: "3. Timestamped Freshness Guarantee",
     tagline: "Precise Delivery SLAs",
-    desc: "Freshness is never left to interpretation. For First Hit and real-time tiers, leads are delivered within minutes of submission. For daily batches, records are delivered within 24 hours with timestamps intact.",
+    desc: "Freshness is never left to interpretation. For First Hit and real-time tiers, leads are delivered within minutes of submission. For daily batches, records are delivered within agreed 24-hour windows with timestamps intact.",
   },
   {
     title: "4. Multi-Stage Quality Screening",
@@ -552,9 +615,9 @@ export const BUYER_CONFIDENCE = [
     desc: "Before dispatch, data passes automated filters: email syntax verification, HLR phone line validation to eliminate dead numbers, and strict deduplication against your historical delivery log.",
   },
   {
-    title: "5. 100% Replacement Warranty",
-    tagline: "Zero-Risk Delivery Policy",
-    desc: "If any lead in your delivered batch is disconnected, contains corrupted syntax, or was delivered to your team in a previous batch, notify us within 48 hours for immediate 1-to-1 replacement.",
+    title: "5. Clear Replacement Policy",
+    tagline: "Transparent Buyer Protection",
+    desc: "If any lead in your delivered batch is disconnected, contains corrupted syntax, or was delivered to your team in a previous batch, notify us within 48 hours for immediate 1-to-1 replacement credit.",
   },
 ];
 

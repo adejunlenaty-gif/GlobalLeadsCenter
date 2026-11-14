@@ -55,48 +55,67 @@ export function ServiceDetail({ slug }: { slug: string }) {
       {/* Hero Header */}
       <section className="border-b border-stone-800/15 bg-[#CDC4BC] pt-12 pb-14">
         <div className="mx-auto max-w-7xl px-5">
-          <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="pill-badge bg-stone-900 text-[#FAF7F2] border-stone-800">
-              {service.category}
-            </span>
-            <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">
-              <Clock className="h-3 w-3" /> SLA: {service.freshnessWindow}
-            </span>
-            <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">
-              <ShieldCheck className="h-3 w-3" /> 100% Replacement Warranty
-            </span>
-          </div>
+          <div className="grid lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7">
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                <span className="pill-badge bg-stone-900 text-[#FAF7F2] border-stone-800">
+                  {service.category}
+                </span>
+                <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">
+                  <Clock className="h-3 w-3" /> SLA: {service.freshnessWindow}
+                </span>
+                <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">
+                  <ShieldCheck className="h-3 w-3" /> Clear Replacement Policy
+                </span>
+              </div>
 
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-stone-900 font-bold max-w-4xl">
-            {service.name}
-          </h1>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-stone-900 font-bold max-w-4xl">
+                {service.name}
+              </h1>
 
-          <p className="mt-4 max-w-3xl text-base sm:text-lg text-stone-700 leading-relaxed">
-            {service.summary}
-          </p>
+              <p className="mt-4 max-w-2xl text-base sm:text-lg text-stone-700 leading-relaxed">
+                {service.summary}
+              </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Button asChild size="lg" className="bg-stone-900 text-[#FAF7F2] hover:bg-stone-800">
-              <Link to="/contact" search={serviceQuoteSearch(service)}>
-                Request a Proposal <ArrowRight className="h-4 w-4 ml-1.5" />
-              </Link>
-            </Button>
-            <a
-              href={CONTACT.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-stone-800/30 bg-stone-100/80 px-4 py-2.5 text-sm font-semibold text-stone-800 transition-colors hover:border-stone-900 hover:bg-white"
-            >
-              <Send className="h-4 w-4 text-sky-600" /> Chat on Telegram
-            </a>
-            <a
-              href={CONTACT.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-md border border-stone-800/30 bg-stone-100/80 px-4 py-2.5 text-sm font-semibold text-stone-800 transition-colors hover:border-stone-900 hover:bg-white"
-            >
-              <MessageCircle className="h-4 w-4 text-emerald-600" /> WhatsApp Line
-            </a>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Button asChild size="lg" className="bg-stone-900 text-[#FAF7F2] hover:bg-stone-800">
+                  <Link to="/contact" search={serviceQuoteSearch(service)}>
+                    Request a Proposal <ArrowRight className="h-4 w-4 ml-1.5" />
+                  </Link>
+                </Button>
+                <a
+                  href={CONTACT.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-stone-800/30 bg-stone-100/80 px-4 py-2.5 text-sm font-semibold text-stone-800 transition-colors hover:border-stone-900 hover:bg-white"
+                >
+                  <Send className="h-4 w-4 text-sky-600" /> Chat on Telegram
+                </a>
+                <a
+                  href={CONTACT.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-md border border-stone-800/30 bg-stone-100/80 px-4 py-2.5 text-sm font-semibold text-stone-800 transition-colors hover:border-stone-900 hover:bg-white"
+                >
+                  <MessageCircle className="h-4 w-4 text-emerald-600" /> WhatsApp Line
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="rounded-2xl overflow-hidden border border-stone-800/20 bg-stone-950 shadow-xl aspect-[16/10] relative">
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-3 left-3 right-3 text-center pointer-events-none">
+                  <span className="pill-badge bg-stone-950/85 text-[#FAF7F2] border-stone-700/60 text-[10px] backdrop-blur-md uppercase tracking-wider font-semibold">
+                    {service.name} · Verified Acquisition
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -335,9 +354,9 @@ export function ServiceDetail({ slug }: { slug: string }) {
 
               <div className="rounded-xl border border-emerald-600/30 bg-emerald-50/70 p-3.5 text-xs text-emerald-900">
                 <div className="flex items-center gap-1.5 font-bold mb-1">
-                  <ShieldCheck className="h-4 w-4 text-emerald-700" /> 100% Replacement Guarantee
+                  <ShieldCheck className="h-4 w-4 text-emerald-700" /> Clear Replacement Policy
                 </div>
-                Any invalid numbers or format discrepancies reported within 48 hours are replaced free of charge.
+                Any invalid numbers or format discrepancies reported within 48 hours are replaced 1-to-1 with replacement credit.
               </div>
 
               <div className="pt-2 space-y-3">

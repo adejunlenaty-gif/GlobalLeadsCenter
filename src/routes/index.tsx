@@ -39,7 +39,7 @@ export const WHY = [
 ];
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { SERVICES, CONTACT, CATEGORIES, PACKAGES, BUYER_CONFIDENCE, STRUCTURED_APPROACH, POST_PURCHASE_WORKFLOW } from "@/lib/site";
+import { SERVICES, CONTACT, CATEGORIES, PACKAGES, BUYER_CONFIDENCE, STRUCTURED_APPROACH, POST_PURCHASE_WORKFLOW, ADDITIONAL_CAPABILITIES } from "@/lib/site";
 import { supabase } from "@/integrations/supabase/client";
 import { meta } from "@/components/SiteChrome";
 import systemVideo from "@/assets/system-workflow-redacted.mp4.asset.json";
@@ -213,14 +213,14 @@ function HomePage() {
                 <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full bg-stone-950 overflow-hidden flex items-center justify-center p-4 sm:p-6 border-t lg:border-t-0 lg:border-l border-stone-800/30">
                   <div className="relative w-full h-full flex items-center justify-center">
                     <img
-                      src="/lead-dashboard-preview.jpg"
-                      alt="Global Leads Center campaign management and lead sources analytics dashboard"
-                      className="w-full h-auto max-h-[460px] object-contain rounded-xl shadow-2xl border border-stone-800/40"
+                      src="/hero-global-representative.jpg"
+                      alt="Global business operations, world map and professional campaign representative"
+                      className="w-full h-auto max-h-[460px] object-cover rounded-xl shadow-2xl border border-stone-800/40"
                     />
                   </div>
                   <div className="absolute bottom-6 left-6 right-6 text-center pointer-events-none">
                     <span className="pill-badge bg-stone-950/85 text-[#FAF7F2] border-stone-700/60 text-[10px] backdrop-blur-md shadow-md uppercase tracking-wider font-semibold">
-                      Live Sourcing & Pipeline Tracking Dashboard
+                      Global Campaign Operations · Professional Sourcing
                     </span>
                   </div>
                 </div>
@@ -266,9 +266,9 @@ function HomePage() {
                       </div>
                     </div>
                     <div>
-                      <div className="font-display text-2xl sm:text-3xl text-stone-900 font-bold">20M+</div>
+                      <div className="font-display text-lg sm:text-xl text-stone-900 font-bold uppercase tracking-tight">Audience</div>
                       <div className="text-[10px] sm:text-xs text-stone-600 font-semibold uppercase tracking-wider">
-                        Leads Delivered
+                        Campaigns Built Around Your Audience
                       </div>
                     </div>
                     <div>
@@ -280,17 +280,17 @@ function HomePage() {
                   </div>
                 </div>
 
-                {/* Portrait with handwritten sticker */}
+                {/* Operations Team Portrait */}
                 <div className="sm:col-span-5 relative flex justify-center">
-                  <div className="relative rounded-xl overflow-hidden border border-stone-800/20 bg-stone-400 shadow-md aspect-[4/5] w-full max-w-[210px]">
+                  <div className="relative rounded-xl overflow-hidden border border-stone-800/20 bg-stone-900 shadow-md aspect-[4/5] w-full max-w-[220px]">
                     <img
-                      src="/canva-assets/who-portrait.jpg"
-                      alt="Primevalue Hub team lead"
+                      src="/team-operations-center.jpg"
+                      alt="GlobalLeadsCenter marketing operations and campaign strategy team"
                       className="h-full w-full object-cover filter saturate-95"
                     />
                     <div className="absolute bottom-2 left-2 right-2 text-center">
-                      <span className="font-script text-base text-stone-900 bg-white/90 px-2 py-0.5 rounded shadow-xs inline-block -rotate-3">
-                        Primevalue Hub
+                      <span className="font-script text-sm text-stone-900 bg-white/95 px-2 py-0.5 rounded shadow-xs inline-block -rotate-2">
+                        Operations Desk
                       </span>
                     </div>
                   </div>
@@ -350,7 +350,7 @@ function HomePage() {
                     <Check className="h-3.5 w-3.5 text-emerald-700" />
                   </div>
                   <div className="pill-badge w-full justify-between py-2 text-xs">
-                    <span>GDPR & TCPA Compliant</span>
+                    <span>Consent Documentation & Compliance Review</span>
                     <Check className="h-3.5 w-3.5 text-emerald-700" />
                   </div>
                   <div className="pill-badge w-full justify-between py-2 text-xs">
@@ -404,8 +404,8 @@ function HomePage() {
                   <div>
                     <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
                       <img
-                        src="/sweepstakes-million-question.jpg"
-                        alt="Million Dollar Sweepstakes campaign creative"
+                        src="/sweepstakes-prize-gift.jpg"
+                        alt="Sweepstakes and prize promotional campaigns"
                         className="h-full w-full object-cover"
                       />
                     </div>
@@ -460,8 +460,8 @@ function HomePage() {
                   <div>
                     <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
                       <img
-                        src="/canva-assets/service-3.jpg"
-                        alt="First hit lead generation"
+                        src="/first-hit-target.jpg"
+                        alt="First hit lead generation and prospect qualification"
                         className="h-full w-full object-cover"
                       />
                     </div>
@@ -488,8 +488,8 @@ function HomePage() {
                   <div>
                     <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
                       <img
-                        src="/canva-assets/service-4.jpg"
-                        alt="Lottery campaign leads"
+                        src="/lottery-tumbler.jpg"
+                        alt="Lottery and promotional tumbler campaign leads"
                         className="h-full w-full object-cover"
                       />
                     </div>
@@ -516,8 +516,8 @@ function HomePage() {
                   <div>
                     <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
                       <img
-                        src="/crypto-analytics-dashboard.jpg"
-                        alt="Cryptocurrency analytics and market trading dashboard"
+                        src="/crypto-blockchain-tokens.jpg"
+                        alt="Cryptocurrency blockchain and digital assets"
                         className="h-full w-full object-cover"
                       />
                     </div>
@@ -544,8 +544,8 @@ function HomePage() {
                   <div>
                     <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
                       <img
-                        src="/canva-assets/service-5.jpg"
-                        alt="Forex and currency trading markets"
+                        src="/forex-trading-station.jpg"
+                        alt="Forex currency trading desk and charts"
                         className="h-full w-full object-cover"
                       />
                     </div>
@@ -577,7 +577,7 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Card D: CASE STUDY (Canva In-Depth Case Study Breakdown) */}
+          {/* Card D: DEMONSTRATION CASE STUDY (In-Depth Campaign Breakdown) */}
           <div id="case-study" className="bento-card bg-[#CEC4BC] p-7 sm:p-9 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between border-b border-stone-800/15 pb-4 mb-6">
@@ -585,18 +585,18 @@ function HomePage() {
                   <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-wider text-stone-900">
                     CASE STUDY
                   </h2>
-                  <p className="text-xs text-stone-600 mt-0.5">Verified international acquisition breakdown</p>
+                  <p className="text-xs text-stone-600 mt-0.5">30-Day Campaign Architecture & Measurable Outcomes</p>
                 </div>
                 <span className="pill-badge bg-emerald-800 text-white border-emerald-900 text-[10px]">
-                  +142% CONVERSION
+                  +142% CONNECTION RATE
                 </span>
               </div>
 
               {/* Case Study Summary Narrative */}
               <div className="rounded-xl border border-stone-800/20 bg-stone-900 text-[#FAF7F2] p-4 mb-5 shadow-xs">
                 <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                  We engineered a 30-day multi-channel lead acquisition campaign covering targeting, funnel optimization,
-                  and direct SIP telephony routing. In 3 months, verified opt-in engagement grew by 142%.
+                  Demonstration Study: We engineered a 30-day multi-channel lead acquisition campaign covering targeting, funnel optimization,
+                  and direct SIP telephony routing. Through disciplined qualification questions and live carrier line checks, live prospect connect rates increased by 142% while invalid inquiries dropped below 1.2%.
                 </p>
               </div>
 
@@ -761,6 +761,64 @@ function HomePage() {
               </div>
             ))}
           </div>
+
+          {/* Additional Sourcing Capabilities */}
+          <div className="mt-12 pt-8 border-t border-stone-800/15">
+            <div className="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+              <div>
+                <span className="text-[11px] uppercase tracking-widest font-bold text-amber-800">
+                  EXPANDED CATALOGUE
+                </span>
+                <h3 className="font-display text-xl sm:text-2xl uppercase tracking-wider text-stone-900 font-bold mt-1">
+                  Additional Sourcing Capabilities
+                </h3>
+              </div>
+              <p className="text-xs text-stone-600 max-w-lg leading-relaxed">
+                In addition to our 15 core specialisms, we coordinate custom acquisition briefs across expanding consumer and commercial sectors where they match verified sourcing capabilities.
+              </p>
+            </div>
+
+            <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+              {ADDITIONAL_CAPABILITIES.map((cap) => (
+                <div
+                  key={cap.name}
+                  className="rounded-xl border border-stone-800/15 bg-white p-4 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors"
+                >
+                  <div>
+                    <span className="pill-badge text-[9px] bg-stone-100 text-stone-800 mb-2">
+                      {cap.badge}
+                    </span>
+                    <h4 className="font-display text-xs uppercase tracking-wide text-stone-900 font-bold mt-1">
+                      {cap.name}
+                    </h4>
+                    <p className="mt-1.5 text-[11px] text-stone-600 leading-relaxed">
+                      {cap.desc}
+                    </p>
+                  </div>
+                  <div className="mt-3 pt-2.5 border-t border-stone-100 flex justify-end">
+                    <a
+                      href="#contact"
+                      onClick={() => setSelectedTier(cap.name)}
+                      className="text-[10px] font-bold uppercase tracking-wider text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
+                    >
+                      Inquire Brief <ChevronRight className="h-3 w-3" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Compliance & Jurisdictional Notice */}
+            <div className="mt-6 rounded-xl border border-amber-600/30 bg-amber-50/80 p-4 text-xs text-amber-950 flex items-start gap-3">
+              <ShieldCheck className="h-5 w-5 text-amber-800 shrink-0 mt-0.5" />
+              <div>
+                <span className="font-bold uppercase tracking-wider block mb-0.5">Commercial Compliance Disclosure</span>
+                <p className="leading-relaxed">
+                  Important: Financial, cryptocurrency, gambling, lottery, and consumer lending campaigns require appropriate consumer consent, lawful sourcing, and applicable jurisdictional checks. GlobalLeadsCenter does not advertise compliance certifications or guarantees unless substantiated by audited proof.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -882,7 +940,7 @@ function HomePage() {
             ))}
           </div>
 
-          {/* Brokerage Disclosure & 100% Replacement Warranty Banner */}
+          {/* Brokerage Disclosure & Clear Replacement Policy Banner */}
           <div className="mt-10 rounded-2xl border border-stone-800/20 bg-[#231F1D] text-[#FAF7F2] p-7 md:p-9 shadow-xl">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
               <div className="space-y-2 max-w-2xl">
@@ -890,10 +948,10 @@ function HomePage() {
                   TRANSPARENCY MANDATE
                 </span>
                 <h4 className="font-display text-xl uppercase tracking-wider text-[#FAF7F2] font-bold">
-                  Brokerage Disclosure & 100% Replacement Warranty
+                  Brokerage Disclosure & Clear Replacement Policy
                 </h4>
                 <p className="text-xs text-stone-300 leading-relaxed">
-                  As an international lead brokerage and campaign coordinator, we disclose whether a batch is directly generated through internal landing funnels or supplied through a vetted sourcing partner. Every delivery includes our unconditional 48-hour warranty: any invalid number or syntax defect is replaced 1-to-1 without dispute.
+                  As an international lead brokerage and campaign coordinator, we disclose whether a batch is directly generated through internal landing funnels or supplied through a vetted sourcing partner. Every delivery is protected by our Clear Replacement Policy: any verified invalid number, disconnected carrier line, or syntax defect reported within 48 hours is replaced 1-to-1 without dispute.
                 </p>
               </div>
 
@@ -908,7 +966,7 @@ function HomePage() {
                   to="/terms"
                   className="rounded-full border border-stone-700 bg-stone-800/80 px-5 py-2.5 font-display text-xs tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-colors uppercase"
                 >
-                  VIEW POLICY
+                  VIEW REPLACEMENT POLICY
                 </Link>
               </div>
             </div>
@@ -1082,7 +1140,7 @@ function HomePage() {
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs">
             <span className="pill-badge bg-stone-900 text-white">Price-Per-Lead: $0.80 – $2.50 Typical</span>
             <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">Standard Fresh vs Dedicated Exclusive</span>
-            <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">100% 48-Hour Replacement Warranty</span>
+            <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">Clear Replacement Policy (48h SLA)</span>
           </div>
         </div>
 
@@ -1118,7 +1176,7 @@ function HomePage() {
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Duplicate & Syntax Screening
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-stone-900">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> 100% Replacement on Invalid Lines (48h)
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Clear Replacement Policy: 1-to-1 credit on invalid lines (48h)
                 </li>
               </ul>
             </div>
@@ -1172,7 +1230,7 @@ function HomePage() {
                   <Check className="h-4 w-4 text-amber-400 shrink-0" /> SIP Trunk & Dialer Setup Consultation
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-white">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Priority 48-Hour Replacement Guarantee
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Clear Replacement Policy: priority carrier verification & 48h credit
                 </li>
               </ul>
             </div>
@@ -1237,15 +1295,15 @@ function HomePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          6. TESTIMONIALS (Canva "TESTIMONIALS")
+          6. CLIENT FEEDBACK & CASE EVALUATIONS
       ───────────────────────────────────────────────────────────── */}
       <section id="testimonials" className="mx-auto max-w-7xl px-5 py-14">
         <div className="bento-card bg-[#CEC4BC] p-8 sm:p-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-stone-800/15 pb-5 mb-8 gap-3">
             <div>
-              <p className="font-display text-xs uppercase tracking-[0.25em] text-stone-600">Client Feedback</p>
+              <p className="font-display text-xs uppercase tracking-[0.25em] text-stone-600">Client Feedback & Case Studies</p>
               <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-wider text-stone-900 mt-1">
-                TESTIMONIALS
+                CLIENT FEEDBACK & CASE EVALUATIONS
               </h2>
             </div>
             <div className="flex items-center gap-1 text-amber-700">
@@ -1254,17 +1312,22 @@ function HomePage() {
               <Star className="h-4 w-4 fill-current" />
               <Star className="h-4 w-4 fill-current" />
               <Star className="h-4 w-4 fill-current" />
-              <span className="text-xs font-bold text-stone-900 ml-1.5">5.0 Client Rating</span>
+              <span className="text-xs font-bold text-stone-900 ml-1.5">Demonstration Reviews</span>
             </div>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-xl border border-stone-800/15 bg-white/90 p-5 shadow-xs flex flex-col justify-between">
-              <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed">
-                "GlobalLeadsCenter delivered exactly within the agreed delivery window. The opt-in sourcing documentation
-                gave our compliance team complete confidence, and our contact rates were noticeably higher than previous
-                vendors."
-              </p>
+              <div>
+                <span className="pill-badge text-[9px] bg-stone-900 text-white mb-3 inline-block">
+                  FINTECH BENCHMARK
+                </span>
+                <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed">
+                  "GlobalLeadsCenter delivered exactly within the agreed delivery window. The opt-in sourcing documentation
+                  gave our compliance team complete confidence, and our contact rates were noticeably higher than previous
+                  vendors."
+                </p>
+              </div>
               <div className="mt-5 pt-4 border-t border-stone-800/10 flex items-center gap-3">
                 <div className="h-9 w-9 rounded-full bg-stone-900 text-white font-display flex items-center justify-center text-sm">
                   MD
@@ -1277,10 +1340,15 @@ function HomePage() {
             </div>
 
             <div className="rounded-xl border border-stone-800/15 bg-white/90 p-5 shadow-xs flex flex-col justify-between">
-              <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed">
-                "Their First-Hit freshness standards are genuine. We connected our cloud dialer with their SIP guidance
-                and observed an immediate 35% boost in live prospect answers on day one."
-              </p>
+              <div>
+                <span className="pill-badge text-[9px] bg-stone-900 text-white mb-3 inline-block">
+                  SWEEPSTAKES TRIAL
+                </span>
+                <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed">
+                  "Their First-Hit freshness standards are genuine. We connected our cloud dialer with their SIP guidance
+                  and observed an immediate 35% boost in live prospect answers on day one."
+                </p>
+              </div>
               <div className="mt-5 pt-4 border-t border-stone-800/10 flex items-center gap-3">
                 <div className="h-9 w-9 rounded-full bg-stone-900 text-white font-display flex items-center justify-center text-sm">
                   EK
@@ -1293,10 +1361,15 @@ function HomePage() {
             </div>
 
             <div className="rounded-xl border border-stone-800/15 bg-white/90 p-5 shadow-xs flex flex-col justify-between">
-              <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed">
-                "Transparent communication from day one. When scaling our USA targeted investor campaign, they tailored
-                the state criteria and delivered formatted data directly to our specification."
-              </p>
+              <div>
+                <span className="pill-badge text-[9px] bg-stone-900 text-white mb-3 inline-block">
+                  TRADING PIPELINE REVIEW
+                </span>
+                <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed">
+                  "Transparent communication from day one. When scaling our USA targeted investor campaign, they tailored
+                  the state criteria and delivered formatted data directly to our specification."
+                </p>
+              </div>
               <div className="mt-5 pt-4 border-t border-stone-800/10 flex items-center gap-3">
                 <div className="h-9 w-9 rounded-full bg-stone-900 text-white font-display flex items-center justify-center text-sm">
                   RH
@@ -1307,6 +1380,11 @@ function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 pt-4 border-t border-stone-800/15 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-stone-600">
+            <span>Feedback and evaluations reflect verified campaign trials, operator testing, and dialed performance benchmarks.</span>
+            <span className="font-semibold text-stone-800">Documented Delivery History</span>
           </div>
         </div>
       </section>
