@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as ServicesSlugRouteImport } from './routes/services_.$slug'
 import { Route as ServicesFirstHitRouteImport } from './routes/services_.first-hit'
 import { Route as ServicesMegaMillionsRouteImport } from './routes/services_.mega-millions'
 import { Route as ServicesPchRouteImport } from './routes/services_.pch'
@@ -50,6 +51,11 @@ const SolutionsRoute = SolutionsRouteImport.update({
   path: '/solutions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesSlugRoute = ServicesSlugRouteImport.update({
+  id: '/services_/$slug',
+  path: '/services/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesFirstHitRoute = ServicesFirstHitRouteImport.update({
   id: '/services_/first-hit',
   path: '/services/first-hit',
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/services': typeof ServicesRoute
   '/solutions': typeof SolutionsRoute
+  '/services/$slug': typeof ServicesSlugRoute
   '/services/first-hit': typeof ServicesFirstHitRoute
   '/services/mega-millions': typeof ServicesMegaMillionsRoute
   '/services/pch': typeof ServicesPchRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/services': typeof ServicesRoute
   '/solutions': typeof SolutionsRoute
+  '/services/$slug': typeof ServicesSlugRoute
   '/services/first-hit': typeof ServicesFirstHitRoute
   '/services/mega-millions': typeof ServicesMegaMillionsRoute
   '/services/pch': typeof ServicesPchRoute
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/services': typeof ServicesRoute
   '/solutions': typeof SolutionsRoute
+  '/services_/$slug': typeof ServicesSlugRoute
   '/services_/first-hit': typeof ServicesFirstHitRoute
   '/services_/mega-millions': typeof ServicesMegaMillionsRoute
   '/services_/pch': typeof ServicesPchRoute
@@ -117,6 +126,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/solutions'
+    | '/services/$slug'
     | '/services/first-hit'
     | '/services/mega-millions'
     | '/services/pch'
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/solutions'
+    | '/services/$slug'
     | '/services/first-hit'
     | '/services/mega-millions'
     | '/services/pch'
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/services'
     | '/solutions'
+    | '/services_/$slug'
     | '/services_/first-hit'
     | '/services_/mega-millions'
     | '/services_/pch'
@@ -154,6 +166,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   ServicesRoute: typeof ServicesRoute
   SolutionsRoute: typeof SolutionsRoute
+  ServicesSlugRoute: typeof ServicesSlugRoute
   ServicesFirstHitRoute: typeof ServicesFirstHitRoute
   ServicesMegaMillionsRoute: typeof ServicesMegaMillionsRoute
   ServicesPchRoute: typeof ServicesPchRoute
@@ -204,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services_/$slug': {
+      id: '/services_/$slug'
+      path: '/services/$slug'
+      fullPath: '/services/$slug'
+      preLoaderRoute: typeof ServicesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services_/first-hit': {
       id: '/services_/first-hit'
       path: '/services/first-hit'
@@ -242,6 +262,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   ServicesRoute: ServicesRoute,
   SolutionsRoute: SolutionsRoute,
+  ServicesSlugRoute: ServicesSlugRoute,
   ServicesFirstHitRoute: ServicesFirstHitRoute,
   ServicesMegaMillionsRoute: ServicesMegaMillionsRoute,
   ServicesPchRoute: ServicesPchRoute,

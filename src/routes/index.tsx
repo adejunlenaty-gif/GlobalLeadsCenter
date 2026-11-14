@@ -39,7 +39,7 @@ export const WHY = [
 ];
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { SERVICES, CONTACT } from "@/lib/site";
+import { SERVICES, CONTACT, CATEGORIES, PACKAGES, BUYER_CONFIDENCE } from "@/lib/site";
 import { supabase } from "@/integrations/supabase/client";
 import { meta } from "@/components/SiteChrome";
 import systemVideo from "@/assets/system-workflow-redacted.mp4.asset.json";
@@ -114,9 +114,9 @@ function HomePage() {
 
           {/* Main Editorial Hero Layout */}
           <div className="relative">
-            {/* Massive condensed background headline */}
-            <h1 className="font-display text-[4.5rem] sm:text-[7.5rem] md:text-[10.5rem] lg:text-[13rem] leading-[0.8] tracking-tight text-stone-900 font-bold uppercase select-none transition-all">
-              PORTFOLIO
+            {/* Massive condensed background headline with mobile safe sizing */}
+            <h1 className="font-display text-[2.4rem] sm:text-[4.6rem] md:text-[6.8rem] lg:text-[9.2rem] leading-[0.85] tracking-tight text-stone-900 font-bold uppercase select-none transition-all">
+              OUR LEAD SOLUTIONS
             </h1>
 
             {/* Sub-headline overlay styled like Canva template */}
@@ -445,21 +445,21 @@ function HomePage() {
                         className="h-full w-full object-cover"
                       />
                     </div>
-                    <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
-                      FIRST HIT
+                    <span className="pill-badge text-[10px] bg-amber-200 text-amber-950 font-bold py-0.5 px-2 mb-2">
+                      FRESH vs. EXCLUSIVE
                     </span>
                     <h3 className="font-display text-base uppercase tracking-wide text-stone-900 mt-1">
-                      First Hit Freshness
+                      First Hit Leads
                     </h3>
-                    <p className="text-[11px] text-stone-600 mt-1 line-clamp-2">
-                      Newly acquired prospects delivered within agreed time windows. No recycled lists.
+                    <p className="text-[11px] text-stone-700 mt-1 line-clamp-2">
+                      Guaranteed newly acquired (&lt;24h) with explicit choice between Standard Fresh or Dedicated 1-to-1 Exclusive.
                     </p>
                   </div>
                   <Link
                     to="/services/first-hit"
                     className="mt-3 text-[11px] font-semibold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
                   >
-                    View details <ChevronRight className="h-3 w-3" />
+                    View distinction & details <ChevronRight className="h-3 w-3" />
                   </Link>
                 </div>
 
@@ -665,6 +665,65 @@ function HomePage() {
                 Explore Portfolio Sheets →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          3B. COMPLETE 14-SERVICE CATEGORY DIRECTORY
+      ───────────────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-7xl px-5 py-6">
+        <div className="bento-card bg-[#FAF7F2] p-7 sm:p-10 border border-stone-800/15">
+          <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-stone-800/15 pb-6 mb-8 gap-4">
+            <div>
+              <p className="font-display text-xs uppercase tracking-[0.25em] text-stone-600">Full Capabilities</p>
+              <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-wider text-stone-900 mt-1 font-bold">
+                14 Dedicated Lead Specialisms by Sector
+              </h2>
+              <p className="mt-2 max-w-2xl text-xs sm:text-sm text-stone-700 font-sans leading-relaxed">
+                Every service features its own dedicated programme page with complete data schema, sourcing methods, freshness SLAs, and compliance details.
+              </p>
+            </div>
+            <Link
+              to="/services"
+              className="pill-badge bg-stone-900 text-[#FAF7F2] text-xs py-2 px-4 shrink-0 hover:bg-stone-800"
+            >
+              Directory Overview →
+            </Link>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {CATEGORIES.map((cat) => (
+              <div
+                key={cat.id}
+                className="rounded-xl border border-stone-800/15 bg-white p-5 flex flex-col justify-between shadow-xs hover:border-stone-900 transition-colors"
+              >
+                <div>
+                  <span className="text-[10px] uppercase tracking-wider font-bold text-amber-800">
+                    {cat.id}
+                  </span>
+                  <h3 className="font-display text-base uppercase tracking-wider text-stone-900 font-bold mt-1">
+                    {cat.title}
+                  </h3>
+                  <p className="mt-2 text-xs text-stone-600 leading-relaxed">
+                    {cat.desc}
+                  </p>
+                  <ul className="mt-4 space-y-2 border-t border-stone-800/10 pt-3 text-xs text-stone-800">
+                    {SERVICES.filter((s) => s.category === cat.id).map((s) => (
+                      <li key={s.slug}>
+                        <Link
+                          to={`/services/${s.slug}`}
+                          className="hover:text-amber-800 hover:underline flex items-center justify-between group py-0.5"
+                        >
+                          <span className="truncate font-medium">{s.name.replace(" Lead Generation", "")}</span>
+                          <ChevronRight className="h-3 w-3 opacity-50 group-hover:opacity-100 shrink-0 ml-1" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

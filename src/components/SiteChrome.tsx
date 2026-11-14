@@ -11,6 +11,9 @@ export function Logo() {
       <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-stone-800/20 bg-stone-300">
         <img
           src={profile.url}
+          onError={(e) => {
+            e.currentTarget.src = "/primevalue-hub-profile.jpg";
+          }}
           alt="Primevalue Hub profile image"
           width={44}
           height={44}
@@ -46,22 +49,43 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5">
         <Logo />
 
-        {/* Canva-inspired condensed uppercase navigation */}
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
-          {CANVA_SECTIONS.map((n) => (
-            <a
-              key={n.to}
-              href={n.to}
-              className="font-display text-sm tracking-widest text-stone-700 transition-colors hover:text-stone-950 hover:underline hover:decoration-amber-700 hover:underline-offset-4"
-            >
-              {n.label}
-            </a>
-          ))}
+        {/* Professional condensed uppercase navigation */}
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
           <Link
             to="/services"
-            className="font-display text-xs tracking-widest text-stone-500 hover:text-stone-800"
+            className="font-display text-xs tracking-widest text-stone-700 transition-colors hover:text-stone-950"
           >
-            ALL SERVICES →
+            SERVICES (14)
+          </Link>
+          <Link
+            to="/portfolio"
+            className="font-display text-xs tracking-widest text-stone-700 transition-colors hover:text-stone-950"
+          >
+            PROOF & SAMPLES
+          </Link>
+          <a
+            href="/#rate-card"
+            className="font-display text-xs tracking-widest text-stone-700 transition-colors hover:text-stone-950"
+          >
+            PACKAGES & RATES
+          </a>
+          <Link
+            to="/solutions"
+            className="font-display text-xs tracking-widest text-stone-700 transition-colors hover:text-stone-950"
+          >
+            DIALER & SIP
+          </Link>
+          <Link
+            to="/about"
+            className="font-display text-xs tracking-widest text-stone-700 transition-colors hover:text-stone-950"
+          >
+            ABOUT
+          </Link>
+          <Link
+            to="/contact"
+            className="font-display text-xs tracking-widest text-stone-700 transition-colors hover:text-stone-950"
+          >
+            CONTACT
           </Link>
         </nav>
 
@@ -212,24 +236,31 @@ export function Footer() {
           <p className="mb-4 text-xs text-stone-400">
             Instant campaign coordination on verified Telegram & WhatsApp lines:
           </p>
-          <div className="flex flex-wrap gap-2">
-            <a
-              href={CONTACT.telegram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pill-badge bg-stone-800 text-[#FAF7F2] border-stone-700 hover:bg-stone-700"
-            >
-              <Send className="h-3 w-3" /> Telegram Primary
-            </a>
-            <a
-              href={CONTACT.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pill-badge bg-emerald-950 text-emerald-200 border-emerald-800 hover:bg-emerald-900"
-            >
-              <MessageCircle className="h-3 w-3" /> WhatsApp Line
-            </a>
-          </div>
+            <div className="flex flex-wrap gap-2">
+              <a
+                href={CONTACT.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pill-badge bg-stone-800 text-[#FAF7F2] border-stone-700 hover:bg-stone-700"
+              >
+                <Send className="h-3 w-3" /> Telegram Primary
+              </a>
+              <a
+                href={CONTACT.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pill-badge bg-emerald-950 text-emerald-200 border-emerald-800 hover:bg-emerald-900"
+              >
+                <MessageCircle className="h-3 w-3" /> WhatsApp Line
+              </a>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="pill-badge bg-stone-800 text-[#FAF7F2] border-stone-700 hover:bg-stone-700"
+              >
+                <ExternalLink className="h-3 w-3" /> {CONTACT.email}
+              </a>
+            </div>
+            <p className="mt-2 text-[11px] text-stone-500">Response SLA: Under 30 minutes during active desk hours</p>
         </div>
       </div>
       <div className="border-t border-stone-800/30 px-5 py-6 text-center text-xs text-stone-500">

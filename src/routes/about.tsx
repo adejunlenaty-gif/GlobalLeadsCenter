@@ -14,7 +14,16 @@ function About() {
       <PageHero eyebrow="About Us" title="An international agency built on responsible lead generation" intro="Globalleadscenter partners with businesses and campaign operators to plan and deliver targeted lead programmes across industries and regions." />
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-2">
         <div>
-          <img src={profile.url} alt="Primevalue Hub — supplied profile artwork" width={768} height={768} className="mb-8 aspect-square w-full max-w-80 rounded-lg object-contain" />
+          <img
+            src={profile.url}
+            onError={(e) => {
+              e.currentTarget.src = "/primevalue-hub-profile.jpg";
+            }}
+            alt="Primevalue Hub — supplied profile artwork"
+            width={768}
+            height={768}
+            className="mb-8 aspect-square w-full max-w-80 rounded-lg object-contain"
+          />
           <h2 className="text-3xl font-semibold">Who we are</h2>
           <p className="mt-5 text-muted-foreground">We are a team of campaign planners, sourcing specialists and project coordinators. Our work begins with understanding your offer, your audience and the rules that apply in your markets, and ends with organised, documented lead delivery.</p>
           <p className="mt-4 text-muted-foreground">We focus on transparency: you know how leads are sourced, which consent was given, and how data is handled from collection to handover.</p>
