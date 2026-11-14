@@ -160,47 +160,67 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Hero Image Showcase Cutout Banner */}
-            <div className="mt-10 overflow-hidden rounded-2xl border border-stone-800/20 bg-stone-900 text-[#FAF7F2] shadow-xl">
-              <div className="grid lg:grid-cols-12 items-center">
-                <div className="p-8 lg:p-12 lg:col-span-7 space-y-5">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-stone-800/80 px-3.5 py-1 text-xs uppercase tracking-wider text-amber-300 font-semibold">
-                    <Sparkles className="h-3.5 w-3.5" /> High-Performance Lead Generation
+            {/* Hero Lead Brokerage & Sourcing Cutout Banner */}
+            <div className="mt-10 overflow-hidden rounded-2xl border border-stone-800/20 bg-stone-900 text-[#FAF7F2] shadow-2xl">
+              <div className="grid lg:grid-cols-12 items-stretch">
+                <div className="p-8 lg:p-12 lg:col-span-7 flex flex-col justify-between space-y-6">
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-stone-800/90 px-3.5 py-1 text-[11px] uppercase tracking-wider text-amber-300 font-bold border border-amber-400/20">
+                        <Sparkles className="h-3.5 w-3.5" /> PRIMEVALUE'S GLOBAL LEADS CENTER
+                      </span>
+                    </div>
+
+                    <p className="text-xs uppercase tracking-[0.2em] text-stone-400 font-bold">
+                      LEAD SOURCING • LEAD BROKERAGE • CAMPAIGN SOLUTIONS
+                    </p>
+
+                    <h2 className="font-display text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide text-[#FAF7F2] font-bold leading-tight">
+                      SPECIALIZED LEADS. RELIABLE SOURCING. PROFESSIONAL DELIVERY.
+                    </h2>
+
+                    <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
+                      We connect businesses, brokers and campaign operators with targeted lead opportunities across Sweepstakes, Mega Millions, Cryptocurrency, Forex, Investor, Banking and Loan campaigns.
+                    </p>
+
+                    <p className="text-stone-400 text-xs sm:text-sm leading-relaxed">
+                      From First-Hit leads to specialized USA-targeted audiences, we coordinate sourcing, qualification requirements, freshness standards and delivery according to each buyer's campaign needs.
+                    </p>
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-wide text-[#FAF7F2]">
-                    High-Intent Prospects for Serious Campaigns
-                  </h2>
-                  <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-                    We plan targeted audience acquisition for sweepstakes, financial promotions, lottery-interest
-                    campaigns, and B2B pipelines. Freshness and delivery windows are agreed upfront with complete opt-in
-                    documentation.
-                  </p>
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    <a
-                      href="#services"
-                      className="rounded-full bg-[#FAF7F2] px-6 py-2.5 font-display text-xs tracking-wider text-stone-900 hover:bg-stone-200 transition-colors"
-                    >
-                      EXPLORE SERVICES
-                    </a>
-                    <a
-                      href="#workflow"
-                      className="pill-badge bg-stone-800/90 text-[#FAF7F2] border-stone-700 hover:bg-stone-700"
-                    >
-                      <Play className="h-3 w-3 fill-current" /> WATCH SYSTEM REEL
-                    </a>
+
+                  <div className="space-y-4 pt-2">
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href="#contact"
+                        className="rounded-full bg-[#FAF7F2] px-7 py-3 font-display text-xs tracking-wider text-stone-900 hover:bg-stone-200 transition-colors shadow-md font-bold uppercase inline-flex items-center gap-2"
+                      >
+                        REQUEST LEAD AVAILABILITY <ArrowRight className="h-3.5 w-3.5" />
+                      </a>
+                      <a
+                        href="#services"
+                        className="rounded-full border border-stone-700 bg-stone-800/80 px-6 py-3 font-display text-xs tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-colors font-semibold uppercase"
+                      >
+                        EXPLORE OUR SERVICES
+                      </a>
+                    </div>
+
+                    <div className="pt-3 border-t border-stone-800/60 text-[11px] text-stone-400 font-medium tracking-wide">
+                      Targeted Campaigns · Defined Freshness · Transparent Sourcing · Professional Delivery
+                    </div>
                   </div>
                 </div>
 
-                <div className="lg:col-span-5 relative h-64 lg:h-full min-h-[280px] bg-stone-950/60 overflow-hidden flex items-center justify-center p-6 border-t lg:border-t-0 lg:border-l border-stone-800/30">
-                  <img
-                    src="/canva-assets/hero-portrait.jpg"
-                    alt="Campaign strategy and workflow"
-                    className="h-full w-full object-cover rounded-xl filter saturate-90 brightness-95"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4 text-center">
-                    <span className="pill-badge bg-white/90 text-stone-900 text-[11px] shadow-sm">
-                      Targeting · Freshness · Compliance
+                <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full bg-stone-950 overflow-hidden flex items-center justify-center p-4 sm:p-6 border-t lg:border-t-0 lg:border-l border-stone-800/30">
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <img
+                      src="/lead-dashboard-preview.jpg"
+                      alt="Global Leads Center campaign management and lead sources analytics dashboard"
+                      className="w-full h-auto max-h-[460px] object-contain rounded-xl shadow-2xl border border-stone-800/40"
+                    />
+                  </div>
+                  <div className="absolute bottom-6 left-6 right-6 text-center pointer-events-none">
+                    <span className="pill-badge bg-stone-950/85 text-[#FAF7F2] border-stone-700/60 text-[10px] backdrop-blur-md shadow-md uppercase tracking-wider font-semibold">
+                      Live Sourcing & Pipeline Tracking Dashboard
                     </span>
                   </div>
                 </div>
