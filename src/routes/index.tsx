@@ -310,68 +310,120 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Card B: QUALIFICATIONS & STANDARDS (Canva "QUALIFICATIONS") */}
+          {/* Card B: QUALITY, TECHNOLOGY & DELIVERY STANDARDS */}
           <div className="bento-card bg-[#CEC4BC] p-7 sm:p-9 flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between border-b border-stone-800/15 pb-4 mb-6">
-                <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-wider text-stone-900">
-                  QUALIFICATIONS
+              <div className="border-b border-stone-800/15 pb-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-stone-700">
+                    QUALITY, TECHNOLOGY & DELIVERY STANDARDS
+                  </span>
+                  <Award className="h-5 w-5 text-stone-700" />
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-wider text-stone-900 font-bold mt-1">
+                  BUILT ON TRANSPARENCY. POWERED BY THE RIGHT TOOLS.
                 </h2>
-                <Award className="h-5 w-5 text-stone-700" />
+                <p className="mt-2 text-xs sm:text-sm text-stone-700 leading-relaxed font-sans">
+                  At Primevalue's Global Leads Center, we combine campaign planning, audience acquisition, quality screening and organized data delivery to support businesses, brokers and campaign operators.
+                </p>
+                <p className="mt-2 text-xs sm:text-sm text-stone-700 leading-relaxed font-sans">
+                  Our approach focuses on campaign-specific requirements, appropriate consent documentation, clearly defined freshness standards and accountable delivery.
+                </p>
               </div>
 
-              <div className="grid sm:grid-cols-12 gap-6 items-center">
-                {/* Certificate Mockup & Tool Badges */}
-                <div className="sm:col-span-6 space-y-4">
-                  <div className="rounded-xl border border-stone-800/20 bg-white p-3 shadow-xs">
+              {/* Graphic + 5 Labels Grid */}
+              <div className="grid sm:grid-cols-12 gap-5 items-center">
+                {/* Operational Standards Graphic */}
+                <div className="sm:col-span-7">
+                  <div className="rounded-xl border border-stone-800/20 bg-stone-950 p-2 shadow-md overflow-hidden relative group">
                     <img
-                      src="/canva-assets/qual-cert.jpg"
-                      alt="Lead standards certificate"
-                      className="w-full object-contain rounded"
+                      src="/operational-standards.jpg"
+                      alt="Primevalue Global Leads Center operational standards, compliance dashboard and consent lifecycle"
+                      className="w-full h-auto max-h-[220px] object-cover rounded-lg"
                     />
-                    <p className="text-[11px] font-semibold text-stone-800 text-center mt-2 uppercase tracking-wide">
-                      Verified Campaign Compliance Standards
-                    </p>
-                  </div>
-
-                  {/* Platforms Row */}
-                  <div className="flex items-center justify-center gap-2 pt-1">
-                    <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900">Meta Ads</span>
-                    <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900">Google</span>
-                    <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900">HubSpot</span>
-                    <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900">Supabase</span>
+                    <div className="absolute bottom-2 left-2 right-2 text-center pointer-events-none">
+                      <span className="pill-badge bg-stone-950/90 text-[#FAF7F2] border-stone-700/60 text-[9px] backdrop-blur-md uppercase tracking-wider font-semibold py-0.5 px-2">
+                        Real-Time Compliance & Consent Posture
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Right Certifications Pills Stack */}
-                <div className="sm:col-span-6 flex flex-col justify-center space-y-2.5">
-                  <div className="pill-badge w-full justify-between py-2 text-xs">
-                    <span>Opt-In Consent Verified</span>
-                    <Check className="h-3.5 w-3.5 text-emerald-700" />
+                {/* 5 Short Labels beside graphic */}
+                <div className="sm:col-span-5 flex flex-col justify-center space-y-2">
+                  {[
+                    "Consent Documentation",
+                    "Quality Screening",
+                    "Compliance Review",
+                    "Freshness Standards",
+                    "Secure Delivery",
+                  ].map((label, idx) => (
+                    <div
+                      key={label}
+                      className="pill-badge w-full justify-between py-1.5 px-3 text-xs bg-white/90 border-stone-800/20 shadow-xs"
+                    >
+                      <span className="font-semibold text-stone-800">
+                        <span className="text-[10px] text-amber-800 font-mono mr-1.5 font-bold">0{idx + 1}</span>
+                        {label}
+                      </span>
+                      <Check className="h-3.5 w-3.5 text-emerald-700 shrink-0" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 5 Operational Standards Detail List */}
+              <div className="mt-6 pt-5 border-t border-stone-800/15">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-stone-700 block mb-3">
+                  OUR OPERATIONAL STANDARDS
+                </span>
+                <div className="grid gap-2 text-xs text-stone-700">
+                  <div className="rounded-lg bg-white/70 p-2.5 border border-stone-800/10">
+                    <span className="font-bold text-stone-900 uppercase tracking-wide">01. Opt-In & Consent Documentation:</span>{" "}
+                    We prioritize appropriately permissioned lead sourcing and maintain available consent records according to campaign requirements and applicable regulations.
                   </div>
-                  <div className="pill-badge w-full justify-between py-2 text-xs">
-                    <span>Consent Documentation & Compliance Review</span>
-                    <Check className="h-3.5 w-3.5 text-emerald-700" />
+                  <div className="rounded-lg bg-white/70 p-2.5 border border-stone-800/10">
+                    <span className="font-bold text-stone-900 uppercase tracking-wide">02. Lead Quality & Verification:</span>{" "}
+                    Our quality-control process can include contact-format validation, duplicate detection, record completeness checks and mobile line-status screening where supported.
                   </div>
-                  <div className="pill-badge w-full justify-between py-2 text-xs">
-                    <span>Real-Time Bot & Fraud Scrubbing</span>
-                    <Check className="h-3.5 w-3.5 text-emerald-700" />
+                  <div className="rounded-lg bg-white/70 p-2.5 border border-stone-800/10">
+                    <span className="font-bold text-stone-900 uppercase tracking-wide">03. Privacy & Compliance Review:</span>{" "}
+                    We review campaign requirements against applicable privacy, advertising and telemarketing rules for the intended market and communication channel.
                   </div>
-                  <div className="pill-badge w-full justify-between py-2 text-xs">
-                    <span>Direct Carrier SIP Trunks</span>
-                    <Check className="h-3.5 w-3.5 text-emerald-700" />
+                  <div className="rounded-lg bg-white/70 p-2.5 border border-stone-800/10">
+                    <span className="font-bold text-stone-900 uppercase tracking-wide">04. Freshness & Delivery Management:</span>{" "}
+                    Each campaign has agreed freshness expectations, delivery schedules, qualification requirements and distribution terms.
                   </div>
-                  <div className="pill-badge w-full justify-between py-2 text-xs">
-                    <span>Documented Sourcing Reports</span>
-                    <Check className="h-3.5 w-3.5 text-emerald-700" />
+                  <div className="rounded-lg bg-white/70 p-2.5 border border-stone-800/10">
+                    <span className="font-bold text-stone-900 uppercase tracking-wide">05. Telephony & CRM Integration:</span>{" "}
+                    We support campaign coordination involving available SIP trunking, cloud dialer systems and CRM delivery integrations.
                   </div>
                 </div>
+              </div>
+
+              {/* Platforms Row Underneath */}
+              <div className="mt-5 pt-4 border-t border-stone-800/15">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-stone-700 block mb-2">
+                  PLATFORMS & TECHNOLOGY
+                </span>
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900 font-semibold">Meta Ads</span>
+                  <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900 font-semibold">Google Ads</span>
+                  <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900 font-semibold">HubSpot</span>
+                  <span className="pill-badge text-[10px] bg-stone-900 text-white border-stone-900 font-semibold">Supabase</span>
+                </div>
+                <p className="text-[11px] text-stone-600 leading-relaxed italic">
+                  Technology used in our campaign planning, marketing, data management and operational workflows. Platform names do not imply certification, partnership or endorsement.
+                </p>
               </div>
             </div>
 
-            <div className="mt-8 pt-5 border-t border-stone-800/15 flex items-center justify-between text-xs text-stone-700">
-              <span className="font-semibold uppercase tracking-wider">Quality Guarantee:</span>
-              <span>Screened, fresh & lawful delivery standards</span>
+            {/* Quality Commitment Banner */}
+            <div className="mt-6 pt-4 border-t border-stone-800/15 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <span className="font-bold uppercase tracking-wider text-stone-900">
+                Transparent Sourcing · Structured Quality Control · Professional Delivery
+              </span>
+              <span className="text-[11px] text-stone-600">Accountable Delivery SLA</span>
             </div>
           </div>
         </div>
@@ -577,110 +629,206 @@ function HomePage() {
             </div>
           </div>
 
-          {/* Card D: DEMONSTRATION CASE STUDY (In-Depth Campaign Breakdown) */}
+          {/* Card D: CAMPAIGN DEMONSTRATION (30-Day Campaign Acquisition & Delivery Framework) */}
           <div id="case-study" className="bento-card bg-[#CEC4BC] p-7 sm:p-9 flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between border-b border-stone-800/15 pb-4 mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-stone-800/15 pb-4 mb-6 gap-2">
                 <div>
-                  <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-wider text-stone-900">
-                    CASE STUDY
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-amber-800">
+                    30-DAY CAMPAIGN ACQUISITION & DELIVERY FRAMEWORK
+                  </span>
+                  <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-wider text-stone-900 font-bold mt-1">
+                    CAMPAIGN DEMONSTRATION
                   </h2>
-                  <p className="text-xs text-stone-600 mt-0.5">30-Day Campaign Architecture & Measurable Outcomes</p>
+                  <p className="text-xs text-stone-700 font-semibold mt-0.5 uppercase tracking-wide">
+                    A THREE-STAGE APPROACH TO PROFESSIONAL LEAD GENERATION
+                  </p>
                 </div>
-                <span className="pill-badge bg-emerald-800 text-white border-emerald-900 text-[10px]">
-                  +142% CONNECTION RATE
+                <span className="pill-badge bg-stone-900 text-[#FAF7F2] border-stone-900 text-[10px] shrink-0">
+                  ILLUSTRATIVE FRAMEWORK
                 </span>
               </div>
 
-              {/* Case Study Summary Narrative */}
-              <div className="rounded-xl border border-stone-800/20 bg-stone-900 text-[#FAF7F2] p-4 mb-5 shadow-xs">
-                <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-                  Demonstration Study: We engineered a 30-day multi-channel lead acquisition campaign covering targeting, funnel optimization,
-                  and direct SIP telephony routing. Through disciplined qualification questions and live carrier line checks, live prospect connect rates increased by 142% while invalid inquiries dropped below 1.2%.
+              {/* Demonstration Disclaimer Narrative */}
+              <div className="rounded-xl border border-stone-800/20 bg-stone-900 text-[#FAF7F2] p-4 mb-5 shadow-xs space-y-1.5">
+                <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-sans">
+                  This demonstration illustrates how Primevalue's Global Leads Center structures a campaign from initial audience planning through qualification, quality control and final lead delivery.
+                </p>
+                <p className="text-[11px] text-stone-400 italic">
+                  The framework represents an illustrative operational workflow, not a verified customer performance result.
                 </p>
               </div>
 
-              {/* 3 Step Breakdown matching the Canva template */}
+              {/* 3 Stage Breakdown with Case Images */}
               <div className="space-y-4">
-                {/* 1. Website 01 Funnel */}
-                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs">
-                  <div className="grid sm:grid-cols-12 gap-3 items-center">
+                {/* Stage 01: Funnel Optimization */}
+                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-4 shadow-xs">
+                  <div className="grid sm:grid-cols-12 gap-3.5 items-center">
                     <div className="sm:col-span-7">
                       <span className="text-[10px] font-semibold uppercase tracking-widest text-amber-800">
-                        STEP 01 · FUNNEL OPTIMIZATION
+                        STAGE 01 · FUNNEL OPTIMIZATION
                       </span>
-                      <h4 className="font-display text-sm uppercase tracking-wide text-stone-900 mt-0.5">
-                        Acquisition Funnel & Landing Architecture
-                      </h4>
+                      <h3 className="font-display text-sm uppercase tracking-wide text-stone-900 font-bold mt-0.5">
+                        Acquisition Funnel & Landing Page Architecture
+                      </h3>
                       <p className="text-[11px] text-stone-600 mt-1 leading-relaxed">
-                        Audited the existing web journey, eliminated friction in lead disclosures, and rebuilt the
-                        opt-in capture mechanism from the ground up to ensure high intent.
+                        We structure campaign landing pages around the intended audience, promotional offer and buyer's qualification requirements. Our approach emphasizes a clear user journey, relevant information capture and appropriate consent disclosures.
                       </p>
+                      <div className="mt-2.5 pt-2 border-t border-stone-100">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-stone-700 block mb-1">
+                          Key Campaign Activities:
+                        </span>
+                        <ul className="grid grid-cols-1 gap-1 text-[11px] text-stone-600">
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Campaign landing-page planning & offer disclosure structure
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Custom lead capture fields & consent documentation
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Qualification-question planning & compliance disclaimers
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <div className="sm:col-span-5 h-20 overflow-hidden rounded-lg bg-stone-200 border border-stone-800/10">
+                    <div className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative">
                       <img
-                        src="/canva-assets/case-bag.jpg"
-                        alt="Funnel optimization preview"
-                        className="h-full w-full object-cover"
+                        src="/case-funnel.jpg"
+                        alt="Acquisition Funnel & Landing Architecture demonstration visual"
+                        className="w-full h-auto max-h-[160px] object-cover"
                       />
+                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center pointer-events-none">
+                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5">
+                          Funnel Architecture Preview
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* 2. Instagram Feed / Audience Grid 02 */}
-                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs">
-                  <div className="grid sm:grid-cols-12 gap-3 items-center">
+                {/* Stage 02: Audience Segmentation */}
+                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-4 shadow-xs">
+                  <div className="grid sm:grid-cols-12 gap-3.5 items-center">
                     <div className="sm:col-span-7">
                       <span className="text-[10px] font-semibold uppercase tracking-widest text-amber-800">
-                        STEP 02 · AUDIENCE SEGMENTATION
+                        STAGE 02 · AUDIENCE SEGMENTATION
                       </span>
-                      <h4 className="font-display text-sm uppercase tracking-wide text-stone-900 mt-0.5">
-                        30-Day Multi-Source Prospect Calendar
-                      </h4>
+                      <h3 className="font-display text-sm uppercase tracking-wide text-stone-900 font-bold mt-0.5">
+                        Targeted Audience & Qualification Planning
+                      </h3>
                       <p className="text-[11px] text-stone-600 mt-1 leading-relaxed">
-                        Segmented audiences by geographic and demographic parameters, deploying creative hooks across
-                        social and search channels for authentic interest.
+                        We organize campaign targeting around geographic requirements, relevant audience characteristics and campaign-specific interests. Each acquisition brief defines the criteria used to organize and qualify incoming inquiries.
                       </p>
+                      <div className="mt-2.5 pt-2 border-t border-stone-100">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-stone-700 block mb-1">
+                          Key Campaign Activities:
+                        </span>
+                        <ul className="grid grid-cols-1 gap-1 text-[11px] text-stone-600">
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Geographic and regional audience targeting
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Campaign-specific audience segmentation & custom questions
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Approved audience exclusion criteria & sourcing coordination
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <div className="sm:col-span-5 h-20 overflow-hidden rounded-lg bg-stone-200 border border-stone-800/10">
+                    <div className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative">
                       <img
-                        src="/canva-assets/case-grid.jpg"
-                        alt="Audience grid preview"
-                        className="h-full w-full object-cover"
+                        src="/case-audience.jpg"
+                        alt="Audience segmentation and campaign targeting dashboard visual"
+                        className="w-full h-auto max-h-[160px] object-cover"
                       />
+                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center pointer-events-none">
+                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5">
+                          Audience Targeting Dashboard
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* 3. Video Content / Direct Engagement 03 */}
-                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs">
-                  <div className="grid sm:grid-cols-12 gap-3 items-center">
+                {/* Stage 03: Quality Control & Direct Delivery */}
+                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-4 shadow-xs">
+                  <div className="grid sm:grid-cols-12 gap-3.5 items-center">
                     <div className="sm:col-span-7">
                       <span className="text-[10px] font-semibold uppercase tracking-widest text-amber-800">
-                        STEP 03 · DIRECT DISPATCH & CALL ROUTING
+                        STAGE 03 · QUALITY CONTROL & DIRECT DELIVERY
                       </span>
-                      <h4 className="font-display text-sm uppercase tracking-wide text-stone-900 mt-0.5">
-                        Short-Form Mobile & Dialer Automation
-                      </h4>
+                      <h3 className="font-display text-sm uppercase tracking-wide text-stone-900 font-bold mt-0.5">
+                        Lead Verification, Dispatch & CRM Integration
+                      </h3>
                       <p className="text-[11px] text-stone-600 mt-1 leading-relaxed">
-                        Routed qualified leads in real time into cloud dialers and client messaging endpoints,
-                        maximizing connection rates within fresh delivery windows.
+                        Following acquisition, leads are prepared for delivery according to the agreed campaign specifications. Available quality checks and supported integrations are used to organize the handover process.
                       </p>
+                      <div className="mt-2.5 pt-2 border-t border-stone-100">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-stone-700 block mb-1">
+                          Key Campaign Activities:
+                        </span>
+                        <ul className="grid grid-cols-1 gap-1 text-[11px] text-stone-600">
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Contact-format, syntax and duplicate checks
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> Available mobile line-status screening & freshness SLAs
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="h-1.5 w-1.5 rounded-full bg-amber-600"></span> CSV/Excel preparation and supported CRM, API & dialer feeds
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                    <div className="sm:col-span-5 h-20 overflow-hidden rounded-lg bg-stone-200 border border-stone-800/10">
+                    <div className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative">
                       <img
-                        src="/canva-assets/case-phones.jpg"
-                        alt="Mobile engagement mockups"
-                        className="h-full w-full object-cover"
+                        src="/case-delivery.jpg"
+                        alt="Lead verification and delivery dashboard visual"
+                        className="w-full h-auto max-h-[160px] object-cover"
                       />
+                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center pointer-events-none">
+                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5">
+                          Verification & Delivery Interface
+                        </span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Campaign Delivery Framework CTA Banner */}
+              <div className="mt-6 rounded-xl border border-stone-800/20 bg-stone-900 text-[#FAF7F2] p-4.5">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-amber-300 block mb-1">
+                  THE CAMPAIGN DELIVERY FRAMEWORK
+                </span>
+                <p className="text-xs text-stone-300 leading-relaxed font-sans">
+                  From campaign planning to final handover, our objective is to provide buyers with a structured, transparent and professionally coordinated sourcing experience.
+                </p>
+                <div className="mt-4 pt-3 border-t border-stone-800 flex flex-wrap items-center justify-between gap-3">
+                  <span className="text-xs font-bold uppercase tracking-wide text-white">
+                    Ready to discuss your campaign?
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href="#contact"
+                      className="rounded-full bg-[#FAF7F2] px-4 py-1.5 font-display text-[11px] tracking-wider text-stone-900 hover:bg-stone-200 transition-colors font-bold uppercase"
+                    >
+                      REQUEST LEAD AVAILABILITY
+                    </a>
+                    <a
+                      href="#services"
+                      className="rounded-full border border-stone-700 bg-stone-800 px-3.5 py-1.5 font-display text-[11px] tracking-wider text-[#FAF7F2] hover:bg-stone-700 transition-colors uppercase"
+                    >
+                      EXPLORE OUR SERVICES
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 pt-5 border-t border-stone-800/15 flex items-center justify-between text-xs text-stone-700">
-              <span>Full case study verified on record.</span>
+            <div className="mt-6 pt-4 border-t border-stone-800/15 flex items-center justify-between text-xs text-stone-700">
+              <span>Demonstration workflow · Operational structure</span>
               <Link to="/portfolio" className="font-semibold text-stone-900 hover:underline">
                 Explore Portfolio Sheets →
               </Link>
