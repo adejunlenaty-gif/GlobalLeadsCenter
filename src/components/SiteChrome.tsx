@@ -55,7 +55,7 @@ export function Header() {
             to="/services"
             className="font-display text-xs tracking-widest text-stone-700 transition-colors hover:text-stone-950"
           >
-            SERVICES (14)
+            SERVICES (15)
           </Link>
           <Link
             to="/portfolio"
@@ -138,7 +138,7 @@ export function Header() {
                 About Us
               </Link>
               <Link to="/services" onClick={() => setOpen(false)} className="text-sm text-stone-700 hover:text-stone-900">
-                All 14 Services
+                All 15 Services
               </Link>
               <Link to="/portfolio" onClick={() => setOpen(false)} className="text-sm text-stone-700 hover:text-stone-900">
                 Portfolio Gallery
@@ -229,6 +229,16 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/privacy" className="transition-colors hover:text-[#FAF7F2]">
+                Privacy & Data
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms" className="transition-colors hover:text-[#FAF7F2]">
+                Terms & Warranty
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -263,8 +273,17 @@ export function Footer() {
             <p className="mt-2 text-[11px] text-stone-500">Response SLA: Under 30 minutes during active desk hours</p>
         </div>
       </div>
-      <div className="border-t border-stone-800/30 px-5 py-6 text-center text-xs text-stone-500">
-        © {new Date().getFullYear()} Globalleadscenter. All rights reserved. Built with editorial precision.
+      <div className="border-t border-stone-800/30 px-5 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 max-w-7xl mx-auto">
+        <div>
+          © {new Date().getFullYear()} Globalleadscenter. All rights reserved. Sourcing Brokerage & Campaign Operations.
+        </div>
+        <div className="flex flex-wrap items-center gap-4 text-stone-400">
+          <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
+          <span>·</span>
+          <Link to="/terms" className="hover:underline">Terms & Conditions</Link>
+          <span>·</span>
+          <span>100% Replacement Warranty (48h SLA)</span>
+        </div>
       </div>
     </footer>
   );

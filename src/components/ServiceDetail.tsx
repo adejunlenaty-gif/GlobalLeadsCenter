@@ -154,6 +154,59 @@ export function ServiceDetail({ slug }: { slug: string }) {
               </div>
             )}
 
+            {/* BANKING ZERO-CREDENTIALS COMPLIANCE NOTICE */}
+            {service.slug === "banking" && (
+              <div className="rounded-2xl border-2 border-blue-600/40 bg-blue-50/90 p-6 md:p-8 shadow-sm">
+                <div className="flex items-start gap-3">
+                  <ShieldCheck className="h-6 w-6 text-blue-700 shrink-0 mt-1" />
+                  <div>
+                    <h2 className="font-display text-xl uppercase tracking-wider text-blue-950 font-bold">
+                      Compliance Notice: Banking & Financial Services Inquiries Only
+                    </h2>
+                    <p className="mt-1 text-xs uppercase tracking-widest text-blue-800 font-semibold">
+                      Strict Consumer Privacy Safeguards
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 text-xs text-blue-950 leading-relaxed space-y-2">
+                  <p>
+                    <strong>Marketing Inquiries Defined:</strong> Banking Leads represent consumer and business inquiries from individuals who have expressed interest in receiving information regarding banking products, business accounts, credit solutions, or digital fintech services.
+                  </p>
+                  <p className="rounded-lg bg-white/90 p-3 border border-blue-200 font-medium text-stone-800">
+                    <strong>Zero Sensitive Financial Data:</strong> Under no circumstances does this service collect, broker, or transmit bank account numbers, passwords, PINs, account balances, or financial statements. All submissions are pure promotional opt-ins generated through transparent educational and comparison funnels.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* INVESTOR ACCREDITATION DISCLOSURE */}
+            {service.slug === "investor" && (
+              <div className="rounded-2xl border-2 border-stone-600/30 bg-stone-100 p-6 md:p-8 shadow-sm">
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="h-6 w-6 text-stone-700 shrink-0 mt-1" />
+                  <div>
+                    <h2 className="font-display text-xl uppercase tracking-wider text-stone-900 font-bold">
+                      Important Buyer Notice: Investor Interest vs. Accredited Verification
+                    </h2>
+                    <p className="mt-1 text-xs uppercase tracking-widest text-stone-600 font-semibold">
+                      Eligibility Clarification
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-3 text-xs text-stone-700 leading-relaxed">
+                  Investor Leads represent prospects who have expressed interest in alternative investments, private equity, or wealth management opportunities matching specific campaign brief criteria. They are NOT described as verified accredited investors unless formal eligibility documentation has been specifically contracted, verified, and audited.
+                </div>
+              </div>
+            )}
+
+            {/* MEGA MILLIONS TRADEMARK DISCLAIMER */}
+            {service.slug === "mega-millions" && (
+              <div className="rounded-2xl border-2 border-amber-500/30 bg-amber-50/70 p-5 shadow-sm text-xs text-amber-950">
+                <span className="font-bold uppercase tracking-wider block mb-1">Trademark & Jurisdiction Disclaimer:</span>
+                Mega Millions is a registered trademark. This lead acquisition programme serves lawful promotional campaign operators and does not imply affiliation with, sponsorship of, or endorsement by Mega Millions lottery operators. All campaign operators must hold appropriate licensing for their offers in target jurisdictions.
+              </div>
+            )}
+
             {/* In-Depth Programme Scope */}
             <div className="bento-card p-6 md:p-8 space-y-6">
               <h2 className="font-display text-2xl uppercase tracking-wider text-stone-900 font-bold border-b border-stone-800/10 pb-4">

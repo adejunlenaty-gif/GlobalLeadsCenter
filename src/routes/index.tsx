@@ -39,7 +39,7 @@ export const WHY = [
 ];
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { SERVICES, CONTACT, CATEGORIES, PACKAGES, BUYER_CONFIDENCE } from "@/lib/site";
+import { SERVICES, CONTACT, CATEGORIES, PACKAGES, BUYER_CONFIDENCE, STRUCTURED_APPROACH, POST_PURCHASE_WORKFLOW } from "@/lib/site";
 import { supabase } from "@/integrations/supabase/client";
 import { meta } from "@/components/SiteChrome";
 import systemVideo from "@/assets/system-workflow-redacted.mp4.asset.json";
@@ -393,7 +393,7 @@ function HomePage() {
                   <p className="text-xs text-stone-600 mt-0.5">Specialized prospect pipelines across 6 primary sectors</p>
                 </div>
                 <Link to="/services" className="font-display text-xs tracking-wider text-stone-800 hover:underline">
-                  ALL 14 →
+                  ALL 15 →
                 </Link>
               </div>
 
@@ -404,8 +404,8 @@ function HomePage() {
                   <div>
                     <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
                       <img
-                        src="/canva-assets/service-1.jpg"
-                        alt="Sweepstakes lead generation"
+                        src="/sweepstakes-million-question.jpg"
+                        alt="Million Dollar Sweepstakes campaign creative"
                         className="h-full w-full object-cover"
                       />
                     </div>
@@ -416,7 +416,7 @@ function HomePage() {
                       Sweepstakes Leads
                     </h3>
                     <p className="text-[11px] text-stone-600 mt-1 line-clamp-2">
-                      Targeted opt-in acquisition and brief-led qualification for authorized campaigns.
+                      Targeted audiences for authorized sweepstakes and promotional campaigns.
                     </p>
                   </div>
                   <Link
@@ -444,7 +444,7 @@ function HomePage() {
                       PCH & Prize Leads
                     </h3>
                     <p className="text-[11px] text-stone-600 mt-1 line-clamp-2">
-                      Organized prize-and-promotion targeting with documented consent records.
+                      Audience acquisition for prize-and-promotion briefs with documented opt-in consent.
                     </p>
                   </div>
                   <Link
@@ -469,10 +469,10 @@ function HomePage() {
                       FRESH vs. EXCLUSIVE
                     </span>
                     <h3 className="font-display text-base uppercase tracking-wide text-stone-900 mt-1">
-                      First Hit Leads
+                      First-Hit Leads
                     </h3>
                     <p className="text-[11px] text-stone-700 mt-1 line-clamp-2">
-                      Guaranteed newly acquired (&lt;24h) with explicit choice between Standard Fresh or Dedicated 1-to-1 Exclusive.
+                      Newly acquired leads (&lt;24h) with explicit buyer choice: Standard Fresh or Dedicated Exclusive lock.
                     </p>
                   </div>
                   <Link
@@ -494,13 +494,13 @@ function HomePage() {
                       />
                     </div>
                     <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
-                      LOTTERY AUDIENCE
+                      LOTTERY INTEREST
                     </span>
                     <h3 className="font-display text-base uppercase tracking-wide text-stone-900 mt-1">
                       Mega Millions Leads
                     </h3>
                     <p className="text-[11px] text-stone-600 mt-1 line-clamp-2">
-                      Jurisdiction-aware lottery-interest prospect generation for lawful operators.
+                      Lottery-interest audiences for authorized, jurisdiction-permitted promotional campaigns.
                     </p>
                   </div>
                   <Link
@@ -511,60 +511,60 @@ function HomePage() {
                   </Link>
                 </div>
 
-                {/* 5. Crypto & Financial */}
+                {/* 5. Crypto Leads (Separated) */}
+                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
+                  <div>
+                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
+                      <img
+                        src="/crypto-analytics-dashboard.jpg"
+                        alt="Cryptocurrency analytics and market trading dashboard"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
+                      WEB3 & DIGITAL ASSETS
+                    </span>
+                    <h3 className="font-display text-base uppercase tracking-wide text-stone-900 mt-1">
+                      Cryptocurrency Leads
+                    </h3>
+                    <p className="text-[11px] text-stone-600 mt-1 line-clamp-2">
+                      Prospects expressing interest in cryptocurrency, digital assets and related services.
+                    </p>
+                  </div>
+                  <Link
+                    to="/services/crypto"
+                    className="mt-3 text-[11px] font-semibold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
+                  >
+                    View details <ChevronRight className="h-3 w-3" />
+                  </Link>
+                </div>
+
+                {/* 6. Forex Leads (Separated) */}
                 <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
                   <div>
                     <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
                       <img
                         src="/canva-assets/service-5.jpg"
-                        alt="Crypto lead generation"
+                        alt="Forex and currency trading markets"
                         className="h-full w-full object-cover"
                       />
                     </div>
                     <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
-                      FINTECH & CRYPTO
+                      RETAIL FX & PROP
                     </span>
                     <h3 className="font-display text-base uppercase tracking-wide text-stone-900 mt-1">
-                      Crypto & Forex Leads
+                      Forex Leads
                     </h3>
                     <p className="text-[11px] text-stone-600 mt-1 line-clamp-2">
-                      Prospect programmes for digital-asset businesses and licensed trading brokers.
+                      Trading-interest prospects for appropriately authorized forex brokers and prop desks.
                     </p>
                   </div>
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/services/forex"
                     className="mt-3 text-[11px] font-semibold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
                   >
-                    Request Quote <ChevronRight className="h-3 w-3" />
-                  </a>
-                </div>
-
-                {/* 6. B2B & USA Targeted */}
-                <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
-                  <div>
-                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
-                      <img
-                        src="/canva-assets/service-6.jpg"
-                        alt="B2B lead generation"
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
-                      B2B & USA
-                    </span>
-                    <h3 className="font-display text-base uppercase tracking-wide text-stone-900 mt-1">
-                      B2B & USA Nationwide
-                    </h3>
-                    <p className="text-[11px] text-stone-600 mt-1 line-clamp-2">
-                      Decision-maker prospecting by industry, role, state, and demographic criteria.
-                    </p>
-                  </div>
-                  <a
-                    href="#contact"
-                    className="mt-3 text-[11px] font-semibold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
-                  >
-                    Request Quote <ChevronRight className="h-3 w-3" />
-                  </a>
+                    View details <ChevronRight className="h-3 w-3" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -690,7 +690,7 @@ function HomePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          3B. COMPLETE 14-SERVICE CATEGORY DIRECTORY
+          3B. COMPLETE 15-SERVICE CATEGORY DIRECTORY (3 Groups)
       ───────────────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-5 py-6">
         <div className="bento-card bg-[#FAF7F2] p-7 sm:p-10 border border-stone-800/15">
@@ -698,10 +698,10 @@ function HomePage() {
             <div>
               <p className="font-display text-xs uppercase tracking-[0.25em] text-stone-600">Full Capabilities</p>
               <h2 className="font-display text-3xl sm:text-4xl uppercase tracking-wider text-stone-900 mt-1 font-bold">
-                14 Dedicated Lead Specialisms by Sector
+                15 Dedicated Lead Specialisms Across 3 Categories
               </h2>
               <p className="mt-2 max-w-2xl text-xs sm:text-sm text-stone-700 font-sans leading-relaxed">
-                Every service features its own dedicated programme page with complete data schema, sourcing methods, freshness SLAs, and compliance details.
+                Organized into Promotional, Financial, and Specialized outreach groups. Every service features its own dedicated programme page with complete data schema, sourcing methods, freshness SLAs, and compliance details.
               </p>
             </div>
             <Link
@@ -712,38 +712,206 @@ function HomePage() {
             </Link>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-3">
             {CATEGORIES.map((cat) => (
               <div
                 key={cat.id}
-                className="rounded-xl border border-stone-800/15 bg-white p-5 flex flex-col justify-between shadow-xs hover:border-stone-900 transition-colors"
+                className="rounded-xl border border-stone-800/15 bg-white p-6 flex flex-col justify-between shadow-xs hover:border-stone-900 transition-colors"
               >
                 <div>
-                  <span className="text-[10px] uppercase tracking-wider font-bold text-amber-800">
-                    {cat.id}
-                  </span>
-                  <h3 className="font-display text-base uppercase tracking-wider text-stone-900 font-bold mt-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-[10px] uppercase tracking-wider font-bold text-amber-800">
+                      {cat.categoryNumber}
+                    </span>
+                    <span className="text-[10px] font-semibold text-stone-500 uppercase tracking-widest">
+                      {SERVICES.filter((s) => s.category === cat.id).length} Services
+                    </span>
+                  </div>
+
+                  <h3 className="font-display text-lg uppercase tracking-wider text-stone-900 font-bold mt-1">
                     {cat.title}
                   </h3>
                   <p className="mt-2 text-xs text-stone-600 leading-relaxed">
                     {cat.desc}
                   </p>
-                  <ul className="mt-4 space-y-2 border-t border-stone-800/10 pt-3 text-xs text-stone-800">
+
+                  <ul className="mt-5 space-y-2.5 border-t border-stone-800/10 pt-4 text-xs text-stone-800">
                     {SERVICES.filter((s) => s.category === cat.id).map((s) => (
                       <li key={s.slug}>
                         <Link
                           to={`/services/${s.slug}`}
-                          className="hover:text-amber-800 hover:underline flex items-center justify-between group py-0.5"
+                          className="hover:text-amber-800 hover:underline flex items-center justify-between group py-1 border-b border-stone-100 last:border-b-0"
                         >
-                          <span className="truncate font-medium">{s.name.replace(" Lead Generation", "")}</span>
-                          <ChevronRight className="h-3 w-3 opacity-50 group-hover:opacity-100 shrink-0 ml-1" />
+                          <span className="truncate font-medium">{s.name}</span>
+                          <ChevronRight className="h-3.5 w-3.5 opacity-50 group-hover:opacity-100 shrink-0 ml-1 text-stone-600" />
                         </Link>
                       </li>
                     ))}
                   </ul>
                 </div>
+
+                <div className="mt-6 pt-3 border-t border-stone-800/10">
+                  <Link
+                    to="/services"
+                    className="text-[11px] font-bold uppercase tracking-wider text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
+                  >
+                    Explore all {cat.title.toLowerCase()} <ChevronRight className="h-3 w-3" />
+                  </Link>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          3C. A STRUCTURED APPROACH FEATURE BAR
+      ───────────────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-7xl px-5 py-6">
+        <div className="rounded-2xl border border-stone-800/20 bg-[#CEC4BC] p-7 sm:p-9 shadow-md">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <span className="text-xs uppercase tracking-[0.2em] font-bold text-stone-700">
+              OPERATIONAL STANDARD
+            </span>
+            <h2 className="font-display text-2xl sm:text-3xl uppercase tracking-wider text-stone-900 font-bold mt-1">
+              A structured approach to specialist lead sourcing and campaign delivery
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-stone-700 font-sans leading-relaxed">
+              We establish clear commitments upfront so you know exactly what standards apply to your delivery before work begins.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {STRUCTURED_APPROACH.map((item, idx) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-stone-800/15 bg-white/90 p-5 shadow-xs flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="grid h-6 w-6 place-items-center rounded-full bg-stone-900 text-[11px] font-bold text-white">
+                      0{idx + 1}
+                    </span>
+                    <h3 className="font-display text-xs uppercase tracking-wider text-stone-900 font-bold">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-stone-600 leading-relaxed pl-8">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────────
+          3D. WHAT HAPPENS AFTER YOU ORDER: 5 POST-PURCHASE STAGES
+      ───────────────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-7xl px-5 py-8">
+        <div className="bento-card bg-[#CEC4BC] p-7 sm:p-10">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-xs uppercase tracking-[0.25em] font-bold text-stone-700">
+              Buyer Assurance & Transparency
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl uppercase tracking-wider text-stone-900 font-bold mt-1">
+              WHAT HAPPENS AFTER YOU ORDER
+            </h2>
+            <p className="mt-3 text-xs sm:text-sm text-stone-700 leading-relaxed font-sans">
+              A serious buyer doesn't just want to see a list of services. You need to know what happens after you pay:
+              from campaign-specific targeting and HLR screening to documented consent records and predictable delivery schedules.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {POST_PURCHASE_WORKFLOW.map((step) => (
+              <div
+                key={step.step}
+                className="overflow-hidden rounded-2xl border border-stone-800/20 bg-white/95 shadow-md"
+              >
+                <div className="grid lg:grid-cols-12 items-center">
+                  <div className="p-6 sm:p-8 lg:col-span-7 space-y-4">
+                    <div className="flex items-center gap-2.5">
+                      <span className="rounded-full bg-stone-900 px-3 py-1 font-display text-xs font-bold text-white tracking-widest">
+                        STAGE {step.step}
+                      </span>
+                      <span className="text-xs font-semibold uppercase tracking-wider text-amber-800">
+                        {step.subtitle}
+                      </span>
+                    </div>
+
+                    <h3 className="font-display text-2xl uppercase tracking-wide text-stone-900 font-bold">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                      {step.desc}
+                    </p>
+
+                    <div className="pt-2">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-stone-900 block mb-2">
+                        Key Verification Deliverables:
+                      </span>
+                      <div className="grid sm:grid-cols-2 gap-2 text-xs text-stone-800">
+                        {step.deliverables.map((item) => (
+                          <div key={item} className="flex items-center gap-1.5">
+                            <Check className="h-3.5 w-3.5 text-emerald-700 shrink-0" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-5 h-64 lg:h-full min-h-[240px] bg-stone-950 relative overflow-hidden border-t lg:border-t-0 lg:border-l border-stone-800/20">
+                    <img
+                      src={step.image}
+                      alt={step.title}
+                      className="h-full w-full object-cover filter brightness-95"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <span className="pill-badge bg-stone-900/90 text-white border-stone-700 text-[10px] backdrop-blur-sm">
+                        Documented Verification Protocol
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Brokerage Disclosure & 100% Replacement Warranty Banner */}
+          <div className="mt-10 rounded-2xl border border-stone-800/20 bg-[#231F1D] text-[#FAF7F2] p-7 md:p-9 shadow-xl">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div className="space-y-2 max-w-2xl">
+                <span className="pill-badge bg-amber-400 text-stone-950 text-[10px] font-bold uppercase">
+                  TRANSPARENCY MANDATE
+                </span>
+                <h4 className="font-display text-xl uppercase tracking-wider text-[#FAF7F2] font-bold">
+                  Brokerage Disclosure & 100% Replacement Warranty
+                </h4>
+                <p className="text-xs text-stone-300 leading-relaxed">
+                  As an international lead brokerage and campaign coordinator, we disclose whether a batch is directly generated through internal landing funnels or supplied through a vetted sourcing partner. Every delivery includes our unconditional 48-hour warranty: any invalid number or syntax defect is replaced 1-to-1 without dispute.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 shrink-0">
+                <a
+                  href="#contact"
+                  className="rounded-full bg-[#FAF7F2] px-6 py-2.5 font-display text-xs tracking-wider text-stone-900 hover:bg-stone-200 transition-colors font-bold uppercase shadow-md"
+                >
+                  REQUEST LEAD AVAILABILITY
+                </a>
+                <Link
+                  to="/terms"
+                  className="rounded-full border border-stone-700 bg-stone-800/80 px-5 py-2.5 font-display text-xs tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-colors uppercase"
+                >
+                  VIEW POLICY
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -904,14 +1072,18 @@ function HomePage() {
       ───────────────────────────────────────────────────────────── */}
       <section id="rate-card" className="mx-auto max-w-7xl px-5 py-14">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="font-display text-xs uppercase tracking-[0.25em] text-stone-600">Transparent Campaign Tiers</p>
-          <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-wider text-stone-900 mt-1">
-            CAMPAIGN RATE CARD
+          <p className="font-display text-xs uppercase tracking-[0.25em] text-stone-600">Transparent Campaign Tiers & Rate Card</p>
+          <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-wider text-stone-900 mt-1 font-bold">
+            CAMPAIGN RATE CARD & PRICING
           </h2>
-          <p className="mt-3 text-sm text-stone-700 font-sans">
-            Clear standards, predictable delivery schedules, and brief-led qualification fields.
-            Choose a campaign tier to pre-select it in your quote inquiry below.
+          <p className="mt-3 text-sm text-stone-700 font-sans leading-relaxed">
+            Every lead package is quoted on an agreed price-per-lead (PPL) or custom volume structure based on vertical, target country, qualification criteria, and freshness SLA.
           </p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs">
+            <span className="pill-badge bg-stone-900 text-white">Price-Per-Lead: $0.80 – $2.50 Typical</span>
+            <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">Standard Fresh vs Dedicated Exclusive</span>
+            <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">100% 48-Hour Replacement Warranty</span>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -929,6 +1101,7 @@ function HomePage() {
               <div className="my-6 border-y border-stone-800/15 py-4">
                 <span className="font-display text-3xl text-stone-900 font-bold">500 - 1,000</span>
                 <span className="text-xs text-stone-600 ml-2 font-semibold uppercase">Verified Leads</span>
+                <p className="text-[11px] text-amber-900 font-medium mt-1">From $0.85 – $1.20 / lead (Custom Quoted)</p>
               </div>
 
               <ul className="space-y-2.5 text-xs text-stone-800">
@@ -939,10 +1112,13 @@ function HomePage() {
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Explicit Opt-In Consent Documentation
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Agreed Freshness Window
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Agreed Freshness Window (&lt;24h)
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Duplicate & Syntax Screening
+                </li>
+                <li className="flex items-center gap-2 font-semibold text-stone-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> 100% Replacement on Invalid Lines (48h)
                 </li>
               </ul>
             </div>
@@ -976,6 +1152,7 @@ function HomePage() {
               <div className="my-6 border-y border-stone-700/50 py-4">
                 <span className="font-display text-3xl text-[#FAF7F2] font-bold">2,500 - 10,000</span>
                 <span className="text-xs text-stone-400 ml-2 font-semibold uppercase">Fresh Leads</span>
+                <p className="text-[11px] text-amber-300 font-medium mt-1">Volume-Tiered Discount · Dedicated Rep</p>
               </div>
 
               <ul className="space-y-2.5 text-xs text-stone-300">
@@ -986,13 +1163,16 @@ function HomePage() {
                   <Check className="h-4 w-4 text-amber-400 shrink-0" /> Custom Qualification & Survey Fields
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Rapid First-Hit Freshness Windows
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Choice of Standard Fresh or Dedicated Exclusive
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> HLR Mobile Line-Status Live Ping Screening
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-amber-400 shrink-0" /> SIP Trunk & Dialer Setup Consultation
                 </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Priority Batch Delivery Schedules
+                <li className="flex items-center gap-2 font-semibold text-white">
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Priority 48-Hour Replacement Guarantee
                 </li>
               </ul>
             </div>
@@ -1020,6 +1200,7 @@ function HomePage() {
               <div className="my-6 border-y border-stone-800/15 py-4">
                 <span className="font-display text-3xl text-stone-900 font-bold">10,000+</span>
                 <span className="text-xs text-stone-600 ml-2 font-semibold uppercase">High-Volume Scale</span>
+                <p className="text-[11px] text-stone-700 font-medium mt-1">Direct Wholesale Rates · Webhook API</p>
               </div>
 
               <ul className="space-y-2.5 text-xs text-stone-800">
@@ -1027,13 +1208,19 @@ function HomePage() {
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Nationwide US & Global Sourcing
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Real-time Webhook / API CRM Ingestion
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Real-time Webhook / API CRM Ingestion (0-15 mins)
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Guaranteed Exclusive Distribution Locks Available
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Dedicated Telephony & DID Sourcing
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Dedicated Account Campaign Manager
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Dedicated Senior Campaign Account Manager
+                </li>
+                <li className="flex items-center gap-2 font-semibold text-stone-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Automated Instant Replacement Credit
                 </li>
               </ul>
             </div>

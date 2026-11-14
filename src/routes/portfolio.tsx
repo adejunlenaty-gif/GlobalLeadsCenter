@@ -94,6 +94,27 @@ const SAMPLES = [
     description: "Illustrative delivery ramp chart demonstrating volume pacing from pilot to enterprise scale.",
     redacted: false,
   },
+  {
+    image: { url: "/sweepstakes-million-question.jpg" },
+    category: "Promotional Creative",
+    title: "Million Dollar Question Sweepstakes Creative",
+    description: "Authentic campaign creative sample showing headline prize offer, compliant terms disclosure, and user opt-in framing.",
+    redacted: false,
+  },
+  {
+    image: { url: "/crypto-analytics-dashboard.jpg" },
+    category: "Finance & Web3",
+    title: "Crypto & Portfolio Risk Analytics",
+    description: "Market metrics tracking asset allocation, cryptocurrency valuation, and high-intent investor interest segmentation.",
+    redacted: false,
+  },
+  {
+    image: { url: "/global-operations-center.jpg" },
+    category: "Global Operations",
+    title: "International Campaign Telemetry & Geo-Targeting",
+    description: "Worldwide telemetry tracking campaign sourcing volume, delivery latency, and international regional compliance.",
+    redacted: false,
+  },
 ];
 
 function PortfolioPage() {
@@ -241,7 +262,7 @@ function PortfolioPage() {
             </h2>
           </div>
           <span className="pill-badge bg-white/80 text-stone-700 border-stone-800/20 text-xs">
-            7 Verified Sample Formats
+            10 Verified Sample Formats
           </span>
         </div>
 

@@ -16,7 +16,7 @@ export const NAV = [
   { to: "/contact", label: "Get a Quote" },
 ] as const;
 
-export type ServiceCategory = "Promotional" | "Finance & Web3" | "B2B & Outreach" | "Regulated Niches";
+export type ServiceCategory = "Promotional" | "Financial" | "Specialized";
 
 export type Service = {
   slug: string;
@@ -33,75 +33,47 @@ export type Service = {
   popularCountries: string[];
 };
 
-export const CATEGORIES: { id: ServiceCategory; title: string; desc: string }[] = [
+export const CATEGORIES: { id: ServiceCategory; categoryNumber: string; title: string; desc: string }[] = [
   {
     id: "Promotional",
-    title: "Promotional & Sweepstakes Audiences",
-    desc: "Authorised promotional, lottery-interest, and incentive-driven campaign audiences with verified opt-in collection.",
+    categoryNumber: "CATEGORY 01",
+    title: "Promotional & Sweepstakes Leads",
+    desc: "Help authorized promotional operators reach audiences who have expressed relevant interest.",
   },
   {
-    id: "Finance & Web3",
-    title: "Financial, Trading & Web3 Investors",
-    desc: "Active market participants, crypto traders, retail investors, and consumer credit prospects matched to regulatory tiers.",
+    id: "Financial",
+    categoryNumber: "CATEGORY 02",
+    title: "Financial & Investment Leads",
+    desc: "Separate each financial category so buyers can specify exactly which audience they need.",
   },
   {
-    id: "B2B & Outreach",
-    title: "Enterprise B2B & Regional Targeting",
-    desc: "Decision-maker contacts segmented by industry, company revenue, job seniority, and exact geographic radius.",
-  },
-  {
-    id: "Regulated Niches",
-    title: "Specialized & Compliance-Sensitive Campaigns",
-    desc: "Programs built strictly for licensed gaming operators and verified recovery assistance firms with compliant disclosure copy.",
+    id: "Specialized",
+    categoryNumber: "CATEGORY 03",
+    title: "Specialized & High-Intent Outreach",
+    desc: "Targeted regional acquisition, high-intent first-hit pipelines, enterprise B2B, and compliant niche campaigns.",
   },
 ];
 
 export const SERVICES: Service[] = [
-  {
-    slug: "first-hit",
-    name: "Premium First Hit Lead Generation",
-    category: "Promotional",
-    summary:
-      "Newly acquired prospects delivered within agreed freshness windows, with verified opt-in collection and an unambiguous choice between Standard Fresh and Dedicated Exclusive delivery.",
-    focus: [
-      "Explicit choice: Standard Fresh (0-24h window) vs. Dedicated Exclusive",
-      "Exact capture timestamp included on every single delivered record",
-      "HLR line-validation check prior to client handover",
-      "Authorised opt-in sourcing and consent documentation",
-      "Screened, transparent, and privacy-compliant delivery",
-    ],
-    details: [
-      "First Hit refers specifically to newly acquired leads delivered within agreed freshness windows. To protect buyers and ensure complete commercial transparency, our First Hit programme clearly distinguishes between 'Standard Fresh' and 'Dedicated Exclusive'. Buyers select the exact delivery standard they require before work begins.",
-      "In our Standard Fresh tier, leads are freshly acquired and handed over within 0-2 hours (real-time push) or within 24 hours of user opt-in, complete with exact ISO timestamps. In our Dedicated Exclusive tier, the lead record is locked to a single buyer with zero secondary or concurrent distribution for the agreed contractual exclusivity period.",
-      "Every batch includes documented origin data, capture URL, IP timestamp, and consent disclosures. We never make unverified conversion guarantees: our commitment is rigorous freshness verification, clean phone line screening, and documented proof of acquisition.",
-    ],
-    fieldsCaptured: ["Full Name", "Phone (Line-checked)", "Email Address", "Target Country / State", "Capture Timestamp (ISO)", "Opt-in Consent URL / Token"],
-    sourcingMethods: ["Dedicated high-converting opt-in landing funnels", "Interactive sweepstakes entry forms", "Targeted search-intent advertising", "Verified digital survey channels"],
-    freshnessWindow: "Real-time webhook (0-15 mins) or daily morning batch (under 24 hours)",
-    exclusivityNote:
-      "CRITICAL BUYER NOTICE: First Hit leads are available either as 'Standard Fresh' (newly acquired within your 24-hr freshness SLA) or 'Dedicated Exclusive' (strictly 1-to-1 client lock). Your campaign agreement explicitly states your chosen exclusivity tier so you know precisely what you are purchasing.",
-    minVolume: "500 records",
-    popularCountries: ["United States", "United Kingdom", "Canada", "Australia", "European Union"],
-  },
+  // ── CATEGORY 01: Promotional & Sweepstakes Leads ──
   {
     slug: "sweepstakes",
-    name: "Premium Sweepstakes Lead Generation",
+    name: "Sweepstakes Leads",
     category: "Promotional",
-    summary:
-      "Targeted audience acquisition for authorised sweepstakes, prize promotions, and brand reward giveaways with verifiable opt-in consent and demographic qualification.",
+    summary: "Targeted audiences for authorized sweepstakes and promotional campaigns.",
     focus: [
       "Targeted audience and geographic acquisition",
       "Campaign-specific demographic qualification",
-      "Authorised opt-in sourcing with clear prize disclosures",
-      "Freshness windows agreed upfront (daily or weekly)",
-      "Strict compliance with promotional advertising guidelines",
+      "Authorized opt-in sourcing with clear prize disclosures",
+      "Freshness windows agreed upfront (daily batches or weekly schedule)",
+      "Strict compliance with regional promotional advertising guidelines",
     ],
     details: [
-      "Develop an enthusiastic, high-intent audience around your authorised promotional giveaway, prize draw, or reward offer. We define geographic, age, and demographic criteria with your team so acquisition directly supports your campaign.",
+      "Develop an enthusiastic, high-intent audience around your authorized promotional giveaway, prize draw, or reward offer. We define geographic, age, and demographic criteria with your team so acquisition directly supports your campaign goals.",
       "Capture funnels use transparent promotional terms, clear prize disclosure language, and affirmative opt-in checkboxes. Sourcing documentation is maintained for every record, ensuring you meet regional advertising standards.",
       "Your proposal establishes delivery formats (CSV, Excel, CRM API), freshness criteria, and volume tiers. We assess all deliveries against strict quality benchmarks, filtering out invalid syntax and disconnected phone numbers.",
     ],
-    fieldsCaptured: ["Full Name", "Verified Mobile Phone", "Email", "State/City/ZIP", "Age Bracket", "Timestamp & IP"],
+    fieldsCaptured: ["Full Name", "Verified Mobile Phone", "Email", "State/City/ZIP", "Age Bracket", "Timestamp & Consent IP"],
     sourcingMethods: ["Incentive giveaway portals", "Mobile consumer sweepstakes pages", "Sponsored social media prize funnels"],
     freshnessWindow: "Daily batches (under 24h) or weekly schedule",
     minVolume: "1,000 records",
@@ -109,10 +81,9 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "pch",
-    name: "Premium PCH Lead Generation",
+    name: "PCH & Prize Leads",
     category: "Promotional",
-    summary:
-      "Audience acquisition for prize-and-promotion briefs, combining relevant qualification, documented consent, and international delivery schedules.",
+    summary: "Audience acquisition for prize-and-promotion briefs, combining relevant qualification, documented consent, and international delivery schedules.",
     focus: [
       "Prize-and-promotion enthusiast audience targeting",
       "Permitted-country and age-eligibility screening",
@@ -122,8 +93,8 @@ export const SERVICES: Service[] = [
     ],
     details: [
       "Our PCH lead programme serves prize-and-promotion-style campaign briefs. Audience criteria, eligible jurisdictions, and campaign qualification fields are defined in partnership with your team prior to launch.",
-      "We support only lawful, properly authorised promotional operators. Collection uses transparent opt-in terms, documented consent, and source logging. Data is handled strictly in accordance with regional consumer privacy laws.",
-      "The service name represents the prize-and-promotion campaign format and does not imply direct affiliation with, endorsement by, or authorisation from Publishers Clearing House. All campaign operators must hold appropriate licensing for their offers.",
+      "We support only lawful, properly authorized promotional operators. Collection uses transparent opt-in terms, documented consent, and source logging. Data is handled strictly in accordance with regional consumer privacy laws.",
+      "The service name represents the prize-and-promotion campaign format and does not imply direct affiliation with, endorsement by, or authorization from Publishers Clearing House. All campaign operators must hold appropriate licensing for their offers.",
     ],
     fieldsCaptured: ["Full Name", "Phone", "Email", "Address / Postal Code", "Eligibility Confirmation", "Capture Date/Time"],
     sourcingMethods: ["Prize draw registration portals", "Co-registration consumer surveys", "Digital promotion entry hubs"],
@@ -133,10 +104,9 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "mega-millions",
-    name: "Premium Mega Millions Lead Generation",
+    name: "Mega Millions / Lottery-Interest Leads",
     category: "Promotional",
-    summary:
-      "Lottery-interest audience acquisition for lawful, appropriately authorised promotions through jurisdiction-aware targeting and documented consent.",
+    summary: "Lottery-interest audiences for authorized, jurisdiction-permitted campaigns.",
     focus: [
       "Targeted lottery-interest audience segmentation",
       "Jurisdiction and age-eligibility screening (18+ / 21+)",
@@ -145,9 +115,9 @@ export const SERVICES: Service[] = [
       "Freshness verification and delivery manifest",
     ],
     details: [
-      "Build an engaged audience for lawful promotional campaigns in the jurisdictions your business is authorised to serve. Geographic targeting and age-eligibility criteria are validated before collection begins.",
+      "Build an engaged audience for lawful promotional campaigns in the jurisdictions your business is authorized to serve. Geographic targeting and age-eligibility criteria are validated before collection begins.",
       "Collection utilizes clear opt-in disclaimers, transparent terms, and documented consent timestamps. Source reporting, deduplication, and privacy-conscious data handling are core parts of the delivery standard.",
-      "This programme does not imply affiliation with or endorsement by Mega Millions lottery operators, nor does it promise winning outcomes. Campaign operators remain solely responsible for local promotional licensing.",
+      "Mega Millions is a registered trademark. This programme does not imply affiliation with or endorsement by Mega Millions lottery operators, nor does it promise winning outcomes. Campaign operators remain solely responsible for local promotional licensing and jurisdiction compliance.",
     ],
     fieldsCaptured: ["Full Name", "Phone", "Email", "State / Province", "Age Verification", "Consent Record"],
     sourcingMethods: ["Lottery statistics & results portals", "Number tracking tools", "Incentive-based promotional surveys"],
@@ -155,21 +125,22 @@ export const SERVICES: Service[] = [
     minVolume: "1,000 records",
     popularCountries: ["United States", "Canada"],
   },
+
+  // ── CATEGORY 02: Financial & Investment Leads ──
   {
     slug: "crypto",
-    name: "Cryptocurrency & Web3 Lead Generation",
-    category: "Finance & Web3",
-    summary:
-      "High-intent lead programmes for digital-asset platforms, trading exchanges, and Web3 projects seeking prospects with active crypto interest and experience.",
+    name: "Cryptocurrency Leads",
+    category: "Financial",
+    summary: "Prospects expressing interest in cryptocurrency, digital assets and related services.",
     focus: [
-      "Crypto experience and wallet interest segmentation",
+      "Prospects expressing active interest in crypto, Web3 & digital assets",
       "Regional regulatory awareness (FCA, SEC, MiCA guidelines)",
-      "Verification of active mobile lines and contact details",
-      "Clear risk disclaimers in all capture flows",
-      "Documented sourcing and GDPR/TCPA compliance",
+      "Active mobile line screening and syntax verification",
+      "Mandatory financial risk disclosures in capture flows",
+      "Documented sourcing origins and consent records",
     ],
     details: [
-      "Reach individuals who have actively expressed interest in digital asset trading, token launches, crypto education, or custodial solutions. We build audience segments tailored to your platform's geographical licenses.",
+      "Reach prospects who have actively expressed interest in digital asset trading, cryptocurrency platforms, educational resources, or custodial technologies. We build audience segments tailored to your platform's geographical licensing.",
       "Capture funnels include appropriate financial risk notices and transparent opt-in permissions. Leads are screened to verify phone line validity and remove stale or duplicate entries.",
       "Delivery can be configured via daily encrypted CSV files, secure SFTP, or real-time CRM webhook integrations.",
     ],
@@ -181,20 +152,19 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "forex",
-    name: "Forex & Trading Lead Generation",
-    category: "Finance & Web3",
-    summary:
-      "Prospect generation for licensed retail brokers, prop trading firms, and financial educators scoped to your permitted jurisdictions and deposit experience tiers.",
+    name: "Forex Leads",
+    category: "Financial",
+    summary: "Trading-interest prospects for appropriately authorized forex brokers.",
     focus: [
-      "Market experience segmentation (Beginner to Experienced)",
+      "Trading-interest prospects for authorized forex brokers & prop desks",
       "Jurisdiction-compliant capture flows with mandatory risk disclosures",
       "HLR phone screening to ensure connectable mobile numbers",
-      "Custom qualification fields (preferred platform, deposit tier)",
+      "Custom qualification fields (experience level, deposit tier)",
       "Dedicated account management and delivery manifests",
     ],
     details: [
-      "Connect with prospective traders who are seeking brokerage accounts, prop firm evaluations, or professional trading education. Every prospect has requested information on forex trading services.",
-      "We respect financial promotional regulations across major regions, ensuring capture creatives display appropriate risk notices. All submissions include verifiable digital consent tokens.",
+      "Connect with prospective traders seeking retail brokerage accounts, prop firm evaluations, or financial trading education. Every prospect has requested information on forex trading services.",
+      "We respect financial promotional regulations across major jurisdictions, ensuring capture creatives display appropriate risk notices. All submissions include verifiable digital consent tokens.",
       "Packages range from initial pilot test batches of 500 records up to high-volume recurring monthly broker partnerships.",
     ],
     fieldsCaptured: ["Full Name", "Verified Mobile", "Email", "Country", "Experience Level", "Capital Interest Tier"],
@@ -205,43 +175,64 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "investor",
-    name: "Accredited & Private Investor Leads",
-    category: "Finance & Web3",
-    summary:
-      "Targeted prospecting for wealth management, private equity, alternative asset syndicates, and high-net-worth investment opportunities.",
+    name: "Investor Leads",
+    category: "Financial",
+    summary: "Investor-interest inquiries matched to campaign-specific criteria.",
     focus: [
-      "Net worth and investment criteria profiling",
+      "Investor-interest inquiries matched to campaign-specific criteria",
       "High-touch, professional copy and discreet capture flows",
       "Strict data privacy and encryption during transit",
       "Detailed geographic targeting (ZIP/Postal code level)",
       "Consent-verified contact information",
     ],
     details: [
-      "Our investor lead programme serves firms looking for qualified prospects interested in alternative investments, real estate syndications, private equity, and wealth planning.",
-      "We deploy high-quality, professional landing assets that clearly explain the nature of investment inquiries. Contacts are pre-qualified based on stated liquidity, investment horizon, and geographic location.",
-      "All investor data is treated with institutional confidentiality and delivered securely via encrypted channels.",
+      "Our investor lead programme connects firms with prospects who have expressed interest in alternative investments, private equity, real estate syndications, and wealth management solutions.",
+      "IMPORTANT BUYER DISTINCTION: Investor Leads represent prospects who have expressed interest in investment opportunities according to campaign criteria. They are NOT described as verified accredited investors unless their formal eligibility has been specifically verified through documented certification.",
+      "All investor inquiry data is handled with institutional confidentiality and delivered securely via encrypted channels.",
     ],
     fieldsCaptured: ["Full Name", "Direct Phone", "Business/Personal Email", "City / State / ZIP", "Stated Investment Range", "Consent Token"],
-    sourcingMethods: ["Alternative investment whitepapers", "Executive wealth reports", "Accredited investor survey funnels"],
+    sourcingMethods: ["Alternative investment whitepapers", "Executive wealth reports", "Investment interest survey funnels"],
     freshnessWindow: "24-48 hours",
     minVolume: "250 records",
     popularCountries: ["United States", "United Kingdom", "Switzerland", "UAE", "Singapore"],
   },
   {
-    slug: "pay-loan",
-    name: "Consumer Finance & Pay Loan Inquiries",
-    category: "Finance & Web3",
-    summary:
-      "High-intent inquiry generation for authorised lenders, brokers, and credit assistance providers, scoped strictly to permitted credit jurisdictions.",
+    slug: "banking",
+    name: "Banking Leads",
+    category: "Financial",
+    summary: "Prospects interested in banking products and financial services.",
     focus: [
-      "Permitted-region and state licensing compliance",
-      "Transparent APR and loan disclosure terms",
-      "Essential qualification fields (employment, amount requested)",
-      "Rapid delivery windows for urgent customer inquiries",
-      "Strict data protection for financial inquiry records",
+      "Prospects interested in retail banking, merchant services & commercial accounts",
+      "Strict zero-tolerance policy: NO account numbers, balances, or credentials collected",
+      "Authorized opt-in inquiries for licensed banks and fintech providers",
+      "Pre-qualification by banking product interest and geographic location",
+      "Transparent consent records and encrypted delivery manifests",
     ],
     details: [
-      "Generate consumer finance inquiries for licensed lenders and lending networks. Inquiries come from individuals actively seeking loan options or debt relief solutions in your operating states.",
+      "Connect with individuals and commercial enterprises actively seeking information on banking products, business accounts, credit facilities, high-yield savings, merchant processing, and digital fintech solutions.",
+      "CRITICAL COMPLIANCE NOTICE: Banking Leads refer strictly to prospective customers who have expressed affirmative interest in receiving information regarding banking and financial products. Under no circumstances does this service collect, broker, or transmit private bank account numbers, passwords, PINs, balances, or confidential financial statements. All inquiries are pure marketing opt-ins generated through transparent educational and promotional funnels.",
+      "Delivered with complete opt-in timestamps, campaign source URLs, and line-validated contact records for your customer onboarding desk.",
+    ],
+    fieldsCaptured: ["Full Name", "Verified Phone", "Email", "Country / State / ZIP", "Product Interest (Checking/Savings/Merchant/Business)", "Opt-in Consent Timestamp"],
+    sourcingMethods: ["Banking comparison portals", "Commercial account inquiry forms", "Fintech product educational hubs"],
+    freshnessWindow: "Daily batches or real-time webhook",
+    minVolume: "500 records",
+    popularCountries: ["United States", "United Kingdom", "Canada", "European Union"],
+  },
+  {
+    slug: "pay-loan",
+    name: "Pay Loan Leads",
+    category: "Financial",
+    summary: "Loan and consumer-finance inquiries for authorized lenders and brokers.",
+    focus: [
+      "Inquiries for consumer loans, personal credit & debt relief",
+      "Permitted-region and state licensing compliance",
+      "Transparent APR disclosures and representative loan terms",
+      "Essential qualification fields (employment status, loan amount requested)",
+      "Rapid delivery windows for urgent customer inquiries",
+    ],
+    details: [
+      "Generate consumer finance and loan inquiries for authorized lenders and licensed lending networks. Inquiries come from individuals actively seeking credit options, personal loans, or debt relief assistance in your permitted operational jurisdictions.",
       "Capture forms include all required regulatory disclosures, including representative APR examples and transparent licensing statements. Prospects submit affirmative consent for phone and email follow-up.",
       "Fast delivery is paramount for consumer finance: leads can be delivered via real-time API push directly into your loan origination system or dialer.",
     ],
@@ -251,60 +242,38 @@ export const SERVICES: Service[] = [
     minVolume: "500 records",
     popularCountries: ["United States", "United Kingdom", "Canada"],
   },
+
+  // ── CATEGORY 03: Specialized & High-Intent Outreach ──
   {
-    slug: "ledger",
-    name: "Hardware Wallet & Digital Security Campaigns",
-    category: "Finance & Web3",
-    summary:
-      "Audience campaigns for hardware wallets, key security solutions, and crypto custody devices, focused on security-conscious digital asset holders.",
+    slug: "first-hit",
+    name: "First-Hit Leads",
+    category: "Specialized",
+    summary: "Newly acquired leads delivered within a clearly agreed freshness window.",
     focus: [
-      "Security-interest and self-custody segmentation",
-      "Brand-safe creative execution without sensitive seed/credential queries",
-      "Verified consumer contact information",
-      "Privacy-preserving capture and handover standards",
-      "Documented opt-in origins",
+      "Explicit choice: Standard Fresh (0-24h window) vs. Dedicated Exclusive",
+      "Exact capture timestamp included on every single delivered record",
+      "HLR line-validation check prior to client handover",
+      "Authorized opt-in sourcing and consent documentation",
+      "Screened, transparent, and privacy-compliant delivery",
     ],
     details: [
-      "Help digital security providers and hardware wallet resellers reach consumers who own cryptocurrency and prioritize offline cold storage and asset protection.",
-      "Our capture mechanisms strictly respect user privacy: we never solicit private keys, seed phrases, or specific wallet balances. Capture focuses purely on device interest, security software upgrades, and hardware purchases.",
-      "Delivered with complete source reporting and verified contact records for your sales and fulfillment teams.",
+      "First Hit refers specifically to newly acquired leads delivered within clearly agreed freshness windows. To protect buyers and ensure complete commercial transparency, our First Hit programme clearly distinguishes between 'Standard Fresh' and 'Dedicated Exclusive'. Buyers select the exact delivery standard they require before work begins.",
+      "In our Standard Fresh tier, leads are freshly acquired and handed over within 0-2 hours (real-time push) or within 24 hours of user opt-in, complete with exact ISO timestamps. In our Dedicated Exclusive tier, the lead record is locked to a single buyer with zero secondary or concurrent distribution for the agreed contractual exclusivity period.",
+      "Every batch includes documented origin data, capture URL, IP timestamp, and consent disclosures. We never make unverified conversion guarantees: our commitment is rigorous freshness verification, clean phone line screening, and documented proof of acquisition.",
     ],
-    fieldsCaptured: ["Full Name", "Phone", "Email", "Country / Postal Code", "Device Interest", "Opt-in Timestamp"],
-    sourcingMethods: ["Hardware security guide downloads", "Web3 safety checklists", "Crypto storage review portals"],
-    freshnessWindow: "Daily batches or weekly schedule",
+    fieldsCaptured: ["Full Name", "Phone (Line-checked)", "Email Address", "Target Country / State", "Capture Timestamp (ISO)", "Opt-in Consent URL / Token"],
+    sourcingMethods: ["Dedicated high-converting opt-in landing funnels", "Interactive promotional entry forms", "Targeted search-intent advertising", "Verified digital survey channels"],
+    freshnessWindow: "Real-time webhook (0-15 mins) or daily morning batch (under 24 hours)",
+    exclusivityNote:
+      "CRITICAL BUYER NOTICE: First Hit leads are available either as 'Standard Fresh' (newly acquired within your 24-hr freshness SLA) or 'Dedicated Exclusive' (strictly 1-to-1 client lock). Your campaign agreement explicitly states your chosen exclusivity tier so you know precisely what you are purchasing.",
     minVolume: "500 records",
-    popularCountries: ["Global (USA, EU, UK, Canada, Australia, Japan)"],
-  },
-  {
-    slug: "b2b",
-    name: "B2B Decision-Maker Lead Generation",
-    category: "B2B & Outreach",
-    summary:
-      "Targeted prospecting by industry vertical, company revenue, employee headcount, and job title for enterprise sales and partnership desks.",
-    focus: [
-      "Firmographic and job role targeting (C-level, VP, Director)",
-      "Account-Based Marketing (ABM) list construction",
-      "Verified direct-dial phone numbers and corporate emails",
-      "Strict deduplication against your existing CRM database",
-      "Consent-based corporate outreach compliance",
-    ],
-    details: [
-      "Equip your sales executives with verified contact information for key business decision-makers. We filter prospect audiences based on your exact ideal customer profile (ICP).",
-      "Target criteria can include industry vertical, annual revenue, tech stack adoption, and geographic headquarters. All corporate emails and direct lines are validated through automated ping and verification checks.",
-      "We provide custom data schemas matching your CRM (Salesforce, HubSpot, Zoho, or raw CSV).",
-    ],
-    fieldsCaptured: ["First & Last Name", "Job Title", "Company Name", "Corporate Email", "Direct Phone / HQ Phone", "Company Size / Revenue", "LinkedIn URL"],
-    sourcingMethods: ["B2B research databases", "Industry survey participation", "Executive webinar registrations", "Digital trade publications"],
-    freshnessWindow: "Curated on-demand within 48-72 hours",
-    minVolume: "250 records",
-    popularCountries: ["North America", "United Kingdom & Europe", "Australia", "Middle East"],
+    popularCountries: ["United States", "United Kingdom", "Canada", "Australia", "European Union"],
   },
   {
     slug: "usa",
-    name: "USA State & ZIP Targeted Lead Generation",
-    category: "B2B & Outreach",
-    summary:
-      "Precision nationwide and state-specific audience acquisition configured around your exact vertical, age demographics, and US compliance mandates.",
+    name: "USA Targeted Leads",
+    category: "Specialized",
+    summary: "Precision nationwide and state-specific audience acquisition configured around your exact vertical, age demographics, and US compliance mandates.",
     focus: [
       "State-level, County, or ZIP-code radius targeting",
       "TCPA compliance records with TrustedForm / Jornaya token support",
@@ -324,35 +293,33 @@ export const SERVICES: Service[] = [
     popularCountries: ["United States (All 50 States)"],
   },
   {
-    slug: "custom",
-    name: "Custom Bespoke Lead Generation",
-    category: "B2B & Outreach",
-    summary:
-      "Bespoke audience generation built from scratch for niche verticals, specialized campaigns, and unique qualification requirements.",
+    slug: "b2b",
+    name: "B2B Leads",
+    category: "Specialized",
+    summary: "Decision-maker contacts segmented by industry, company revenue, job seniority, and exact geographic radius.",
     focus: [
-      "Discovery consultation and custom scope definition",
-      "Tailored qualification survey questions",
-      "Bespoke landing page and brand-aligned creative design",
-      "Custom API webhook delivery into your proprietary software",
-      "Dedicated campaign strategist and quality assurance",
+      "Firmographic and job role targeting (C-level, VP, Director)",
+      "Account-Based Marketing (ABM) list construction",
+      "Verified direct-dial phone numbers and corporate emails",
+      "Strict deduplication against your existing CRM database",
+      "Consent-based corporate outreach compliance",
     ],
     details: [
-      "If your campaign requirements fall outside standard industry categories, our team will engineer a custom acquisition architecture specifically for your business model.",
-      "We work collaboratively with your product and compliance teams to design custom questionnaires, screening criteria, and validation workflows that ensure high lead relevance.",
-      "Every aspect—from creative copywriting to delivery cadence and data formatting—is custom-tailored to your operational workflow.",
+      "Equip your sales executives with verified contact information for key business decision-makers. We filter prospect audiences based on your exact ideal customer profile (ICP).",
+      "Target criteria can include industry vertical, annual revenue, tech stack adoption, and geographic headquarters. All corporate emails and direct lines are validated through automated ping and verification checks.",
+      "We provide custom data schemas matching your CRM (Salesforce, HubSpot, Zoho, or raw CSV).",
     ],
-    fieldsCaptured: ["Configured per client specification", "Standard Contact Data", "Custom Survey Questions", "Consent & Timestamp Logs"],
-    sourcingMethods: ["Bespoke digital funnels", "Custom programmatic acquisition", "Multi-step interactive assessments"],
-    freshnessWindow: "Configurable per agreement",
-    minVolume: "Custom brief",
-    popularCountries: ["Global coverage upon request"],
+    fieldsCaptured: ["First & Last Name", "Job Title", "Company Name", "Corporate Email", "Direct Phone / HQ Phone", "Company Size / Revenue", "LinkedIn URL"],
+    sourcingMethods: ["B2B research databases", "Industry survey participation", "Executive webinar registrations", "Digital trade publications"],
+    freshnessWindow: "Curated on-demand within 48-72 hours",
+    minVolume: "250 records",
+    popularCountries: ["North America", "United Kingdom & Europe", "Australia", "Middle East"],
   },
   {
     slug: "gambling",
-    name: "Licensed Gambling & iGaming Lead Generation",
-    category: "Regulated Niches",
-    summary:
-      "Audience acquisition built exclusively for licensed gaming, sports betting, and casino operators, aligned with responsible gambling mandates.",
+    name: "Gambling Campaign Leads",
+    category: "Specialized",
+    summary: "Audience acquisition built exclusively for licensed gaming, sports betting, and casino operators, aligned with responsible gambling mandates.",
     focus: [
       "Strict targeting of legally licensed jurisdictions only",
       "Age verification (18+ / 21+ mandatory threshold)",
@@ -373,10 +340,9 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "recovery",
-    name: "Recovery & Claims Assistance Lead Generation",
-    category: "Regulated Niches",
-    summary:
-      "Inquiry generation for authorized claims-assistance, fraud dispute, and chargeback services, with transparent, non-misleading communications.",
+    name: "Recovery Inquiry Leads",
+    category: "Specialized",
+    summary: "Inquiry generation for authorized claims-assistance, fraud dispute, and chargeback services, with transparent, non-misleading communications.",
     focus: [
       "Accurate, non-misleading capture copy with mandatory legal disclaimers",
       "Pre-qualification fields regarding claim type and disputed amount",
@@ -395,6 +361,114 @@ export const SERVICES: Service[] = [
     minVolume: "250 records",
     popularCountries: ["USA", "United Kingdom", "Canada", "Australia", "European Union"],
   },
+  {
+    slug: "ledger",
+    name: "Ledger-Related Leads",
+    category: "Specialized",
+    summary: "Audience campaigns for hardware wallets, key security solutions, and crypto custody devices, focused on security-conscious digital asset holders.",
+    focus: [
+      "Security-interest and self-custody segmentation",
+      "Brand-safe creative execution without sensitive seed/credential queries",
+      "Verified consumer contact information",
+      "Privacy-preserving capture and handover standards",
+      "Documented opt-in origins",
+    ],
+    details: [
+      "Help digital security providers and hardware wallet resellers reach consumers who own cryptocurrency and prioritize offline cold storage and asset protection.",
+      "Our capture mechanisms strictly respect user privacy: we never solicit private keys, seed phrases, or specific wallet balances. Capture focuses purely on device interest, security software upgrades, and hardware purchases.",
+      "Delivered with complete source reporting and verified contact records for your sales and fulfillment teams.",
+    ],
+    fieldsCaptured: ["Full Name", "Phone", "Email", "Country / Postal Code", "Device Interest", "Opt-in Timestamp"],
+    sourcingMethods: ["Hardware security guide downloads", "Web3 safety checklists", "Crypto storage review portals"],
+    freshnessWindow: "Daily batches or weekly schedule",
+    minVolume: "500 records",
+    popularCountries: ["Global (USA, EU, UK, Canada, Australia, Japan)"],
+  },
+  {
+    slug: "custom",
+    name: "Custom Lead Generation",
+    category: "Specialized",
+    summary: "Bespoke audience generation built from scratch for niche verticals, specialized campaigns, and unique qualification requirements.",
+    focus: [
+      "Discovery consultation and custom scope definition",
+      "Tailored qualification survey questions",
+      "Bespoke landing page and brand-aligned creative design",
+      "Custom API webhook delivery into your proprietary software",
+      "Dedicated campaign strategist and quality assurance",
+    ],
+    details: [
+      "If your campaign requirements fall outside standard industry categories, our team will engineer a custom acquisition architecture specifically for your business model.",
+      "We work collaboratively with your product and compliance teams to design custom questionnaires, screening criteria, and validation workflows that ensure high lead relevance.",
+      "Every aspect—from creative copywriting to delivery cadence and data formatting—is custom-tailored to your operational workflow.",
+    ],
+    fieldsCaptured: ["Configured per client specification", "Standard Contact Data", "Custom Survey Questions", "Consent & Timestamp Logs"],
+    sourcingMethods: ["Bespoke digital funnels", "Custom programmatic acquisition", "Multi-step interactive assessments"],
+    freshnessWindow: "Configurable per agreement",
+    minVolume: "Custom brief",
+    popularCountries: ["Global coverage upon request"],
+  },
+];
+
+export const STRUCTURED_APPROACH = [
+  {
+    title: "Campaign-specific targeting",
+    desc: "Requirements aligned with your campaign brief.",
+  },
+  {
+    title: "Freshness standards",
+    desc: "Delivery timeframes clearly defined before ordering.",
+  },
+  {
+    title: "Sourcing transparency",
+    desc: "Available source and consent documentation.",
+  },
+  {
+    title: "Buyer-focused service",
+    desc: "Clear communication and agreed delivery requirements.",
+  },
+];
+
+export const POST_PURCHASE_WORKFLOW = [
+  {
+    step: "01",
+    title: "Targeting & Audience Selection",
+    subtitle: "Precision brief alignment before acquisition starts",
+    desc: "Buyers define exact campaign parameters: target country, state/region, age criteria, industry vertical, and qualification questions. We verify that all requested criteria comply with local marketing regulations before launching funnels.",
+    deliverables: ["Jurisdiction & Geo-filtering", "Custom questionnaire design", "Demographic & age gating", "Offer alignment review"],
+    image: "/global-operations-center.jpg",
+  },
+  {
+    step: "02",
+    title: "Lead Quality & Verification",
+    subtitle: "Multi-layered screening prior to handover",
+    desc: "Every record passes automated quality gates: syntax validation, duplicate scrubbing against your historical delivery logs, and live HLR carrier checks to verify that mobile lines are active and connectable.",
+    deliverables: ["Live HLR mobile line validation", "Email deliverability ping check", "Duplicate exclusion across batches", "Bot & fraudulent entry scrubbing"],
+    image: "/lead-dashboard-preview.jpg",
+  },
+  {
+    step: "03",
+    title: "Consent & Sourcing Transparency",
+    subtitle: "Documented audit trail and brokerage disclosure",
+    desc: "We operate with total sourcing transparency. Every batch includes capture URL, IP timestamp, and consent documentation. As a professional sourcing coordinator and broker, we clearly disclose whether a batch is directly generated through our internal assets or procured via our vetted partner network.",
+    deliverables: ["Exact ISO capture timestamps", "Landing page URL & consent log", "Direct vs partner sourcing disclosure", "TCPA / GDPR compliant records"],
+    image: "/sweepstakes-million-question.jpg",
+  },
+  {
+    step: "04",
+    title: "Lead Delivery & Reporting",
+    subtitle: "Predictable schedules in your preferred format",
+    desc: "Delivered according to your agreed schedule: real-time API webhooks (0-15 minutes), daily morning batch drops, or encrypted weekly archives. Choose between CSV, Excel, CRM integration (HubSpot/Salesforce), or direct dialer feeds.",
+    deliverables: ["Secure CSV & Excel spreadsheets", "Real-time CRM webhook push", "Encrypted SFTP transfer", "Batch delivery manifest & stats"],
+    image: "/crypto-analytics-dashboard.jpg",
+  },
+  {
+    step: "05",
+    title: "Buyer Support & Order Management",
+    subtitle: "100% Replacement warranty & dedicated coordination",
+    desc: "Clients receive proactive updates from a dedicated account coordinator. If any record is found to be disconnected or invalid, submit it within 48 hours for immediate 1-to-1 credit replacement under our transparent warranty.",
+    deliverables: ["48-Hour invalid lead replacement warranty", "Dedicated Telegram/WhatsApp support", "Delivery discrepancy audits", "Flexible campaign pacing adjustments"],
+    image: "/canva-assets/service-3.jpg",
+  },
 ];
 
 export const PACKAGES = [
@@ -403,6 +477,7 @@ export const PACKAGES = [
     name: "Starter Pilot Package",
     badge: "Testing & Validation",
     volume: "500 – 1,000 Verified Leads",
+    pricingSummary: "Custom quote based on vertical & geo ($0.80 – $2.50 / lead typical)",
     idealFor: "Campaign offer testing, script validation, and baseline conversion benchmarking.",
     freshness: "24-48 Hours batch delivery",
     deliveryMode: "Secure CSV / Excel file transfer",
@@ -420,6 +495,7 @@ export const PACKAGES = [
     name: "Growth Accelerator Package",
     badge: "Most Popular",
     volume: "2,500 – 5,000 Verified Leads",
+    pricingSummary: "Volume-tiered pricing with dedicated account coordination",
     idealFor: "Active outbound sales teams, growing call desks, and established campaign operators.",
     freshness: "12-24 Hours or daily rolling drops",
     deliveryMode: "Daily CSV drops, SFTP, or CRM webhook",
@@ -438,6 +514,7 @@ export const PACKAGES = [
     name: "Enterprise Scale Package",
     badge: "High Volume Desks",
     volume: "10,000+ Verified Leads / Month",
+    pricingSummary: "Highest tier volume discounts with bespoke API integration",
     idealFor: "Enterprise call centers, multi-seat brokerage teams, and global lead aggregators.",
     freshness: "Real-time API push (0-15 mins) or hourly batches",
     deliveryMode: "Direct API Webhook / CRM Integration",
