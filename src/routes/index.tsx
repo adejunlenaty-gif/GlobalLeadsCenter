@@ -278,7 +278,7 @@ function HomePage() {
                       </div>
                     </div>
                     <div>
-                      <div className="font-display text-2xl sm:text-3xl text-stone-900 font-bold">5Yrs+</div>
+                      <div className="font-display text-xl sm:text-2xl text-stone-900 font-bold">1-2 Yrs+</div>
                       <div className="text-[10px] sm:text-xs text-stone-600 font-semibold uppercase tracking-wider">
                         Expertise
                       </div>
