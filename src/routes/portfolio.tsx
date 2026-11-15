@@ -206,9 +206,9 @@ function PortfolioPage() {
                     controls
                     playsInline
                     preload="metadata"
-                    poster={systemPoster.url}
                     className="h-full w-full object-contain"
                   >
+                    <source src="/system-workflow-autodialer.mp4" type="video/mp4" />
                     <source src={systemVideo.url} type="video/mp4" />
                     Your browser does not support video playback.
                   </video>
@@ -218,33 +218,45 @@ function PortfolioPage() {
 
             <div className="lg:col-span-5 space-y-5">
               <span className="pill-badge bg-stone-900 text-[#FAF7F2] text-[11px]">
-                Video Walkthrough · 1:56
+                Live Telephony Demonstration · 1:55
               </span>
               <h3 className="font-display text-2xl uppercase tracking-wider text-stone-900 font-bold">
-                End-to-End Ingestion, Scrubbing & Delivery
+                Ecsow Multi-Line Auto Dialer &amp; Telephony Routing
               </h3>
               <p className="text-sm text-stone-700 leading-relaxed">
-                Watch our operational dashboard in action. This footage shows real-time lead ingestion from live campaigns, automated syntax parsing, live HLR carrier pings to weed out disconnected numbers, and final manifest export into encrypted batches.
+                Watch our operational multi-line telephony dialer in action. This authentic video demonstration illustrates live carrier SIP trunk connectivity, CSV campaign lead ingestion, automated parallel dialing, human voice detection, and voicemail audio drops.
               </p>
 
               <ul className="space-y-2.5 text-xs text-stone-700">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-700 shrink-0 mt-0.5" />
-                  <span>Demonstrates automated phone status screening prior to client handover</span>
+                  <span>Licensed multi-line dialer workstation with verified registration status</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-700 shrink-0 mt-0.5" />
-                  <span>Shows ISO timestamping and geographic metadata assignment</span>
+                  <span>Carrier SIP trunk connection linked to provider for low-latency call delivery</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="h-4 w-4 text-emerald-700 shrink-0 mt-0.5" />
-                  <span>Audio removed and contact fields blurred to strictly protect consumer privacy</span>
+                  <span>Rapid CSV manifest import mapping contact names, phone lines, and address data</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-700 shrink-0 mt-0.5" />
+                  <span>Human voice vs. answering machine detection with automated audio message drops</span>
                 </li>
               </ul>
 
-              <div className="pt-2">
-                <Button asChild className="bg-stone-900 text-[#FAF7F2] hover:bg-stone-800">
-                  <Link to="/contact">Request Full Campaign Audit Sample →</Link>
+              <div className="pt-2 flex flex-wrap items-center gap-3">
+                <a
+                  href={CONTACT.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-stone-900 px-5 py-2.5 font-display text-xs font-semibold text-white uppercase tracking-wider hover:bg-stone-800 transition-colors shadow-sm"
+                >
+                  Verify Telephony Setup on Telegram ↗
+                </a>
+                <Button asChild variant="outline" className="border-stone-800/30 text-stone-900 hover:bg-stone-200 text-xs">
+                  <Link to="/contact">Request Audit Sample →</Link>
                 </Button>
               </div>
             </div>

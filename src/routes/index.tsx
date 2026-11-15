@@ -1233,40 +1233,118 @@ function HomePage() {
                 VIDEOGRAPHY & SYSTEM WORKFLOW
               </h2>
               <p className="mt-2 max-w-2xl text-xs sm:text-sm text-stone-700 font-sans leading-relaxed">
-                Through dynamic system automation and intentional campaign architecture, our proprietary pipelines ingest,
-                verify, and route leads seamlessly into client CRM systems and telephony dialers.
+                Watch our operational multi-line telephony dialer in action. We combine verified carrier SIP trunking, automated prospect queueing, human voice detection, and voicemail audio drop workflows to deliver responsive outreach at scale.
               </p>
             </div>
 
-            {/* Video Modal Trigger */}
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="pill-badge bg-stone-900 text-[#FAF7F2] border-stone-800 hover:bg-stone-800 text-xs py-2.5 px-5">
-                  <Play className="h-3.5 w-3.5 fill-current mr-1.5" /> Watch System Workflow (1:56)
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-h-[90dvh] w-[calc(100%-2rem)] max-w-5xl overflow-y-auto rounded-2xl bg-[#231F1D] text-[#FAF7F2] border-stone-700">
-                <DialogHeader className="pr-8">
-                  <DialogTitle className="font-display text-2xl uppercase tracking-wide text-[#FAF7F2]">
-                    Proprietary Campaign System Workflow
-                  </DialogTitle>
-                  <DialogDescription className="text-stone-400 text-xs">
-                    Recorded system demonstration. Sensitive client record areas have been permanently redacted for public viewing.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="aspect-video w-full overflow-hidden rounded-xl bg-black mt-3">
-                  <video controls playsInline preload="metadata" poster={systemPoster.url} className="h-full w-full object-contain">
-                    <source src={systemVideo.url} type="video/mp4" />
-                    Your browser does not support video playback.
-                  </video>
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Video Modal Trigger */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="pill-badge bg-stone-900 text-[#FAF7F2] border-stone-800 hover:bg-stone-800 text-xs py-2.5 px-5 cursor-pointer">
+                    <Play className="h-3.5 w-3.5 fill-current mr-1.5" /> Watch System Workflow (1:55)
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-h-[90dvh] w-[calc(100%-2rem)] max-w-5xl overflow-y-auto rounded-2xl bg-[#231F1D] text-[#FAF7F2] border-stone-700">
+                  <DialogHeader className="pr-8">
+                    <DialogTitle className="font-display text-2xl uppercase tracking-wide text-[#FAF7F2]">
+                      Ecsow Multi-Line Auto Dialer &amp; Campaign Workflow
+                    </DialogTitle>
+                    <DialogDescription className="text-stone-400 text-xs">
+                      Authentic operational demonstration: license registration, carrier SIP trunk connection, CSV lead import, automated dialing, and voicemail audio drops.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="aspect-video w-full overflow-hidden rounded-xl bg-black mt-3">
+                    <video controls playsInline preload="metadata" className="h-full w-full object-contain">
+                      <source src="/system-workflow-autodialer.mp4" type="video/mp4" />
+                      <source src={systemVideo.url} type="video/mp4" />
+                      Your browser does not support video playback.
+                    </video>
+                  </div>
+                </DialogContent>
+              </Dialog>
+
+              <a
+                href={CONTACT.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pill-badge bg-amber-400 text-stone-950 border-amber-500 hover:bg-amber-300 text-xs py-2.5 px-4 font-semibold uppercase tracking-wider inline-flex items-center gap-1.5"
+              >
+                Check Telephony Setup ↗
+              </a>
+            </div>
+          </div>
+
+          {/* Featured Video Player Showcase Card */}
+          <div className="mb-10 rounded-2xl border border-stone-800/20 bg-stone-900 overflow-hidden shadow-xl">
+            <div className="grid lg:grid-cols-12 items-center">
+              {/* Video Player */}
+              <div className="lg:col-span-7 bg-black relative aspect-video flex items-center justify-center">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-contain"
+                >
+                  <source src="/system-workflow-autodialer.mp4" type="video/mp4" />
+                  <source src={systemVideo.url} type="video/mp4" />
+                  Your browser does not support video playback.
+                </video>
+              </div>
+
+              {/* Video Details & Operational Breakdown */}
+              <div className="p-6 sm:p-8 lg:col-span-5 text-[#FAF7F2] space-y-4">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="pill-badge bg-amber-400 text-stone-950 text-[10px] font-bold uppercase tracking-wider py-0.5 px-2.5">
+                    Live Operational Footage · 1:55
+                  </span>
+                  <span className="text-[11px] text-stone-400 font-mono">Ecsow Multi-Line</span>
                 </div>
-              </DialogContent>
-            </Dialog>
+
+                <h3 className="font-display text-xl sm:text-2xl uppercase tracking-wider font-bold text-white">
+                  Ecsow Multi-Line Auto Dialer &amp; Telephony Routing
+                </h3>
+
+                <p className="text-xs text-stone-300 leading-relaxed font-sans">
+                  This authentic screen demonstration illustrates how Primevalue's Global Leads Center initializes carrier SIP trunks, ingests campaign CSV prospect files, and initiates automated multi-line dialing with voice detection.
+                </p>
+
+                <div className="space-y-2 pt-2 border-t border-stone-800 text-[11px] text-stone-300">
+                  <div className="flex items-start gap-2">
+                    <Check className="h-3.5 w-3.5 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>Licensed Multi-Line Dialer:</strong> Registered workstation license for stable multi-channel outbound pacing.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="h-3.5 w-3.5 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>Carrier SIP Connection:</strong> Active provider trunking for clear voice connectivity across US/UK markets.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="h-3.5 w-3.5 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>CSV Manifest Ingestion:</strong> Rapid bulk upload with structured contact mapping (Name, Phone, City, State, ZIP).</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="h-3.5 w-3.5 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>Voice Detection &amp; Audio Drop:</strong> Detects answering machines vs human voice to drop targeted voicemails or bridge live reps.</span>
+                  </div>
+                </div>
+
+                <div className="pt-3">
+                  <a
+                    href={CONTACT.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-amber-400 px-4 py-2 font-display text-xs font-bold text-stone-950 uppercase tracking-wider hover:bg-amber-300 transition-colors shadow-sm"
+                  >
+                    Check Telephony Setup on Telegram ↗
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* 4 Interactive Phone Mockup Frames (Replicating Canva Videography Row) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {/* Phone 1: Targeting */}
+            {/* Phone 1: CSV Lead Ingestion */}
             <div className="card-lift flex flex-col items-center">
               <div className="w-full max-w-[220px] aspect-[9/18] rounded-[2rem] border-[5px] border-stone-900 bg-stone-950 p-2 shadow-lg relative overflow-hidden flex flex-col justify-between">
                 {/* Notch */}
@@ -1275,98 +1353,98 @@ function HomePage() {
                 <div className="flex-1 rounded-xl bg-gradient-to-b from-stone-800 to-stone-900 p-2.5 text-white flex flex-col justify-between">
                   <div>
                     <span className="text-[9px] font-semibold text-amber-300 uppercase">STAGE 01</span>
-                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">Audience Brief</h5>
+                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">CSV Import</h5>
                     <p className="text-[9px] text-stone-300 mt-1 leading-tight">
-                      Targeted geo-filters, demographic parameters & authorized offer setup.
+                      Bulk ingestion mapping names, verified numbers, locations, and campaign tags.
                     </p>
                   </div>
                   <div className="rounded bg-black/40 p-1.5 text-[8px] text-stone-300 space-y-1">
-                    <div className="flex justify-between"><span>Region:</span><span className="text-emerald-400">US / CA / UK</span></div>
-                    <div className="flex justify-between"><span>Consent:</span><span className="text-emerald-400">Explicit Opt-In</span></div>
+                    <div className="flex justify-between"><span>Format:</span><span className="text-emerald-400">UTF-8 CSV</span></div>
+                    <div className="flex justify-between"><span>Fields:</span><span className="text-emerald-400">10+ Mapped</span></div>
                   </div>
                 </div>
                 {/* Home Indicator */}
                 <div className="w-12 h-1 bg-stone-700 rounded-full mx-auto mt-2"></div>
               </div>
               <span className="font-display text-xs uppercase tracking-wider text-stone-900 font-bold mt-3">
-                CAMPAIGN TARGETING
+                LEAD INGESTION
               </span>
-              <span className="text-[10px] text-stone-600 text-center">Multi-channel opt-in capture</span>
+              <span className="text-[10px] text-stone-600 text-center">Rapid bulk manifest queue</span>
             </div>
 
-            {/* Phone 2: Verification */}
+            {/* Phone 2: SIP Line Connection */}
             <div className="card-lift flex flex-col items-center">
               <div className="w-full max-w-[220px] aspect-[9/18] rounded-[2rem] border-[5px] border-stone-900 bg-stone-950 p-2 shadow-lg relative overflow-hidden flex flex-col justify-between">
                 <div className="w-16 h-3 bg-stone-900 rounded-full mx-auto mb-2"></div>
                 <div className="flex-1 rounded-xl bg-gradient-to-b from-stone-800 to-stone-900 p-2.5 text-white flex flex-col justify-between">
                   <div>
                     <span className="text-[9px] font-semibold text-amber-300 uppercase">STAGE 02</span>
-                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">Scrub & Filter</h5>
+                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">SIP Connect</h5>
                     <p className="text-[9px] text-stone-300 mt-1 leading-tight">
-                      Bot elimination, syntax checks, duplicate removal & compliance logs.
+                      Carrier trunking linked directly to provider for stable outbound delivery.
                     </p>
                   </div>
                   <div className="rounded bg-black/40 p-1.5 text-[8px] text-stone-300 space-y-1">
-                    <div className="flex justify-between"><span>Bot Filter:</span><span className="text-emerald-400">Active (99.8%)</span></div>
-                    <div className="flex justify-between"><span>DNC Check:</span><span className="text-emerald-400">Passed</span></div>
+                    <div className="flex justify-between"><span>Provider:</span><span className="text-emerald-400">Connected</span></div>
+                    <div className="flex justify-between"><span>SIP Desk:</span><span className="text-emerald-400">Active Trunk</span></div>
                   </div>
                 </div>
                 <div className="w-12 h-1 bg-stone-700 rounded-full mx-auto mt-2"></div>
               </div>
               <span className="font-display text-xs uppercase tracking-wider text-stone-900 font-bold mt-3">
-                QUALITY SCRUBBING
+                SIP INTEGRATION
               </span>
-              <span className="text-[10px] text-stone-600 text-center">Automated syntax & bot filters</span>
+              <span className="text-[10px] text-stone-600 text-center">Live carrier trunk connection</span>
             </div>
 
-            {/* Phone 3: Telephony */}
+            {/* Phone 3: Multi-Line Auto Dialing */}
             <div className="card-lift flex flex-col items-center">
               <div className="w-full max-w-[220px] aspect-[9/18] rounded-[2rem] border-[5px] border-stone-900 bg-stone-950 p-2 shadow-lg relative overflow-hidden flex flex-col justify-between">
                 <div className="w-16 h-3 bg-stone-900 rounded-full mx-auto mb-2"></div>
                 <div className="flex-1 rounded-xl bg-gradient-to-b from-stone-800 to-stone-900 p-2.5 text-white flex flex-col justify-between">
                   <div>
                     <span className="text-[9px] font-semibold text-amber-300 uppercase">STAGE 03</span>
-                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">SIP & Dialer</h5>
+                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">Multi-Line Dial</h5>
                     <p className="text-[9px] text-stone-300 mt-1 leading-tight">
-                      Carrier trunking and cloud dialer integration for instantaneous connect.
+                      Automated parallel pacing with live contact popup modal upon ring connect.
                     </p>
                   </div>
                   <div className="rounded bg-black/40 p-1.5 text-[8px] text-stone-300 space-y-1">
-                    <div className="flex justify-between"><span>SIP Line:</span><span className="text-emerald-400">Active Trunk</span></div>
-                    <div className="flex justify-between"><span>Dialer:</span><span className="text-emerald-400">Ready</span></div>
+                    <div className="flex justify-between"><span>Dial Mode:</span><span className="text-emerald-400">Multi-Line Auto</span></div>
+                    <div className="flex justify-between"><span>Card Pop:</span><span className="text-emerald-400">Instant</span></div>
                   </div>
                 </div>
                 <div className="w-12 h-1 bg-stone-700 rounded-full mx-auto mt-2"></div>
               </div>
               <span className="font-display text-xs uppercase tracking-wider text-stone-900 font-bold mt-3">
-                CALLER ROUTING
+                AUTO DIALER
               </span>
-              <span className="text-[10px] text-stone-600 text-center">SIP trunking & cloud dialer</span>
+              <span className="text-[10px] text-stone-600 text-center">Parallel queue outbound calling</span>
             </div>
 
-            {/* Phone 4: CRM Delivery */}
+            {/* Phone 4: Voice Detect & Audio Drop */}
             <div className="card-lift flex flex-col items-center">
               <div className="w-full max-w-[220px] aspect-[9/18] rounded-[2rem] border-[5px] border-stone-900 bg-stone-950 p-2 shadow-lg relative overflow-hidden flex flex-col justify-between">
                 <div className="w-16 h-3 bg-stone-900 rounded-full mx-auto mb-2"></div>
                 <div className="flex-1 rounded-xl bg-gradient-to-b from-stone-800 to-stone-900 p-2.5 text-white flex flex-col justify-between">
                   <div>
                     <span className="text-[9px] font-semibold text-amber-300 uppercase">STAGE 04</span>
-                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">CRM Handover</h5>
+                    <h5 className="font-display text-xs uppercase text-white tracking-wide mt-0.5">Voice &amp; Drop</h5>
                     <p className="text-[9px] text-stone-300 mt-1 leading-tight">
-                      Secure encrypted delivery into client database, CSV, or webhook endpoints.
+                      Human voice detection with automated voicemail audio drops and disposition logs.
                     </p>
                   </div>
                   <div className="rounded bg-black/40 p-1.5 text-[8px] text-stone-300 space-y-1">
-                    <div className="flex justify-between"><span>Delivery:</span><span className="text-emerald-400">Within Window</span></div>
-                    <div className="flex justify-between"><span>Format:</span><span className="text-emerald-400">API / CSV</span></div>
+                    <div className="flex justify-between"><span>Voice Detect:</span><span className="text-emerald-400">Active</span></div>
+                    <div className="flex justify-between"><span>Disposition:</span><span className="text-emerald-400">Real-Time Log</span></div>
                   </div>
                 </div>
                 <div className="w-12 h-1 bg-stone-700 rounded-full mx-auto mt-2"></div>
               </div>
               <span className="font-display text-xs uppercase tracking-wider text-stone-900 font-bold mt-3">
-                DELIVERY & REVIEW
+                VOICE &amp; DISPATCH
               </span>
-              <span className="text-[10px] text-stone-600 text-center">Encrypted client handover</span>
+              <span className="text-[10px] text-stone-600 text-center">Automated drop &amp; disposition logging</span>
             </div>
           </div>
         </div>
