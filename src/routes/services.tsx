@@ -32,7 +32,7 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
-export function ServicesPage() {
+function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
   const filteredServices =
