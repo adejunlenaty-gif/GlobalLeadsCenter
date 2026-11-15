@@ -103,18 +103,24 @@ export function ServiceDetail({ slug }: { slug: string }) {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-2xl overflow-hidden border border-stone-800/20 bg-stone-950 shadow-xl aspect-[16/10] relative">
+              <a
+                href={CONTACT.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`Check ${service.name} on Telegram Desk`}
+                className="group relative block rounded-2xl overflow-hidden border border-stone-800/20 bg-stone-950 shadow-xl aspect-[16/10] cursor-pointer"
+              >
                 <img
                   src={service.image}
                   alt={service.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute bottom-3 left-3 right-3 text-center pointer-events-none">
-                  <span className="pill-badge bg-stone-950/85 text-[#FAF7F2] border-stone-700/60 text-[10px] backdrop-blur-md uppercase tracking-wider font-semibold">
-                    {service.name} · Verified Acquisition
+                <div className="absolute bottom-3 left-3 right-3 text-center">
+                  <span className="pill-badge bg-stone-950/85 text-[#FAF7F2] border-stone-700/60 text-[10px] backdrop-blur-md uppercase tracking-wider font-semibold group-hover:border-amber-400 group-hover:text-amber-300 transition-colors inline-flex items-center gap-1">
+                    {service.name} · Check Availability on Telegram ↗
                   </span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

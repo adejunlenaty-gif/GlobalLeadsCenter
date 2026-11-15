@@ -211,18 +211,24 @@ function HomePage() {
                 </div>
 
                 <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full bg-stone-950 overflow-hidden flex items-center justify-center p-4 sm:p-6 border-t lg:border-t-0 lg:border-l border-stone-800/30">
-                  <div className="relative w-full h-full flex items-center justify-center">
+                  <a
+                    href={CONTACT.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Check Campaign Availability on Telegram Desk"
+                    className="group relative w-full h-full flex items-center justify-center cursor-pointer block"
+                  >
                     <img
                       src="/hero-global-representative.jpg"
                       alt="Global business operations, world map and professional campaign representative"
-                      className="w-full h-auto max-h-[460px] object-cover rounded-xl shadow-2xl border border-stone-800/40"
+                      className="w-full h-auto max-h-[460px] object-cover rounded-xl shadow-2xl border border-stone-800/40 group-hover:border-amber-500/50 transition-all duration-300"
                     />
-                  </div>
-                  <div className="absolute bottom-6 left-6 right-6 text-center pointer-events-none">
-                    <span className="pill-badge bg-stone-950/85 text-[#FAF7F2] border-stone-700/60 text-[10px] backdrop-blur-md shadow-md uppercase tracking-wider font-semibold">
-                      Global Campaign Operations · Professional Sourcing
-                    </span>
-                  </div>
+                    <div className="absolute bottom-6 left-6 right-6 text-center">
+                      <span className="pill-badge bg-stone-950/90 text-[#FAF7F2] border-stone-700/60 text-[10px] backdrop-blur-md shadow-md uppercase tracking-wider font-semibold group-hover:border-amber-400 group-hover:text-amber-300 transition-colors inline-flex items-center gap-1.5">
+                        Global Campaign Operations · Check Availability ↗
+                      </span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -282,18 +288,24 @@ function HomePage() {
 
                 {/* Operations Team Portrait */}
                 <div className="sm:col-span-5 relative flex justify-center">
-                  <div className="relative rounded-xl overflow-hidden border border-stone-800/20 bg-stone-900 shadow-md aspect-[4/5] w-full max-w-[220px]">
+                  <a
+                    href={CONTACT.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Connect with Operations Desk on Telegram"
+                    className="group relative rounded-xl overflow-hidden border border-stone-800/20 bg-stone-900 shadow-md aspect-[4/5] w-full max-w-[220px] block cursor-pointer transition-transform hover:scale-[1.02]"
+                  >
                     <img
                       src="/team-operations-center.jpg"
                       alt="GlobalLeadsCenter marketing operations and campaign strategy team"
-                      className="h-full w-full object-cover filter saturate-95"
+                      className="h-full w-full object-cover filter saturate-95 group-hover:saturate-100 transition-all"
                     />
                     <div className="absolute bottom-2 left-2 right-2 text-center">
-                      <span className="font-script text-sm text-stone-900 bg-white/95 px-2 py-0.5 rounded shadow-xs inline-block -rotate-2">
-                        Operations Desk
+                      <span className="font-script text-sm text-stone-900 bg-white/95 px-2 py-0.5 rounded shadow-xs inline-block -rotate-2 group-hover:rotate-0 transition-transform">
+                        Operations Desk ↗
                       </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -335,18 +347,24 @@ function HomePage() {
               <div className="grid sm:grid-cols-12 gap-5 items-center">
                 {/* Operational Standards Graphic */}
                 <div className="sm:col-span-7">
-                  <div className="rounded-xl border border-stone-800/20 bg-stone-950 p-2 shadow-md overflow-hidden relative group">
+                  <a
+                    href={CONTACT.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Check Compliance & Quality Standards on Telegram"
+                    className="block rounded-xl border border-stone-800/20 bg-stone-950 p-2 shadow-md overflow-hidden relative group cursor-pointer transition-transform hover:scale-[1.01]"
+                  >
                     <img
                       src="/operational-standards.jpg"
                       alt="Primevalue Global Leads Center operational standards, compliance dashboard and consent lifecycle"
-                      className="w-full h-auto max-h-[220px] object-cover rounded-lg"
+                      className="w-full h-auto max-h-[220px] object-cover rounded-lg group-hover:opacity-90 transition-opacity"
                     />
-                    <div className="absolute bottom-2 left-2 right-2 text-center pointer-events-none">
-                      <span className="pill-badge bg-stone-950/90 text-[#FAF7F2] border-stone-700/60 text-[9px] backdrop-blur-md uppercase tracking-wider font-semibold py-0.5 px-2">
-                        Real-Time Compliance & Consent Posture
+                    <div className="absolute bottom-2 left-2 right-2 text-center">
+                      <span className="pill-badge bg-stone-950/90 text-[#FAF7F2] border-stone-700/60 text-[9px] backdrop-blur-md uppercase tracking-wider font-semibold py-0.5 px-2 group-hover:border-amber-400 group-hover:text-amber-300 transition-colors inline-flex items-center gap-1">
+                        Real-Time Compliance &amp; Consent Posture · Check on Telegram ↗
                       </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 {/* 5 Short Labels beside graphic */}
@@ -454,13 +472,22 @@ function HomePage() {
                 {/* 1. Sweepstakes */}
                 <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
                   <div>
-                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check Sweepstakes Leads Availability on Telegram"
+                      className="group/img block relative h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10 cursor-pointer"
+                    >
                       <img
                         src="/sweepstakes-prize-gift.jpg"
                         alt="Sweepstakes and prize promotional campaigns"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                    </div>
+                      <span className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-stone-950/85 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded backdrop-blur-xs shadow-xs opacity-90 group-hover/img:opacity-100 transition-opacity">
+                        Check ↗
+                      </span>
+                    </a>
                     <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
                       SWEEPSTAKES
                     </span>
@@ -482,13 +509,22 @@ function HomePage() {
                 {/* 2. PCH & Prize */}
                 <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
                   <div>
-                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check PCH & Prize Leads Availability on Telegram"
+                      className="group/img block relative h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10 cursor-pointer"
+                    >
                       <img
                         src="/canva-assets/service-2.jpg"
                         alt="PCH lead generation"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                    </div>
+                      <span className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-stone-950/85 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded backdrop-blur-xs shadow-xs opacity-90 group-hover/img:opacity-100 transition-opacity">
+                        Check ↗
+                      </span>
+                    </a>
                     <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
                       PRIZE & PROMO
                     </span>
@@ -510,13 +546,22 @@ function HomePage() {
                 {/* 3. First Hit */}
                 <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
                   <div>
-                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check First-Hit Leads Availability on Telegram"
+                      className="group/img block relative h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10 cursor-pointer"
+                    >
                       <img
                         src="/first-hit-target.jpg"
                         alt="First hit lead generation and prospect qualification"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                    </div>
+                      <span className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-stone-950/85 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded backdrop-blur-xs shadow-xs opacity-90 group-hover/img:opacity-100 transition-opacity">
+                        Check ↗
+                      </span>
+                    </a>
                     <span className="pill-badge text-[10px] bg-amber-200 text-amber-950 font-bold py-0.5 px-2 mb-2">
                       FRESH vs. EXCLUSIVE
                     </span>
@@ -538,13 +583,22 @@ function HomePage() {
                 {/* 4. Mega Millions / Lottery */}
                 <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
                   <div>
-                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check Mega Millions Leads Availability on Telegram"
+                      className="group/img block relative h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10 cursor-pointer"
+                    >
                       <img
                         src="/lottery-tumbler.jpg"
                         alt="Lottery and promotional tumbler campaign leads"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                    </div>
+                      <span className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-stone-950/85 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded backdrop-blur-xs shadow-xs opacity-90 group-hover/img:opacity-100 transition-opacity">
+                        Check ↗
+                      </span>
+                    </a>
                     <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
                       LOTTERY INTEREST
                     </span>
@@ -566,13 +620,22 @@ function HomePage() {
                 {/* 5. Crypto Leads (Separated) */}
                 <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
                   <div>
-                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check Cryptocurrency Leads Availability on Telegram"
+                      className="group/img block relative h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10 cursor-pointer"
+                    >
                       <img
                         src="/crypto-blockchain-tokens.jpg"
                         alt="Cryptocurrency blockchain and digital assets"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                    </div>
+                      <span className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-stone-950/85 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded backdrop-blur-xs shadow-xs opacity-90 group-hover/img:opacity-100 transition-opacity">
+                        Check ↗
+                      </span>
+                    </a>
                     <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
                       WEB3 & DIGITAL ASSETS
                     </span>
@@ -594,13 +657,22 @@ function HomePage() {
                 {/* 6. Forex Leads (Separated) */}
                 <div className="rounded-xl border border-stone-800/20 bg-white/95 p-3.5 shadow-xs flex flex-col justify-between hover:border-stone-900 transition-colors">
                   <div>
-                    <div className="h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check Forex Leads Availability on Telegram"
+                      className="group/img block relative h-28 overflow-hidden rounded-lg bg-stone-200 mb-3 border border-stone-800/10 cursor-pointer"
+                    >
                       <img
                         src="/forex-trading-station.jpg"
                         alt="Forex currency trading desk and charts"
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                    </div>
+                      <span className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-stone-950/85 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded backdrop-blur-xs shadow-xs opacity-90 group-hover/img:opacity-100 transition-opacity">
+                        Check ↗
+                      </span>
+                    </a>
                     <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] py-0.5 px-2 mb-2">
                       RETAIL FX & PROP
                     </span>
@@ -691,18 +763,24 @@ function HomePage() {
                         </ul>
                       </div>
                     </div>
-                    <div className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check Funnel Architecture on Telegram"
+                      className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative block group/img cursor-pointer"
+                    >
                       <img
                         src="/case-funnel.jpg"
                         alt="Acquisition Funnel & Landing Architecture demonstration visual"
-                        className="w-full h-auto max-h-[160px] object-cover"
+                        className="w-full h-auto max-h-[160px] object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center pointer-events-none">
-                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5">
-                          Funnel Architecture Preview
+                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center">
+                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5 group-hover/img:border-amber-400 group-hover/img:text-amber-300 transition-colors inline-flex items-center gap-1">
+                          Funnel Architecture · Check on Telegram ↗
                         </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
 
@@ -736,18 +814,24 @@ function HomePage() {
                         </ul>
                       </div>
                     </div>
-                    <div className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check Audience Targeting on Telegram"
+                      className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative block group/img cursor-pointer"
+                    >
                       <img
                         src="/case-audience.jpg"
                         alt="Audience segmentation and campaign targeting dashboard visual"
-                        className="w-full h-auto max-h-[160px] object-cover"
+                        className="w-full h-auto max-h-[160px] object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center pointer-events-none">
-                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5">
-                          Audience Targeting Dashboard
+                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center">
+                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5 group-hover/img:border-amber-400 group-hover/img:text-amber-300 transition-colors inline-flex items-center gap-1">
+                          Targeting Dashboard · Check on Telegram ↗
                         </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
 
@@ -781,18 +865,24 @@ function HomePage() {
                         </ul>
                       </div>
                     </div>
-                    <div className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative">
+                    <a
+                      href={CONTACT.telegram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Check Verification & Delivery on Telegram"
+                      className="sm:col-span-5 overflow-hidden rounded-lg bg-stone-950 border border-stone-800/20 shadow-xs relative block group/img cursor-pointer"
+                    >
                       <img
                         src="/case-delivery.jpg"
                         alt="Lead verification and delivery dashboard visual"
-                        className="w-full h-auto max-h-[160px] object-cover"
+                        className="w-full h-auto max-h-[160px] object-cover group-hover/img:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center pointer-events-none">
-                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5">
-                          Verification & Delivery Interface
+                      <div className="absolute bottom-1.5 left-1.5 right-1.5 text-center">
+                        <span className="pill-badge bg-stone-950/90 text-white border-stone-700 text-[8px] py-0.5 px-1.5 group-hover/img:border-amber-400 group-hover/img:text-amber-300 transition-colors inline-flex items-center gap-1">
+                          Verification & Delivery · Check on Telegram ↗
                         </span>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1070,19 +1160,28 @@ function HomePage() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-5 h-64 lg:h-full min-h-[240px] bg-stone-950 relative overflow-hidden border-t lg:border-t-0 lg:border-l border-stone-800/20">
+                  <a
+                    href={CONTACT.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`Check ${step.title} on Telegram Desk`}
+                    className="group/img lg:col-span-5 h-64 lg:h-full min-h-[240px] bg-stone-950 relative overflow-hidden border-t lg:border-t-0 lg:border-l border-stone-800/20 block cursor-pointer"
+                  >
                     <img
                       src={step.image}
                       alt={step.title}
-                      className="h-full w-full object-cover filter brightness-95"
+                      className="h-full w-full object-cover filter brightness-95 group-hover/img:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
+                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                       <span className="pill-badge bg-stone-900/90 text-white border-stone-700 text-[10px] backdrop-blur-sm">
                         Documented Verification Protocol
                       </span>
+                      <span className="pill-badge bg-amber-400 text-stone-950 text-[9px] font-bold uppercase tracking-wider py-0.5 px-2 group-hover/img:bg-amber-300 transition-colors inline-flex items-center gap-1">
+                        Check ↗
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             ))}

@@ -125,13 +125,24 @@ function ServicesPage() {
               className="bento-card p-6 md:p-7 flex flex-col justify-between scroll-mt-24 transition-transform hover:-translate-y-1 hover:shadow-lg bg-[#FAF7F2]"
             >
               <div>
-                <div className="h-40 overflow-hidden rounded-xl bg-stone-900 mb-4 border border-stone-800/10 shadow-xs">
+                <a
+                  href={CONTACT.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Check ${s.name} Availability on Telegram`}
+                  className="group/img relative block h-40 overflow-hidden rounded-xl bg-stone-900 mb-4 border border-stone-800/10 shadow-xs cursor-pointer"
+                >
                   <img
                     src={s.image}
                     alt={s.name}
-                    className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover/img:scale-105"
                   />
-                </div>
+                  <div className="absolute top-2 right-2">
+                    <span className="pill-badge bg-stone-950/85 text-amber-300 border-amber-500/40 text-[9px] font-semibold py-0.5 px-2 backdrop-blur-xs shadow-xs group-hover/img:bg-amber-500 group-hover/img:text-stone-950 transition-colors inline-flex items-center gap-1">
+                      Check Availability ↗
+                    </span>
+                  </div>
+                </a>
 
                 <div className="flex items-center justify-between gap-2 mb-3">
                   <span className="pill-badge bg-stone-200 text-stone-800 text-[10px] font-semibold">
@@ -314,19 +325,28 @@ function ServicesPage() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-5 h-64 lg:h-full min-h-[240px] bg-stone-950 relative overflow-hidden border-t lg:border-t-0 lg:border-l border-stone-800/20">
+                  <a
+                    href={CONTACT.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`Check ${step.title} on Telegram Desk`}
+                    className="group/img lg:col-span-5 h-64 lg:h-full min-h-[240px] bg-stone-950 relative overflow-hidden border-t lg:border-t-0 lg:border-l border-stone-800/20 block cursor-pointer"
+                  >
                     <img
                       src={step.image}
                       alt={step.title}
-                      className="h-full w-full object-cover filter brightness-95"
+                      className="h-full w-full object-cover filter brightness-95 group-hover/img:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
+                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                       <span className="pill-badge bg-stone-900/90 text-white border-stone-700 text-[10px] backdrop-blur-sm">
                         Documented Verification Protocol
                       </span>
+                      <span className="pill-badge bg-amber-400 text-stone-950 text-[9px] font-bold uppercase tracking-wider py-0.5 px-2 group-hover/img:bg-amber-300 transition-colors inline-flex items-center gap-1">
+                        Check ↗
+                      </span>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             ))}

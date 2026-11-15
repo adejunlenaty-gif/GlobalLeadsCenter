@@ -1,6 +1,7 @@
 export const CONTACT = {
-  telegram: "https://t.me/premiumleadscenter",
-  telegramAlt: "https://t.me/globalleadscenter",
+  telegram: "https://t.me/+7FcITOhG4GI2NDdk",
+  telegramAlt: "https://t.me/+7FcITOhG4GI2NDdk",
+  telegramChannel: "https://t.me/+7FcITOhG4GI2NDdk",
   whatsapp: "https://wa.me/447456067627",
   email: "contact@globalleadscenter.com",
   phone: "+44 7456 067627",

@@ -272,13 +272,24 @@ function PortfolioPage() {
               key={sample.title}
               className="bento-card flex flex-col justify-between overflow-hidden bg-[#FAF7F2] transition-transform hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="aspect-[16/10] border-b border-stone-800/10 bg-stone-200/60 p-2 flex items-center justify-center overflow-hidden">
-                <img
-                  src={sample.image.url}
-                  alt={sample.title}
-                  loading="lazy"
-                  className="h-full w-full object-contain transition-transform duration-300 hover:scale-105"
-                />
+              <div className="aspect-[16/10] border-b border-stone-800/10 bg-stone-200/60 p-2 flex items-center justify-center overflow-hidden relative group/img">
+                <a
+                  href={CONTACT.telegram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Check ${sample.title} on Telegram Desk`}
+                  className="block h-full w-full relative"
+                >
+                  <img
+                    src={sample.image.url}
+                    alt={sample.title}
+                    loading="lazy"
+                    className="h-full w-full object-contain transition-transform duration-300 group-hover/img:scale-105"
+                  />
+                  <span className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-stone-950/85 text-amber-300 border border-amber-400/30 px-1.5 py-0.5 rounded backdrop-blur-xs shadow-xs opacity-90 group-hover/img:opacity-100 transition-opacity">
+                    Check ↗
+                  </span>
+                </a>
               </div>
 
               <div className="p-5 flex-1 flex flex-col justify-between">
@@ -317,11 +328,29 @@ function PortfolioPage() {
                         </DialogDescription>
                       </DialogHeader>
                       <div className="mt-4 overflow-hidden rounded-xl border border-stone-800/15 bg-white p-2">
-                        <img
-                          src={sample.image.url}
-                          alt={sample.title}
-                          className="max-h-[70dvh] w-full object-contain"
-                        />
+                        <a
+                          href={CONTACT.telegram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Verify or Request this sample on Telegram Desk"
+                          className="block cursor-pointer group/modal"
+                        >
+                          <img
+                            src={sample.image.url}
+                            alt={sample.title}
+                            className="max-h-[70dvh] w-full object-contain group-hover/modal:opacity-95 transition-opacity"
+                          />
+                        </a>
+                      </div>
+                      <div className="mt-3 flex justify-end">
+                        <a
+                          href={CONTACT.telegram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full bg-stone-900 px-4 py-2 text-xs font-semibold text-[#FAF7F2] hover:bg-stone-800 transition-colors"
+                        >
+                          Request Sample on Telegram ↗
+                        </a>
                       </div>
                     </DialogContent>
                   </Dialog>
