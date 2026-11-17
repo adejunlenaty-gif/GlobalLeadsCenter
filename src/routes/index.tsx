@@ -62,8 +62,34 @@ const formSchema = z.object({
   service: z.string().min(1, "Choose a service").max(100),
   target_country: z.string().trim().min(1, "Enter a target country").max(100),
   requirements: z.string().trim().max(1000).optional(),
-  details: z.string().trim().min(10, "Please describe your project (at least 10 characters)").max(3000),
+  details: z.string().trim().max(3000).optional(),
 });
+
+function buildQuoteMessage(data: {
+  full_name: string;
+  email: string;
+  company: string;
+  service: string;
+  target_country: string;
+  requirements?: string | null;
+  details?: string | null;
+}) {
+  return [
+    `🔔 NEW CAMPAIGN QUOTE REQUEST — GlobalLeadsCenter`,
+    `━━━━━━━━━━━━━━━━━━━━━━━━━`,
+    `👤 Full Name: ${data.full_name}`,
+    `🏢 Company: ${data.company}`,
+    `📧 Email: ${data.email}`,
+    `🎯 Service: ${data.service}`,
+    `🌍 Target Market: ${data.target_country}`,
+    data.requirements ? `📊 Volume / Timeline: ${data.requirements}` : null,
+    data.details ? `📝 Requirements: ${data.details}` : null,
+    `━━━━━━━━━━━━━━━━━━━━━━━━━`,
+    `Direct Request via GlobalLeadsCenter Portal`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
 
 const fieldCls =
   "w-full rounded-xl border border-stone-800/20 bg-white/90 px-4 py-3 text-sm text-stone-900 outline-none transition-colors placeholder:text-stone-400 focus:border-stone-900 focus:bg-white";
@@ -72,10 +98,13 @@ function HomePage() {
   const [selectedTier, setSelectedTier] = useState<string>("Premium Sweepstakes Lead Generation");
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [submitStatus, setSubmitStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [submittedBrief, setSubmittedBrief] = useState<string>("");
 
   async function handleQuoteSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.currentTarget));
+    const form = e.currentTarget;
+    const targetChannel = (form.dataset.targetChannel as "telegram" | "whatsapp") || "telegram";
+    const data = Object.fromEntries(new FormData(form));
     const parsed = formSchema.safeParse(data);
     if (!parsed.success) {
       const errs: Record<string, string> = {};
@@ -85,11 +114,49 @@ function HomePage() {
     }
     setFormErrors({});
     setSubmitStatus("sending");
-    const { error } = await supabase.from("quote_requests").insert({
-      ...parsed.data,
+
+    const briefText = buildQuoteMessage({
+      full_name: parsed.data.full_name,
+      email: parsed.data.email,
+      company: parsed.data.company,
+      service: parsed.data.service,
+      target_country: parsed.data.target_country,
       requirements: parsed.data.requirements || null,
+      details: parsed.data.details || null,
     });
-    setSubmitStatus(error ? "error" : "done");
+    setSubmittedBrief(briefText);
+
+    // Save to Supabase safely in background if connected, but never block user
+    try {
+      await supabase.from("quote_requests").insert({
+        full_name: parsed.data.full_name,
+        email: parsed.data.email,
+        company: parsed.data.company,
+        service: parsed.data.service,
+        target_country: parsed.data.target_country,
+        requirements: parsed.data.requirements || null,
+        details: parsed.data.details || parsed.data.requirements || "Quote request",
+      });
+    } catch (err) {
+      console.warn("Supabase quote insert:", err);
+    }
+
+    // Copy to clipboard for easy pasting
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard) {
+        await navigator.clipboard.writeText(briefText);
+      }
+    } catch {}
+
+    // Dispatch directly to WhatsApp or Telegram
+    if (targetChannel === "whatsapp") {
+      const waUrl = `https://wa.me/447456067627?text=${encodeURIComponent(briefText)}`;
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    } else {
+      window.open(CONTACT.telegram, "_blank", "noopener,noreferrer");
+    }
+
+    setSubmitStatus("done");
   }
 
   return (
@@ -1789,20 +1856,74 @@ function HomePage() {
             </div>
 
             {submitStatus === "done" ? (
-              <div className="py-16 text-center space-y-4">
-                <CheckCircle2 className="mx-auto h-16 w-16 text-emerald-800 animate-bounce" />
-                <h4 className="font-display text-3xl uppercase tracking-wide text-stone-900">Inquiry Received</h4>
-                <p className="max-w-md mx-auto text-sm text-stone-700">
-                  Thank you. Our coordination team has received your brief and will review requirements and availability
-                  before preparing a structured proposal.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setSubmitStatus("idle")}
-                  className="pill-badge bg-stone-900 text-white border-stone-900 mt-4 text-xs"
-                >
-                  Send another inquiry
-                </button>
+              <div className="py-10 text-center space-y-6">
+                <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-emerald-100 text-emerald-800 shadow-sm">
+                  <CheckCircle2 className="h-10 w-10" />
+                </div>
+                <div>
+                  <h4 className="font-display text-2xl sm:text-3xl uppercase tracking-wide text-stone-900 font-bold">
+                    Campaign Brief Ready!
+                  </h4>
+                  <p className="max-w-lg mx-auto text-xs sm:text-sm text-stone-700 mt-2 leading-relaxed font-sans">
+                    Your campaign brief has been compiled. Connect with our desk directly on <strong>Telegram</strong> or <strong>WhatsApp</strong> to lock in pricing and lead availability immediately.
+                  </p>
+                </div>
+
+                {/* Direct Action Buttons to Telegram & WhatsApp */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 max-w-md mx-auto">
+                  <a
+                    href={CONTACT.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-sky-600 px-6 py-3 font-display text-xs font-bold uppercase tracking-wider text-white hover:bg-sky-500 shadow-md transition-colors"
+                  >
+                    <Send className="h-4 w-4" /> Open Telegram Desk ↗
+                  </a>
+                  <a
+                    href={`https://wa.me/447456067627?text=${encodeURIComponent(submittedBrief)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-emerald-700 px-6 py-3 font-display text-xs font-bold uppercase tracking-wider text-white hover:bg-emerald-600 shadow-md transition-colors"
+                  >
+                    <MessageCircle className="h-4 w-4" /> Send on WhatsApp ↗
+                  </a>
+                </div>
+
+                {/* Formatted Brief Preview & Copy Box */}
+                {submittedBrief && (
+                  <div className="max-w-xl mx-auto text-left rounded-xl bg-stone-900 text-[#FAF7F2] p-4 text-xs font-mono border border-stone-800 shadow-inner space-y-2">
+                    <div className="flex items-center justify-between border-b border-stone-800 pb-2">
+                      <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">
+                        Prepared Brief Summary (Auto-Copied to Clipboard)
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (typeof navigator !== "undefined" && navigator.clipboard) {
+                            navigator.clipboard.writeText(submittedBrief);
+                            alert("Copied brief to clipboard!");
+                          }
+                        }}
+                        className="text-[10px] text-stone-400 hover:text-white underline cursor-pointer"
+                      >
+                        Copy Brief
+                      </button>
+                    </div>
+                    <pre className="whitespace-pre-wrap text-[11px] text-stone-300 font-sans leading-relaxed">
+                      {submittedBrief}
+                    </pre>
+                  </div>
+                )}
+
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => setSubmitStatus("idle")}
+                    className="text-xs text-stone-600 hover:text-stone-900 underline font-semibold cursor-pointer"
+                  >
+                    ← Submit another inquiry
+                  </button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleQuoteSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
@@ -1892,7 +2013,7 @@ function HomePage() {
 
                 <div className="sm:col-span-2">
                   <label className="block text-xs font-semibold uppercase tracking-wider text-stone-800 mb-1.5">
-                    Project Details & Qualification Criteria *
+                    Project Details &amp; Qualification Criteria (Optional)
                   </label>
                   <textarea
                     name="details"
@@ -1906,21 +2027,43 @@ function HomePage() {
                   )}
                 </div>
 
-                {submitStatus === "error" && (
-                  <div className="sm:col-span-2 p-3 rounded-lg bg-red-100 text-red-800 text-xs">
-                    Something went wrong sending your inquiry. Please try again or reach out directly on Telegram.
-                  </div>
-                )}
+                <div className="sm:col-span-2 pt-3 border-t border-stone-800/15 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                  <div className="flex flex-col sm:flex-row gap-2.5">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        const form = e.currentTarget.closest("form");
+                        if (form) {
+                          form.dataset.targetChannel = "telegram";
+                          form.requestSubmit();
+                        }
+                      }}
+                      disabled={submitStatus === "sending"}
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-stone-900 px-6 py-3.5 font-display text-xs font-bold uppercase tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-colors shadow-md disabled:opacity-50 cursor-pointer"
+                    >
+                      <Send className="h-4 w-4 text-sky-400" />
+                      {submitStatus === "sending" ? "Preparing Brief..." : "Submit to Telegram Desk ↗"}
+                    </button>
 
-                <div className="sm:col-span-2 pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <button
-                    type="submit"
-                    disabled={submitStatus === "sending"}
-                    className="w-full sm:w-auto rounded-full bg-stone-900 px-8 py-3.5 font-display text-xs tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-colors shadow-md disabled:opacity-50"
-                  >
-                    {submitStatus === "sending" ? "SUBMITTING BRIEF..." : "SUBMIT INQUIRY →"}
-                  </button>
-                  <span className="text-[11px] text-stone-600">Response typically within 2-4 hours.</span>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        const form = e.currentTarget.closest("form");
+                        if (form) {
+                          form.dataset.targetChannel = "whatsapp";
+                          form.requestSubmit();
+                        }
+                      }}
+                      disabled={submitStatus === "sending"}
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-800 px-6 py-3.5 font-display text-xs font-bold uppercase tracking-wider text-white hover:bg-emerald-700 transition-colors shadow-md disabled:opacity-50 cursor-pointer"
+                    >
+                      <MessageCircle className="h-4 w-4 text-emerald-300" />
+                      Submit to WhatsApp ↗
+                    </button>
+                  </div>
+                  <span className="text-[11px] text-stone-600 text-center sm:text-right font-medium">
+                    Direct dispatch to senior desk
+                  </span>
                 </div>
               </form>
             )}
