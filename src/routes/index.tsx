@@ -1519,169 +1519,362 @@ function HomePage() {
 
       {/* ─────────────────────────────────────────────────────────────
           5. RATE CARD (Canva "RATE CARD")
+          💎 PREMIUM SWEEPSTAKES LEADS — PCH & MEGA MILLIONS
       ───────────────────────────────────────────────────────────── */}
       <section id="rate-card" className="mx-auto max-w-7xl px-5 py-14">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="font-display text-xs uppercase tracking-[0.25em] text-stone-600">Transparent Campaign Tiers & Rate Card</p>
+          <div className="inline-flex items-center gap-2 rounded-full border border-stone-800/20 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-stone-900 shadow-xs mb-3">
+            <span>💎</span>
+            <span>PREMIUM SWEEPSTAKES LEADS — PCH &amp; MEGA MILLIONS</span>
+          </div>
           <h2 className="font-display text-4xl sm:text-5xl uppercase tracking-wider text-stone-900 mt-1 font-bold">
-            CAMPAIGN RATE CARD & PRICING
+            CAMPAIGN RATE CARD &amp; PRICING
           </h2>
-          <p className="mt-3 text-sm text-stone-700 font-sans leading-relaxed">
-            Every lead package is quoted on an agreed price-per-lead (PPL) or custom volume structure based on vertical, target country, qualification criteria, and freshness SLA.
+          <p className="mt-3 text-sm sm:text-base text-stone-700 font-sans leading-relaxed">
+            Every lead package is quoted with transparent fixed tiers, high contact rates, and rapid delivery for PCH, Mega Millions &amp; promotional campaign operators.
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs">
-            <span className="pill-badge bg-stone-900 text-white">Price-Per-Lead: $0.80 – $2.50 Typical</span>
-            <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">Standard Fresh vs Dedicated Exclusive</span>
-            <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">Clear Replacement Policy (48h SLA)</span>
+            <span className="pill-badge bg-stone-900 text-white">🔥 Fixed Volume Packages</span>
+            <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">✅ Bigger Packages, Better Value!</span>
+            <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">✅ Flexible Package Options</span>
+            <span className="pill-badge bg-stone-200 text-stone-900">🛡️ Clear Replacement Policy (48h SLA)</span>
           </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {/* Tier 1: Starter Batch */}
-          <div className="bento-card bg-[#CEC4BC] p-7 flex flex-col justify-between hover:border-stone-900 transition-all">
+        {/* 4 Packages Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Tier 1: $100 — 150 Leads */}
+          <div className="bento-card bg-[#CEC4BC] p-6 flex flex-col justify-between hover:border-stone-900 transition-all border border-stone-800/15">
             <div>
-              <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] border-stone-800">
-                PILOT & VALIDATION
-              </span>
-              <h3 className="font-display text-2xl uppercase tracking-wide text-stone-900 mt-3">Starter Test Batch</h3>
+              <div className="flex items-center justify-between">
+                <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] border-stone-800">
+                  STARTER BATCH
+                </span>
+                <span className="text-[11px] font-semibold text-stone-700">~ $0.67 / lead</span>
+              </div>
+              <h3 className="font-display text-xl uppercase tracking-wide text-stone-900 mt-3 font-bold">
+                Starter Test
+              </h3>
               <p className="text-xs text-stone-700 mt-1">
-                Perfect for evaluating lead freshness, contact rates, and dialing responses.
+                Fast offer validation, script benchmarking &amp; dialing response test.
               </p>
 
-              <div className="my-6 border-y border-stone-800/15 py-4">
-                <span className="font-display text-3xl text-stone-900 font-bold">500 - 1,000</span>
-                <span className="text-xs text-stone-600 ml-2 font-semibold uppercase">Verified Leads</span>
-                <p className="text-[11px] text-amber-900 font-medium mt-1">From $0.85 – $1.20 / lead (Custom Quoted)</p>
+              <div className="my-5 border-y border-stone-800/15 py-3">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display text-4xl text-stone-900 font-bold">$100</span>
+                  <span className="text-xs text-stone-600 font-semibold uppercase">Fixed</span>
+                </div>
+                <div className="mt-1 flex items-center gap-1.5 text-stone-900 font-display text-lg font-bold">
+                  <span>🔥</span>
+                  <span>150 Verified Leads</span>
+                </div>
               </div>
 
-              <ul className="space-y-2.5 text-xs text-stone-800">
+              <ul className="space-y-2 text-xs text-stone-800">
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> 1 Permitted Target Country
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>150 Sweepstakes &amp; PCH Leads</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Explicit Opt-In Consent Documentation
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Opt-In Consent Documentation</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Agreed Freshness Window (&lt;24h)
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Duplicate & Syntax Screening
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Duplicate &amp; Syntax Screening</span>
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-stone-900">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Clear Replacement Policy: 1-to-1 credit on invalid lines (48h)
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Clear 48h Replacement SLA</span>
                 </li>
               </ul>
             </div>
 
-            <a
-              href="#contact"
-              onClick={() => setSelectedTier("Starter Test Batch (500 - 1,000 leads)")}
-              className="mt-8 block w-full text-center rounded-full border border-stone-800/30 bg-white/90 py-2.5 font-display text-xs tracking-wider text-stone-900 hover:bg-stone-900 hover:text-white transition-all shadow-xs"
-            >
-              SELECT STARTER BATCH
-            </a>
+            <div className="mt-6 space-y-2">
+              <a
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $100 Package (150 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center rounded-full bg-stone-900 py-2.5 font-display text-xs font-bold tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-all shadow-xs"
+              >
+                ORDER $100 PACKAGE ↗
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setSelectedTier("Premium Sweepstakes $100 Package (150 Leads)")}
+                className="block w-full text-center text-[11px] text-stone-600 hover:text-stone-900 underline font-semibold"
+              >
+                Or Select for Quote Form ↓
+              </a>
+            </div>
           </div>
 
-          {/* Tier 2: Growth Scale (Highlighted) */}
-          <div className="bento-card bg-[#231F1D] text-[#FAF7F2] p-7 flex flex-col justify-between shadow-xl relative border-stone-700">
-            <div className="absolute -top-3 right-6">
-              <span className="rounded-full bg-amber-400 text-stone-950 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider shadow-sm">
-                MOST POPULAR
+          {/* Tier 2: $200 — 300 Leads */}
+          <div className="bento-card bg-[#CEC4BC] p-6 flex flex-col justify-between hover:border-stone-900 transition-all border border-stone-800/15">
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] border-stone-800">
+                  GROWTH BATCH
+                </span>
+                <span className="text-[11px] font-semibold text-stone-700">~ $0.67 / lead</span>
+              </div>
+              <h3 className="font-display text-xl uppercase tracking-wide text-stone-900 mt-3 font-bold">
+                Growth Pipeline
+              </h3>
+              <p className="text-xs text-stone-700 mt-1">
+                Optimized for active outbound teams, brokers, and steady dialer pacing.
+              </p>
+
+              <div className="my-5 border-y border-stone-800/15 py-3">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display text-4xl text-stone-900 font-bold">$200</span>
+                  <span className="text-xs text-stone-600 font-semibold uppercase">Fixed</span>
+                </div>
+                <div className="mt-1 flex items-center gap-1.5 text-stone-900 font-display text-lg font-bold">
+                  <span>🔥</span>
+                  <span>300 Verified Leads</span>
+                </div>
+              </div>
+
+              <ul className="space-y-2 text-xs text-stone-800">
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>300 Sweepstakes &amp; PCH Leads</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Targeted Geographic Filtering</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>HLR Mobile Live-Status Ping</span>
+                </li>
+                <li className="flex items-center gap-2 font-semibold text-stone-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Clear 48h Replacement SLA</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-6 space-y-2">
+              <a
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $200 Package (300 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center rounded-full bg-stone-900 py-2.5 font-display text-xs font-bold tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-all shadow-xs"
+              >
+                ORDER $200 PACKAGE ↗
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setSelectedTier("Premium Sweepstakes $200 Package (300 Leads)")}
+                className="block w-full text-center text-[11px] text-stone-600 hover:text-stone-900 underline font-semibold"
+              >
+                Or Select for Quote Form ↓
+              </a>
+            </div>
+          </div>
+
+          {/* Tier 3: $300 — 500 Leads */}
+          <div className="bento-card bg-[#CEC4BC] p-6 flex flex-col justify-between hover:border-stone-900 transition-all border border-amber-600/30 relative">
+            <div className="absolute -top-3 right-4">
+              <span className="rounded-full bg-emerald-700 text-white px-3 py-0.5 text-[9px] font-bold uppercase tracking-wider shadow-sm">
+                BETTER VALUE
               </span>
             </div>
 
             <div>
-              <span className="pill-badge text-[10px] bg-stone-800 text-amber-300 border-stone-700">
-                ACTIVE OPERATIONS
-              </span>
-              <h3 className="font-display text-2xl uppercase tracking-wide text-[#FAF7F2] mt-3">Growth Pipeline</h3>
-              <p className="text-xs text-stone-400 mt-1">
-                Optimized for active outbound calling teams, brokers, and ongoing promotion campaigns.
+              <div className="flex items-center justify-between">
+                <span className="pill-badge text-[10px] bg-amber-800 text-white border-amber-900">
+                  PRO PIPELINE
+                </span>
+                <span className="text-[11px] font-bold text-emerald-800">$0.60 / lead</span>
+              </div>
+              <h3 className="font-display text-xl uppercase tracking-wide text-stone-900 mt-3 font-bold">
+                Pro Campaign
+              </h3>
+              <p className="text-xs text-stone-700 mt-1">
+                Scaling outbound operations, multiple dialer seats, and brokers.
               </p>
 
-              <div className="my-6 border-y border-stone-700/50 py-4">
-                <span className="font-display text-3xl text-[#FAF7F2] font-bold">2,500 - 10,000</span>
-                <span className="text-xs text-stone-400 ml-2 font-semibold uppercase">Fresh Leads</span>
-                <p className="text-[11px] text-amber-300 font-medium mt-1">Volume-Tiered Discount · Dedicated Rep</p>
+              <div className="my-5 border-y border-stone-800/15 py-3">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display text-4xl text-stone-900 font-bold">$300</span>
+                  <span className="text-[11px] text-emerald-800 font-bold uppercase">Save $35+</span>
+                </div>
+                <div className="mt-1 flex items-center gap-1.5 text-stone-900 font-display text-lg font-bold">
+                  <span>🔥</span>
+                  <span>500 Verified Leads</span>
+                </div>
               </div>
 
-              <ul className="space-y-2.5 text-xs text-stone-300">
+              <ul className="space-y-2 text-xs text-stone-800">
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Multi-Country Geographic Targeting
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>500 Sweepstakes &amp; PCH Leads</span>
+                </li>
+                <li className="flex items-center gap-2 font-semibold text-emerald-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Better Value Rate ($0.60/lead)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Custom Qualification & Survey Fields
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Enhanced Survey Qualification</span>
+                </li>
+                <li className="flex items-center gap-2 font-semibold text-stone-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>Priority 48h Replacement SLA</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-6 space-y-2">
+              <a
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $300 Package (500 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center rounded-full bg-stone-900 py-2.5 font-display text-xs font-bold tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-all shadow-xs"
+              >
+                ORDER $300 PACKAGE ↗
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setSelectedTier("Premium Sweepstakes $300 Package (500 Leads)")}
+                className="block w-full text-center text-[11px] text-stone-600 hover:text-stone-900 underline font-semibold"
+              >
+                Or Select for Quote Form ↓
+              </a>
+            </div>
+          </div>
+
+          {/* Tier 4: $500 — 1,000 Leads (Featured Dark Bento Card) */}
+          <div className="bento-card bg-[#231F1D] text-[#FAF7F2] p-6 flex flex-col justify-between shadow-xl relative border-amber-400/50">
+            <div className="absolute -top-3 right-4">
+              <span className="rounded-full bg-amber-400 text-stone-950 px-3 py-0.5 text-[9px] font-extrabold uppercase tracking-wider shadow-md">
+                🔥 MOST POPULAR · BEST VALUE
+              </span>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="pill-badge text-[10px] bg-stone-800 text-amber-300 border-stone-700">
+                  SCALE MASTER
+                </span>
+                <span className="text-[11px] font-bold text-amber-300">$0.50 / lead</span>
+              </div>
+              <h3 className="font-display text-xl uppercase tracking-wide text-white mt-3 font-bold">
+                Scale Master
+              </h3>
+              <p className="text-xs text-stone-300 mt-1">
+                Heavy call centers, autodialers &amp; brokers. Bigger packages, better value!
+              </p>
+
+              <div className="my-5 border-y border-stone-700/50 py-3">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display text-4xl text-white font-bold">$500</span>
+                  <span className="text-[11px] text-amber-300 font-bold uppercase">Save 25%!</span>
+                </div>
+                <div className="mt-1 flex items-center gap-1.5 text-amber-300 font-display text-lg font-bold">
+                  <span>🔥</span>
+                  <span>1,000 Verified Leads</span>
+                </div>
+              </div>
+
+              <ul className="space-y-2 text-xs text-stone-300">
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span>1,000 Sweepstakes &amp; PCH Leads</span>
+                </li>
+                <li className="flex items-center gap-2 font-bold text-amber-300">
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span>Deepest Discount ($0.50 / lead)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Choice of Standard Fresh or Dedicated Exclusive
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span>HLR Mobile Live Ping Screened</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> HLR Mobile Line-Status Live Ping Screening
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> SIP Trunk & Dialer Setup Consultation
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span>Dedicated Senior Account Rep</span>
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-white">
-                  <Check className="h-4 w-4 text-amber-400 shrink-0" /> Clear Replacement Policy: priority carrier verification & 48h credit
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span>Priority 48h Replacement SLA</span>
                 </li>
               </ul>
             </div>
 
-            <a
-              href="#contact"
-              onClick={() => setSelectedTier("Growth Pipeline (2,500 - 10,000 leads)")}
-              className="mt-8 block w-full text-center rounded-full bg-[#FAF7F2] py-2.5 font-display text-xs tracking-wider text-stone-950 hover:bg-stone-200 transition-all shadow-md font-bold"
-            >
-              SELECT GROWTH PIPELINE
-            </a>
+            <div className="mt-6 space-y-2">
+              <a
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $500 Package (1,000 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center rounded-full bg-amber-400 py-2.5 font-display text-xs font-bold tracking-wider text-stone-950 hover:bg-amber-300 transition-all shadow-md"
+              >
+                ORDER $500 PACKAGE ↗
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setSelectedTier("Premium Sweepstakes $500 Package (1,000 Leads)")}
+                className="block w-full text-center text-[11px] text-stone-300 hover:text-white underline font-semibold"
+              >
+                Or Select for Quote Form ↓
+              </a>
+            </div>
           </div>
+        </div>
 
-          {/* Tier 3: Enterprise Custom */}
-          <div className="bento-card bg-[#CEC4BC] p-7 flex flex-col justify-between hover:border-stone-900 transition-all">
-            <div>
-              <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] border-stone-800">
-                ENTERPRISE NETWORK
-              </span>
-              <h3 className="font-display text-2xl uppercase tracking-wide text-stone-900 mt-3">Custom Enterprise</h3>
-              <p className="text-xs text-stone-700 mt-1">
-                Bespoke high-volume architecture, dedicated dialer feeds, and bespoke compliance handling.
-              </p>
-
-              <div className="my-6 border-y border-stone-800/15 py-4">
-                <span className="font-display text-3xl text-stone-900 font-bold">10,000+</span>
-                <span className="text-xs text-stone-600 ml-2 font-semibold uppercase">High-Volume Scale</span>
-                <p className="text-[11px] text-stone-700 font-medium mt-1">Direct Wholesale Rates · Webhook API</p>
-              </div>
-
-              <ul className="space-y-2.5 text-xs text-stone-800">
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Nationwide US & Global Sourcing
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Real-time Webhook / API CRM Ingestion (0-15 mins)
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Guaranteed Exclusive Distribution Locks Available
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Dedicated Telephony & DID Sourcing
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Dedicated Senior Campaign Account Manager
-                </li>
-                <li className="flex items-center gap-2 font-semibold text-stone-900">
-                  <Check className="h-4 w-4 text-emerald-800 shrink-0" /> Automated Instant Replacement Credit
-                </li>
-              </ul>
+        {/* READY TO GET STARTED? Callout Box */}
+        <div className="mt-12 rounded-3xl border border-stone-800/20 bg-[#231F1D] text-[#FAF7F2] p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-400 text-stone-950 px-4 py-1 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>READY TO GET STARTED?</span>
             </div>
-
-            <a
-              href="#contact"
-              onClick={() => setSelectedTier("Custom Enterprise (10,000+ leads)")}
-              className="mt-8 block w-full text-center rounded-full border border-stone-800/30 bg-white/90 py-2.5 font-display text-xs tracking-wider text-stone-900 hover:bg-stone-900 hover:text-white transition-all shadow-xs"
-            >
-              SELECT ENTERPRISE
-            </a>
+            <h3 className="font-display text-2xl sm:text-3xl uppercase tracking-wider font-bold text-white">
+              Choose your package and message me now to confirm availability and secure your order.
+            </h3>
+            <p className="mt-3 text-base sm:text-lg text-amber-300 font-semibold">
+              Let’s get your leads ready! 🔥
+            </p>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-stone-300">
+              <span className="flex items-center gap-1.5 font-medium">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Bigger packages, better value!
+              </span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Flexible package options.
+              </span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Clear 48h replacement credit.
+              </span>
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi! I'm ready to choose my Premium Sweepstakes package (PCH & Mega Millions). Please confirm current availability and let's get my leads ready! 🔥")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-8 py-3.5 font-display text-xs font-bold uppercase tracking-wider text-white hover:bg-emerald-500 transition-all shadow-lg hover:shadow-xl cursor-pointer"
+              >
+                <MessageCircle className="h-4 w-4 text-emerald-200" />
+                Message on WhatsApp (+44 7456 067627) ↗
+              </a>
+              <a
+                href={CONTACT.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-sky-600 px-8 py-3.5 font-display text-xs font-bold uppercase tracking-wider text-white hover:bg-sky-500 transition-all shadow-lg hover:shadow-xl cursor-pointer"
+              >
+                <Send className="h-4 w-4 text-sky-200" />
+                Message on Telegram Desk ↗
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setSelectedTier("Custom Enterprise Volume (2,500 - 10,000+ Leads)")}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-stone-600 px-6 py-3.5 font-display text-xs uppercase tracking-wider text-stone-300 hover:text-white hover:border-white transition-all cursor-pointer"
+              >
+                Need Custom Volume (2,500+)? ↓
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1973,10 +2166,14 @@ function HomePage() {
                     key={selectedTier}
                     className={fieldCls}
                   >
-                    <option value="" disabled>Select a campaign service</option>
-                    <option value="Starter Test Batch (500 - 1,000 leads)">Starter Test Batch (500 - 1,000 leads)</option>
-                    <option value="Growth Pipeline (2,500 - 10,000 leads)">Growth Pipeline (2,500 - 10,000 leads)</option>
-                    <option value="Custom Enterprise (10,000+ leads)">Custom Enterprise (10,000+ leads)</option>
+                    <option value="" disabled>Select a package or service</option>
+                    <optgroup label="💎 Premium Sweepstakes Packages (PCH & Mega Millions)">
+                      <option value="Premium Sweepstakes $100 Package (150 Leads)">$100 — 150 Leads (Starter Test)</option>
+                      <option value="Premium Sweepstakes $200 Package (300 Leads)">$200 — 300 Leads (Growth Pipeline)</option>
+                      <option value="Premium Sweepstakes $300 Package (500 Leads)">$300 — 500 Leads (Better Value!)</option>
+                      <option value="Premium Sweepstakes $500 Package (1,000 Leads)">$500 — 1,000 Leads (Most Popular & Best Value!)</option>
+                      <option value="Custom Enterprise Volume (2,500 - 10,000+ Leads)">Custom Enterprise Volume (2,500 - 10,000+ Leads)</option>
+                    </optgroup>
                     {SERVICES.map((s) => (
                       <option key={s.slug} value={s.name}>
                         {s.name}

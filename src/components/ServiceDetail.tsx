@@ -396,12 +396,12 @@ export function ServiceDetail({ slug }: { slug: string }) {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {PACKAGES.map((pkg) => (
               <div
                 key={pkg.id}
                 className={`bento-card p-6 flex flex-col justify-between ${
-                  pkg.id === "growth" ? "ring-2 ring-stone-900 shadow-xl bg-white" : "bg-[#FAF7F2]"
+                  pkg.id === "tier-500" ? "ring-2 ring-stone-900 shadow-xl bg-white" : "bg-[#FAF7F2]"
                 }`}
               >
                 <div>
