@@ -1534,7 +1534,7 @@ function HomePage() {
             Every lead package is quoted with transparent fixed tiers, high contact rates, and rapid delivery for PCH, Mega Millions &amp; promotional campaign operators.
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs">
-            <span className="pill-badge bg-stone-900 text-white">🔥 Fixed Volume Packages</span>
+            <span className="pill-badge bg-stone-900 text-white font-semibold">⚡ Guaranteed 24h Delivery (All Packages)</span>
             <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">✅ Bigger Packages, Better Value!</span>
             <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">✅ Flexible Package Options</span>
             <span className="pill-badge bg-stone-200 text-stone-900">🛡️ Clear Replacement Policy (48h SLA)</span>
@@ -1550,13 +1550,13 @@ function HomePage() {
                 <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] border-stone-800">
                   STARTER BATCH
                 </span>
-                <span className="text-[11px] font-semibold text-stone-700">~ $0.67 / lead</span>
+                <span className="text-[11px] font-bold text-stone-900">⚡ 24h Delivery</span>
               </div>
               <h3 className="font-display text-xl uppercase tracking-wide text-stone-900 mt-3 font-bold">
                 Starter Test
               </h3>
               <p className="text-xs text-stone-700 mt-1">
-                Fast offer validation, script benchmarking &amp; dialing response test.
+                Fast offer validation &amp; script benchmarking. Delivered within 24 hours.
               </p>
 
               <div className="my-5 border-y border-stone-800/15 py-3">
@@ -1571,6 +1571,10 @@ function HomePage() {
               </div>
 
               <ul className="space-y-2 text-xs text-stone-800">
+                <li className="flex items-center gap-2 font-bold text-stone-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>⚡ Delivered within 24 Hours</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" />
                   <span>150 Sweepstakes &amp; PCH Leads</span>
@@ -1592,7 +1596,7 @@ function HomePage() {
 
             <div className="mt-6 space-y-2">
               <a
-                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $100 Package (150 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $100 Package (150 Leads) for Premium Sweepstakes — PCH & Mega Millions. Delivered within 24 hours. Please confirm availability and let's get my leads ready! 🔥")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center rounded-full bg-stone-900 py-2.5 font-display text-xs font-bold tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-all shadow-xs"
@@ -1601,7 +1605,7 @@ function HomePage() {
               </a>
               <a
                 href="#contact"
-                onClick={() => setSelectedTier("Premium Sweepstakes $100 Package (150 Leads)")}
+                onClick={() => setSelectedTier("Premium Sweepstakes $100 Package (150 Leads — 24h Delivery)")}
                 className="block w-full text-center text-[11px] text-stone-600 hover:text-stone-900 underline font-semibold"
               >
                 Or Select for Quote Form ↓
@@ -1616,13 +1620,13 @@ function HomePage() {
                 <span className="pill-badge text-[10px] bg-stone-900 text-[#FAF7F2] border-stone-800">
                   GROWTH BATCH
                 </span>
-                <span className="text-[11px] font-semibold text-stone-700">~ $0.67 / lead</span>
+                <span className="text-[11px] font-bold text-stone-900">⚡ 24h Delivery</span>
               </div>
               <h3 className="font-display text-xl uppercase tracking-wide text-stone-900 mt-3 font-bold">
                 Growth Pipeline
               </h3>
               <p className="text-xs text-stone-700 mt-1">
-                Optimized for active outbound teams, brokers, and steady dialer pacing.
+                Active outbound teams &amp; brokers. Delivered within 24 hours.
               </p>
 
               <div className="my-5 border-y border-stone-800/15 py-3">
@@ -1637,6 +1641,10 @@ function HomePage() {
               </div>
 
               <ul className="space-y-2 text-xs text-stone-800">
+                <li className="flex items-center gap-2 font-bold text-stone-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>⚡ Delivered within 24 Hours</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" />
                   <span>300 Sweepstakes &amp; PCH Leads</span>
@@ -1658,7 +1666,7 @@ function HomePage() {
 
             <div className="mt-6 space-y-2">
               <a
-                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $200 Package (300 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $200 Package (300 Leads) for Premium Sweepstakes — PCH & Mega Millions. Delivered within 24 hours. Please confirm availability and let's get my leads ready! 🔥")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center rounded-full bg-stone-900 py-2.5 font-display text-xs font-bold tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-all shadow-xs"
@@ -1667,7 +1675,7 @@ function HomePage() {
               </a>
               <a
                 href="#contact"
-                onClick={() => setSelectedTier("Premium Sweepstakes $200 Package (300 Leads)")}
+                onClick={() => setSelectedTier("Premium Sweepstakes $200 Package (300 Leads — 24h Delivery)")}
                 className="block w-full text-center text-[11px] text-stone-600 hover:text-stone-900 underline font-semibold"
               >
                 Or Select for Quote Form ↓
@@ -1688,13 +1696,13 @@ function HomePage() {
                 <span className="pill-badge text-[10px] bg-amber-800 text-white border-amber-900">
                   PRO PIPELINE
                 </span>
-                <span className="text-[11px] font-bold text-emerald-800">$0.60 / lead</span>
+                <span className="text-[11px] font-bold text-emerald-800">⚡ 24h Delivery</span>
               </div>
               <h3 className="font-display text-xl uppercase tracking-wide text-stone-900 mt-3 font-bold">
                 Pro Campaign
               </h3>
               <p className="text-xs text-stone-700 mt-1">
-                Scaling outbound operations, multiple dialer seats, and brokers.
+                Scaling outbound operations &amp; brokers. Delivered within 24 hours.
               </p>
 
               <div className="my-5 border-y border-stone-800/15 py-3">
@@ -1709,6 +1717,10 @@ function HomePage() {
               </div>
 
               <ul className="space-y-2 text-xs text-stone-800">
+                <li className="flex items-center gap-2 font-bold text-emerald-900">
+                  <Check className="h-4 w-4 text-emerald-800 shrink-0" />
+                  <span>⚡ Delivered within 24 Hours</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" />
                   <span>500 Sweepstakes &amp; PCH Leads</span>
@@ -1730,7 +1742,7 @@ function HomePage() {
 
             <div className="mt-6 space-y-2">
               <a
-                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $300 Package (500 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $300 Package (500 Leads) for Premium Sweepstakes — PCH & Mega Millions. Delivered within 24 hours. Please confirm availability and let's get my leads ready! 🔥")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center rounded-full bg-stone-900 py-2.5 font-display text-xs font-bold tracking-wider text-[#FAF7F2] hover:bg-stone-800 transition-all shadow-xs"
@@ -1739,7 +1751,7 @@ function HomePage() {
               </a>
               <a
                 href="#contact"
-                onClick={() => setSelectedTier("Premium Sweepstakes $300 Package (500 Leads)")}
+                onClick={() => setSelectedTier("Premium Sweepstakes $300 Package (500 Leads — 24h Delivery)")}
                 className="block w-full text-center text-[11px] text-stone-600 hover:text-stone-900 underline font-semibold"
               >
                 Or Select for Quote Form ↓
@@ -1760,13 +1772,13 @@ function HomePage() {
                 <span className="pill-badge text-[10px] bg-stone-800 text-amber-300 border-stone-700">
                   SCALE MASTER
                 </span>
-                <span className="text-[11px] font-bold text-amber-300">$0.50 / lead</span>
+                <span className="text-[11px] font-bold text-amber-300">⚡ 24h Delivery</span>
               </div>
               <h3 className="font-display text-xl uppercase tracking-wide text-white mt-3 font-bold">
                 Scale Master
               </h3>
               <p className="text-xs text-stone-300 mt-1">
-                Heavy call centers, autodialers &amp; brokers. Bigger packages, better value!
+                Heavy call centers, autodialers &amp; brokers. Delivered within 24 hours.
               </p>
 
               <div className="my-5 border-y border-stone-700/50 py-3">
@@ -1781,6 +1793,10 @@ function HomePage() {
               </div>
 
               <ul className="space-y-2 text-xs text-stone-300">
+                <li className="flex items-center gap-2 font-extrabold text-amber-300">
+                  <Check className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span>⚡ Delivered within 24 Hours</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-amber-400 shrink-0" />
                   <span>1,000 Sweepstakes &amp; PCH Leads</span>
@@ -1806,7 +1822,7 @@ function HomePage() {
 
             <div className="mt-6 space-y-2">
               <a
-                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $500 Package (1,000 Leads) for Premium Sweepstakes — PCH & Mega Millions. Please confirm availability and let's get my leads ready! 🔥")}`}
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi, I want to secure the $500 Package (1,000 Leads) for Premium Sweepstakes — PCH & Mega Millions. Delivered within 24 hours. Please confirm availability and let's get my leads ready! 🔥")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center rounded-full bg-amber-400 py-2.5 font-display text-xs font-bold tracking-wider text-stone-950 hover:bg-amber-300 transition-all shadow-md"
@@ -1815,7 +1831,7 @@ function HomePage() {
               </a>
               <a
                 href="#contact"
-                onClick={() => setSelectedTier("Premium Sweepstakes $500 Package (1,000 Leads)")}
+                onClick={() => setSelectedTier("Premium Sweepstakes $500 Package (1,000 Leads — 24h Delivery)")}
                 className="block w-full text-center text-[11px] text-stone-300 hover:text-white underline font-semibold"
               >
                 Or Select for Quote Form ↓
@@ -1835,9 +1851,12 @@ function HomePage() {
               Choose your package and message me now to confirm availability and secure your order.
             </h3>
             <p className="mt-3 text-base sm:text-lg text-amber-300 font-semibold">
-              Let’s get your leads ready! 🔥
+              All packages (150 leads up to 1,000 leads) delivered within 24 hours guaranteed! 🔥
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs text-stone-300">
+              <span className="flex items-center gap-1.5 font-bold text-amber-300">
+                <CheckCircle2 className="h-4 w-4 text-amber-300" /> ⚡ 24-Hour Guaranteed Delivery
+              </span>
               <span className="flex items-center gap-1.5 font-medium">
                 <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Bigger packages, better value!
               </span>
@@ -1850,7 +1869,7 @@ function HomePage() {
             </div>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi! I'm ready to choose my Premium Sweepstakes package (PCH & Mega Millions). Please confirm current availability and let's get my leads ready! 🔥")}`}
+                href={`https://wa.me/447456067627?text=${encodeURIComponent("Hi! I'm ready to choose my Premium Sweepstakes package (PCH & Mega Millions). Delivered within 24 hours. Please confirm current availability and let's get my leads ready! 🔥")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 px-8 py-3.5 font-display text-xs font-bold uppercase tracking-wider text-white hover:bg-emerald-500 transition-all shadow-lg hover:shadow-xl cursor-pointer"
@@ -2167,11 +2186,11 @@ function HomePage() {
                     className={fieldCls}
                   >
                     <option value="" disabled>Select a package or service</option>
-                    <optgroup label="💎 Premium Sweepstakes Packages (PCH & Mega Millions)">
-                      <option value="Premium Sweepstakes $100 Package (150 Leads)">$100 — 150 Leads (Starter Test)</option>
-                      <option value="Premium Sweepstakes $200 Package (300 Leads)">$200 — 300 Leads (Growth Pipeline)</option>
-                      <option value="Premium Sweepstakes $300 Package (500 Leads)">$300 — 500 Leads (Better Value!)</option>
-                      <option value="Premium Sweepstakes $500 Package (1,000 Leads)">$500 — 1,000 Leads (Most Popular & Best Value!)</option>
+                    <optgroup label="💎 Premium Sweepstakes Packages (PCH & Mega Millions) — 24h Delivery">
+                      <option value="Premium Sweepstakes $100 Package (150 Leads — 24h Delivery)">$100 — 150 Leads (Delivered within 24h)</option>
+                      <option value="Premium Sweepstakes $200 Package (300 Leads — 24h Delivery)">$200 — 300 Leads (Delivered within 24h)</option>
+                      <option value="Premium Sweepstakes $300 Package (500 Leads — 24h Delivery)">$300 — 500 Leads (Delivered within 24h · Better Value!)</option>
+                      <option value="Premium Sweepstakes $500 Package (1,000 Leads — 24h Delivery)">$500 — 1,000 Leads (Delivered within 24h · Best Value!)</option>
                       <option value="Custom Enterprise Volume (2,500 - 10,000+ Leads)">Custom Enterprise Volume (2,500 - 10,000+ Leads)</option>
                     </optgroup>
                     {SERVICES.map((s) => (

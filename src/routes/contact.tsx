@@ -394,11 +394,11 @@ function ContactPage() {
                         <option value="" disabled>
                           Select a lead generation programme or package
                         </option>
-                        <optgroup label="💎 Premium Sweepstakes Packages (PCH & Mega Millions)">
-                          <option value="Premium Sweepstakes $100 Package (150 Leads)">$100 — 150 Leads (Starter Test)</option>
-                          <option value="Premium Sweepstakes $200 Package (300 Leads)">$200 — 300 Leads (Growth Pipeline)</option>
-                          <option value="Premium Sweepstakes $300 Package (500 Leads)">$300 — 500 Leads (Better Value!)</option>
-                          <option value="Premium Sweepstakes $500 Package (1,000 Leads)">$500 — 1,000 Leads (Most Popular & Best Value!)</option>
+                        <optgroup label="💎 Premium Sweepstakes Packages (PCH & Mega Millions) — 24h Delivery">
+                          <option value="Premium Sweepstakes $100 Package (150 Leads — 24h Delivery)">$100 — 150 Leads (Delivered within 24h)</option>
+                          <option value="Premium Sweepstakes $200 Package (300 Leads — 24h Delivery)">$200 — 300 Leads (Delivered within 24h)</option>
+                          <option value="Premium Sweepstakes $300 Package (500 Leads — 24h Delivery)">$300 — 500 Leads (Delivered within 24h · Better Value!)</option>
+                          <option value="Premium Sweepstakes $500 Package (1,000 Leads — 24h Delivery)">$500 — 1,000 Leads (Delivered within 24h · Best Value!)</option>
                           <option value="Custom Enterprise Volume (2,500 - 10,000+ Leads)">Custom Enterprise Volume (2,500 - 10,000+ Leads)</option>
                         </optgroup>
                         {SERVICES.map((s) => (
