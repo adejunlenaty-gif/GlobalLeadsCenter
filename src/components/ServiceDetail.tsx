@@ -362,7 +362,7 @@ export function ServiceDetail({ slug }: { slug: string }) {
                 <div className="flex items-center gap-1.5 font-bold mb-1">
                   <ShieldCheck className="h-4 w-4 text-emerald-700" /> Clear Replacement Policy
                 </div>
-                Any invalid numbers or format discrepancies reported within 48 hours are replaced 1-to-1 with replacement credit.
+                Any invalid numbers or format discrepancies reported within 24 hours are replaced 1-to-1 with replacement credit.
               </div>
 
               <div className="pt-2 space-y-3">

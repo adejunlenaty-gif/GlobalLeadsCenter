@@ -1265,7 +1265,7 @@ function HomePage() {
                   Brokerage Disclosure & Clear Replacement Policy
                 </h4>
                 <p className="text-xs text-stone-300 leading-relaxed">
-                  As an international lead brokerage and campaign coordinator, we disclose whether a batch is directly generated through internal landing funnels or supplied through a vetted sourcing partner. Every delivery is protected by our Clear Replacement Policy: any verified invalid number, disconnected carrier line, or syntax defect reported within 48 hours is replaced 1-to-1 without dispute.
+                  As an international lead brokerage and campaign coordinator, we disclose whether a batch is directly generated through internal landing funnels or supplied through a vetted sourcing partner. Every delivery is protected by our Clear Replacement Policy: any verified invalid number, disconnected carrier line, or syntax defect reported within 24 hours is replaced 1-to-1 without dispute.
                 </p>
               </div>
 
@@ -1537,7 +1537,7 @@ function HomePage() {
             <span className="pill-badge bg-stone-900 text-white font-semibold">⚡ Guaranteed 24h Delivery (All Packages)</span>
             <span className="pill-badge bg-amber-100 text-amber-900 border-amber-300">✅ Bigger Packages, Better Value!</span>
             <span className="pill-badge bg-emerald-100 text-emerald-900 border-emerald-300">✅ Flexible Package Options</span>
-            <span className="pill-badge bg-stone-200 text-stone-900">🛡️ Clear Replacement Policy (48h SLA)</span>
+            <span className="pill-badge bg-stone-200 text-stone-900">🛡️ Clear Replacement Policy (24h SLA)</span>
           </div>
         </div>
 
@@ -1589,7 +1589,7 @@ function HomePage() {
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-stone-900">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" />
-                  <span>Clear 48h Replacement SLA</span>
+                  <span>Clear 24h Replacement SLA</span>
                 </li>
               </ul>
             </div>
@@ -1659,7 +1659,7 @@ function HomePage() {
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-stone-900">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" />
-                  <span>Clear 48h Replacement SLA</span>
+                  <span>Clear 24h Replacement SLA</span>
                 </li>
               </ul>
             </div>
@@ -1735,7 +1735,7 @@ function HomePage() {
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-stone-900">
                   <Check className="h-4 w-4 text-emerald-800 shrink-0" />
-                  <span>Priority 48h Replacement SLA</span>
+                  <span>Priority 24h Replacement SLA</span>
                 </li>
               </ul>
             </div>
@@ -1815,7 +1815,7 @@ function HomePage() {
                 </li>
                 <li className="flex items-center gap-2 font-semibold text-white">
                   <Check className="h-4 w-4 text-amber-400 shrink-0" />
-                  <span>Priority 48h Replacement SLA</span>
+                  <span>Priority 24h Replacement SLA</span>
                 </li>
               </ul>
             </div>
@@ -1864,7 +1864,7 @@ function HomePage() {
                 <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Flexible package options.
               </span>
               <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Clear 48h replacement credit.
+                <CheckCircle2 className="h-4 w-4 text-emerald-400" /> Clear 24h replacement credit.
               </span>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

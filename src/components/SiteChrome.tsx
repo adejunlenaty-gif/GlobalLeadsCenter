@@ -282,7 +282,7 @@ export function Footer() {
           <span>·</span>
           <Link to="/terms" className="hover:underline">Terms & Conditions</Link>
           <span>·</span>
-          <span>Clear Replacement Policy (48h SLA)</span>
+          <span>Clear Replacement Policy (24h SLA)</span>
         </div>
       </div>
     </footer>

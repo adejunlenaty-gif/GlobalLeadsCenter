@@ -103,7 +103,7 @@ function PrivacyPage() {
             </p>
             <div className="mt-3 rounded-lg border border-stone-800/10 bg-stone-100 p-3 text-xs text-stone-800">
               <strong>Email:</strong> privacy@globalleadscenter.com / contact@globalleadscenter.com<br />
-              <strong>Response SLA:</strong> Within 48 business hours.
+              <strong>Response SLA:</strong> Within 24 business hours.
             </div>
           </div>
         </div>

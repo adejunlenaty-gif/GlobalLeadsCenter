@@ -170,7 +170,7 @@ function PortfolioPage() {
                 Clear Replacement Policy
               </h3>
               <p className="mt-3 text-xs leading-relaxed text-stone-300">
-                Should any delivered lead record contain an invalid phone number, disconnected line, or duplicate from a previous batch within 48 hours of delivery, our team issues a 1-to-1 replacement credit without dispute.
+                Should any delivered lead record contain an invalid phone number, disconnected line, or duplicate from a previous batch within 24 hours of delivery, our team issues a 1-to-1 replacement credit without dispute.
               </p>
             </div>
             <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">

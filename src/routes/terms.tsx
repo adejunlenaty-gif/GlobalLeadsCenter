@@ -67,7 +67,7 @@ function TermsPage() {
               <ul className="space-y-1.5 text-xs text-emerald-800">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-700 shrink-0" />
-                  <span><strong>48-Hour Reporting Window:</strong> Submit dispute lists within 48 hours of batch receipt.</span>
+                  <span><strong>24-Hour Reporting Window:</strong> Submit dispute lists within 24 hours of batch receipt.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-700 shrink-0" />

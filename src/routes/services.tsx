@@ -363,7 +363,7 @@ function ServicesPage() {
                   Brokerage Disclosure & Clear Replacement Policy
                 </h4>
                 <p className="text-xs text-stone-300 leading-relaxed">
-                  As an international lead brokerage and campaign coordinator, we clearly disclose whether each delivery batch is directly generated through our internal assets or sourced via vetted partner networks. Every order includes our Clear Replacement Policy: any invalid number or syntax error reported within 48 hours is replaced 1-to-1 without dispute.
+                  As an international lead brokerage and campaign coordinator, we clearly disclose whether each delivery batch is directly generated through our internal assets or sourced via vetted partner networks. Every order includes our Clear Replacement Policy: any invalid number or syntax error reported within 24 hours is replaced 1-to-1 without dispute.
                 </p>
               </div>
 

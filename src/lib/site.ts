@@ -200,7 +200,7 @@ export const SERVICES: Service[] = [
     ],
     fieldsCaptured: ["Full Name", "Direct Phone", "Business/Personal Email", "City / State / ZIP", "Stated Investment Range", "Consent Token"],
     sourcingMethods: ["Alternative investment whitepapers", "Executive wealth reports", "Investment interest survey funnels"],
-    freshnessWindow: "24-48 hours",
+    freshnessWindow: "Under 24 hours",
     minVolume: "250 records",
     popularCountries: ["United States", "United Kingdom", "Switzerland", "UAE", "Singapore"],
   },
@@ -324,7 +324,7 @@ export const SERVICES: Service[] = [
     ],
     fieldsCaptured: ["First & Last Name", "Job Title", "Company Name", "Corporate Email", "Direct Phone / HQ Phone", "Company Size / Revenue", "LinkedIn URL"],
     sourcingMethods: ["B2B research databases", "Industry survey participation", "Executive webinar registrations", "Digital trade publications"],
-    freshnessWindow: "Curated on-demand within 48-72 hours",
+    freshnessWindow: "Curated on-demand within 24 hours",
     minVolume: "250 records",
     popularCountries: ["North America", "United Kingdom & Europe", "Australia", "Middle East"],
   },
@@ -529,8 +529,8 @@ export const POST_PURCHASE_WORKFLOW = [
     step: "05",
     title: "Buyer Support & Order Management",
     subtitle: "Clear replacement policy & dedicated coordination",
-    desc: "Clients receive proactive updates from a dedicated account coordinator. If any record is found to be disconnected or invalid, submit it within 48 hours for immediate 1-to-1 credit replacement under our transparent warranty.",
-    deliverables: ["48-Hour invalid lead replacement policy", "Dedicated Telegram/WhatsApp support", "Delivery discrepancy audits", "Flexible campaign pacing adjustments"],
+    desc: "Clients receive proactive updates from a dedicated account coordinator. If any record is found to be disconnected or invalid, submit it within 24 hours for immediate 1-to-1 credit replacement under our transparent warranty.",
+    deliverables: ["24-Hour invalid lead replacement policy", "Dedicated Telegram/WhatsApp support", "Delivery discrepancy audits", "Flexible campaign pacing adjustments"],
     image: "/team-operations-center.jpg",
   },
 ];
@@ -552,9 +552,9 @@ export const PACKAGES = [
       "Targeted geographic & state demographic filtering",
       "Full opt-in consent documentation & timestamp",
       "Automated phone syntax & duplicate scrubbing",
-      "Clear replacement policy on invalid phone lines (48h SLA)",
+      "Clear replacement policy on invalid phone lines (24h SLA)",
     ],
-    replacementPolicy: "Clear replacement policy: 1-to-1 replacement credit on verified disconnected or invalid numbers reported within 48 hours.",
+    replacementPolicy: "Clear replacement policy: 1-to-1 replacement credit on verified disconnected or invalid numbers reported within 24 hours.",
   },
   {
     id: "tier-200",
@@ -572,9 +572,9 @@ export const PACKAGES = [
       "Multi-country / regional geo-targeting",
       "HLR mobile line-status live ping verification",
       "High-intent promotional survey responders",
-      "Clear replacement policy on invalid phone lines (48h SLA)",
+      "Clear replacement policy on invalid phone lines (24h SLA)",
     ],
-    replacementPolicy: "Clear replacement policy: proactive carrier verification prior to dispatch + priority 48-hour replacement window.",
+    replacementPolicy: "Clear replacement policy: proactive carrier verification prior to dispatch + priority 24-hour replacement window.",
   },
   {
     id: "tier-300",
@@ -592,9 +592,9 @@ export const PACKAGES = [
       "Discounted volume rate ($0.60 / lead — Save $35+)",
       "Custom demographic & survey qualification fields",
       "Priority batch extraction & rapid ingestion",
-      "Clear replacement policy: priority 48h carrier verification credit",
+      "Clear replacement policy: priority 24h carrier verification credit",
     ],
-    replacementPolicy: "Clear replacement policy: priority carrier verification & 48h replacement credit.",
+    replacementPolicy: "Clear replacement policy: priority carrier verification & 24h replacement credit.",
   },
   {
     id: "tier-500",
@@ -613,9 +613,9 @@ export const PACKAGES = [
       "HLR mobile line-status live ping carrier verification",
       "Flexible package options & priority delivery formats",
       "Dedicated Senior Campaign Account Manager",
-      "Clear replacement policy: guaranteed 1-to-1 credit on invalid lines (48h)",
+      "Clear replacement policy: guaranteed 1-to-1 credit on invalid lines (24h)",
     ],
-    replacementPolicy: "Clear replacement policy: priority carrier verification & instant 48h credit.",
+    replacementPolicy: "Clear replacement policy: priority carrier verification & instant 24h credit.",
   },
 ];
 
@@ -643,7 +643,7 @@ export const BUYER_CONFIDENCE = [
   {
     title: "5. Clear Replacement Policy",
     tagline: "Transparent Buyer Protection",
-    desc: "If any lead in your delivered batch is disconnected, contains corrupted syntax, or was delivered to your team in a previous batch, notify us within 48 hours for immediate 1-to-1 replacement credit.",
+    desc: "If any lead in your delivered batch is disconnected, contains corrupted syntax, or was delivered to your team in a previous batch, notify us within 24 hours for immediate 1-to-1 replacement credit.",
   },
 ];
 
