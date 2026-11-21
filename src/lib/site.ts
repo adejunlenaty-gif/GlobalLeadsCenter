@@ -68,7 +68,7 @@ export const SERVICES: Service[] = [
       "Targeted audience and geographic acquisition",
       "Campaign-specific demographic qualification",
       "Authorized opt-in sourcing with clear prize disclosures",
-      "Freshness windows agreed upfront (daily batches or weekly schedule)",
+      "Guaranteed 24-hour delivery SLA across all packages",
       "Strict compliance with regional promotional advertising guidelines",
     ],
     details: [
@@ -79,7 +79,7 @@ export const SERVICES: Service[] = [
     fieldsCaptured: ["Full Name", "Verified Mobile Phone", "Email", "State/City/ZIP", "Age Bracket", "Timestamp & Consent IP"],
     sourcingMethods: ["Incentive giveaway portals", "Mobile consumer sweepstakes pages", "Sponsored social media prize funnels"],
     freshnessWindow: "Guaranteed 24-Hour Delivery SLA",
-    minVolume: "1,000 records",
+    minVolume: "150 records (Starter from $100)",
     popularCountries: ["USA", "Canada", "UK", "Australia"],
   },
   {
@@ -93,7 +93,7 @@ export const SERVICES: Service[] = [
       "Permitted-country and age-eligibility screening",
       "Brief-led qualification questions",
       "Documented consent with transparent source reporting",
-      "Agreed delivery formats and SLA schedules",
+      "Guaranteed 24-hour delivery SLA across all packages",
     ],
     details: [
       "Our PCH lead programme serves prize-and-promotion-style campaign briefs. Audience criteria, eligible jurisdictions, and campaign qualification fields are defined in partnership with your team prior to launch.",
@@ -103,7 +103,7 @@ export const SERVICES: Service[] = [
     fieldsCaptured: ["Full Name", "Phone", "Email", "Address / Postal Code", "Eligibility Confirmation", "Capture Date/Time"],
     sourcingMethods: ["Prize draw registration portals", "Co-registration consumer surveys", "Digital promotion entry hubs"],
     freshnessWindow: "Guaranteed 24-Hour Delivery SLA",
-    minVolume: "1,000 records",
+    minVolume: "150 records (Starter from $100)",
     popularCountries: ["USA", "Canada", "UK"],
   },
   {
@@ -117,7 +117,7 @@ export const SERVICES: Service[] = [
       "Jurisdiction and age-eligibility screening (18+ / 21+)",
       "Campaign-specific qualification fields",
       "Opt-in sourcing with verifiable consent records",
-      "Freshness verification and delivery manifest",
+      "Guaranteed 24-hour delivery SLA across all packages",
     ],
     details: [
       "Build an engaged audience for lawful promotional campaigns in the jurisdictions your business is authorized to serve. Geographic targeting and age-eligibility criteria are validated before collection begins.",
@@ -127,7 +127,7 @@ export const SERVICES: Service[] = [
     fieldsCaptured: ["Full Name", "Phone", "Email", "State / Province", "Age Verification", "Consent Record"],
     sourcingMethods: ["Lottery statistics & results portals", "Number tracking tools", "Incentive-based promotional surveys"],
     freshnessWindow: "Guaranteed 24-Hour Delivery SLA",
-    minVolume: "1,000 records",
+    minVolume: "150 records (Starter from $100)",
     popularCountries: ["United States", "Canada"],
   },
 
